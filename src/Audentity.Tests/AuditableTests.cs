@@ -21,7 +21,20 @@ public class AuditableTests
         entity.Property = currentValue;
 
         Auditable.Collect(database.ChangeTracker).Single().Properties.Should()
-            .ContainModified<Entity, string>(e => e.Property, originalValue, currentValue);
+            .ContainModifiedProperty<Entity, string>(e => e.Property, originalValue, currentValue);
+    }
+
+    [Theory]
+    [AutoData]
+    public void Collect_SingleOwnedModified_ChangeHasModifiedProperty(Database database, Entity entity, Owned current)
+    {
+        database.Set<Entity>().Add(entity);
+        database.SaveChanges();
+        Owned original = entity.Owned;
+        entity.Owned = current;
+
+        Auditable.Collect(database.ChangeTracker).Single().Properties.Should()
+            .ContainModifiedProperty<Entity, string>(e => e.Owned.Value, original.Value, current.Value);
     }
 
     [Theory]
@@ -29,10 +42,13 @@ public class AuditableTests
     public void Collect_SingleAdded_ChangeHasAllPropertiesAndTheirValues(Database database, Entity entity)
     {
         database.Set<Entity>().Add(entity);
-        Auditable.Collect(database.ChangeTracker).Single().Properties.Should()
-            .ContainUnmodified<Entity, Guid>(e => e.Id, entity.Id, entity.Id)
+        Auditable auditable = Auditable.Collect(database.ChangeTracker).Single();
+        auditable.Properties.Should()
+            .ContainAddedProperty<Entity, Guid>(e => e.Id, entity.Id)
             .And
-            .ContainUnmodified<Entity, string>(e => e.Property, entity.Property, entity.Property);
+            .ContainAddedProperty<Entity, string>(e => e.Property, entity.Property)
+            .And
+            .ContainAddedProperty<Entity, string>(e => e.Owned.Value, entity.Owned.Value);
     }
 
     [Theory]
@@ -67,7 +83,8 @@ public class AuditableTests
         database.Set<Entity>().Add(entity);
         database.SaveChanges();
         entity.Property = name;
-        Auditable.Collect(database.ChangeTracker).Single().State.Should().Be(EntityState.Modified);
+        Auditable auditable = Auditable.Collect(database.ChangeTracker).Single();
+        auditable.State.Should().Be(EntityState.Modified);
     }
 
     [Theory]

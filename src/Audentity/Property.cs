@@ -1,34 +1,20 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Audentity;
 
-public class Property
+public record Property
 {
-    private Property(PropertyEntry entry)
+    public Property(PropertyEntry entry)
     {
         IsPrimaryKey = entry.Metadata.IsPrimaryKey();
-        OriginalValue = entry.OriginalValue?.ToString();
+        OriginalValue = entry.EntityEntry.State == EntityState.Added ? null : entry.OriginalValue?.ToString();
         CurrentValue = entry.CurrentValue?.ToString();
-        IsModified = entry.IsModified;
         Name = entry.Metadata.Name;
     }
 
     public bool IsPrimaryKey { get; }
-    public string? OriginalValue { get; }
+    public string? OriginalValue { get; init; }
     public string? CurrentValue { get; }
-    public bool IsModified { get; }
     public string Name { get; }
-
-    private static Property Collect(PropertyEntry entry)
-    {
-        return new Property(entry);
-    }
-
-    public static IReadOnlyCollection<Property> Collect(EntityEntry entry)
-    {
-        return entry.Properties
-            .Select(Collect)
-            .ToArray()
-            .AsReadOnly();
-    }
 }
