@@ -26,15 +26,16 @@ public class AuditableTests
 
     [Theory]
     [AutoData]
-    public void Collect_SingleOwnedModified_ChangeHasModifiedProperty(Database database, Table entity, Owned current)
+    public void Collect_SingleOwnedModified_ChangeHasModifiedProperty(Database database, Table entity,
+        OwnedTable current)
     {
         database.Set<Table>().Add(entity);
         database.SaveChanges();
-        Owned original = entity.Owned;
-        entity.Owned = current;
+        OwnedTable original = entity.OwnedProperty;
+        entity.OwnedProperty = current;
 
         database.ChangeTracker.Audit().Single().Properties.Should()
-            .ContainModifiedProperty<Table, string>(e => e.Owned.Value, original.Value, current.Value);
+            .ContainModifiedProperty<Table, string>(e => e.OwnedProperty.Value, original.Value, current.Value);
     }
 
     [Theory]
@@ -48,7 +49,7 @@ public class AuditableTests
             .And
             .ContainProperty<Table, string>(e => e.Property, entity.Property)
             .And
-            .ContainProperty<Table, string>(e => e.Owned.Value, entity.Owned.Value);
+            .ContainProperty<Table, string>(e => e.OwnedProperty.Value, entity.OwnedProperty.Value);
     }
 
     [Theory]

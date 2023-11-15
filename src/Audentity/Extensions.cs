@@ -27,32 +27,35 @@ public static class Extensions
     private static Entity ToEntity(this EntityEntry entity, IEnumerable<EntityEntry> cache)
     {
         IEnumerable<MemberEntry> members = entity.Members.ToArray();
-        IEnumerable<Property> entityProperties = members.OfType<PropertyEntry>().Select(ToProperty);
-        IEnumerable<Property> referenceProperties = members.OfType<ReferenceEntry>()
-            .Where(IsOwned)
-            .Select(ToOwned)
-            .SelectMany(cache.ToReferenceProperties);
+        IEnumerable<Property> properties = members.OfType<PropertyEntry>()
+            .Select(ToProperty)
+            .Concat(members.OfType<ReferenceEntry>()
+                .Where(IsOwned)
+                .Select(ToOwned)
+                .SelectMany(cache.ToReferenceProperties));
 
-        return new Entity
-        {
-            Properties = entityProperties.Concat(referenceProperties),
-            State = entity.State,
-            Name = entity.Metadata.Name
-        };
+        return new Entity { Properties = properties, State = entity.State, Name = entity.Metadata.Name };
     }
 
     private static IEnumerable<Property> ToReferenceProperties(this IEnumerable<EntityEntry> entries,
-        (string PropertyName, EntityEntry Target) reference)
+        (string NavigationName, EntityEntry Target) reference)
     {
         EntityEntry? old = entries.IsOldReference(reference.Target).FirstOrDefault();
         return reference.Target.Properties.Where(IsNotPrimaryKey)
-            .Select(property => property.ToReferenceProperty(old));
+            .Select(property => property.ToReferenceProperty(old, reference.NavigationName));
     }
 
-    private static Property ToReferenceProperty(this PropertyEntry entry, EntityEntry? originalReference)
+    private static Property ToReferenceProperty(this PropertyEntry entry, EntityEntry? old, string navigationName)
     {
-        PropertyEntry? originalProperty = originalReference?.Properties.Find(entry.Metadata);
-        return entry.ToProperty() with { OriginalValue = originalProperty?.OriginalValue?.ToString() };
+        PropertyEntry? originalProperty = old?.Properties
+            .FirstOrDefault(e => e.HasSameMetadata(entry.Metadata));
+
+        Property property = entry.ToProperty();
+
+        return property with
+        {
+            Name = $"{navigationName}:{property.Name}", OriginalValue = originalProperty?.OriginalValue?.ToString()
+        };
     }
 
     private static IEnumerable<EntityEntry> IsOldReference(this IEnumerable<EntityEntry> entries, EntityEntry target)
@@ -70,7 +73,7 @@ public static class Extensions
             .Order();
     }
 
-    private static (string PropertyName, EntityEntry Target) ToOwned(ReferenceEntry reference)
+    private static (string NavigationName, EntityEntry Target) ToOwned(ReferenceEntry reference)
     {
         return (reference.Metadata.Name, reference.TargetEntry!);
     }
@@ -90,9 +93,9 @@ public static class Extensions
         return entry.Metadata.IsPrimaryKey();
     }
 
-    private static PropertyEntry? Find(this IEnumerable<PropertyEntry> properties, IReadOnlyPropertyBase metadata)
+    private static bool HasSameMetadata(this PropertyEntry property, IReadOnlyPropertyBase metadata)
     {
-        return properties.FirstOrDefault(op => op.Metadata.Name == metadata.Name);
+        return property.Metadata.Name == metadata.Name;
     }
 
     private static bool IsCollectable(EntityEntry entry)

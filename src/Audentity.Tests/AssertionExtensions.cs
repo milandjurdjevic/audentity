@@ -11,10 +11,26 @@ public static class AssertionExtensions
             Expression<Func<TEntity, TProperty>> selector, TProperty currentValue)
     {
         string? currentValueString = currentValue?.ToString();
+        string name = selector.GetMemberName();
         return assertions.Contain(property =>
-            property.Name == ((MemberExpression)selector.Body).Member.Name &&
+            property.Name == name &&
             property.OriginalValue == null &&
             property.CurrentValue == currentValueString);
+    }
+
+    private static string GetMemberName<TEntity, TProperty>(this Expression<Func<TEntity, TProperty>> selector)
+    {
+        return String.Join(":", GetNameSegments().Reverse());
+
+        IEnumerable<string> GetNameSegments()
+        {
+            Expression? expression = selector.Body;
+            while (expression is MemberExpression memberExpression)
+            {
+                expression = memberExpression.Expression;
+                yield return memberExpression.Member.Name;
+            }
+        }
     }
 
     public static AndWhichConstraint<GenericCollectionAssertions<Property>, Property>
@@ -23,8 +39,9 @@ public static class AssertionExtensions
     {
         string? originalValueString = originalValue?.ToString();
         string? currentValueString = currentValue?.ToString();
+        string memberName = selector.GetMemberName();
         return assertions.Contain(property =>
-            property.Name == ((MemberExpression)selector.Body).Member.Name &&
+            property.Name == memberName &&
             property.OriginalValue == originalValueString &&
             property.CurrentValue == currentValueString);
     }

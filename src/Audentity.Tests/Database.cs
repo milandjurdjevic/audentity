@@ -12,6 +12,6 @@ public class Database : DbContext
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<Table>()
-            .OwnsOne(e => e.Owned);
+            .OwnsOne(e => e.OwnedProperty);
     }
 }
