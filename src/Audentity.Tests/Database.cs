@@ -11,7 +11,7 @@ public class Database : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        modelBuilder.Entity<Entity>()
+        modelBuilder.Entity<Table>()
             .OwnsOne(e => e.Owned);
     }
 }

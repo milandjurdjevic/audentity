@@ -7,7 +7,7 @@ namespace Audentity.Tests;
 public static class AssertionExtensions
 {
     public static AndWhichConstraint<GenericCollectionAssertions<Property>, Property>
-        ContainAddedProperty<TEntity, TProperty>(this GenericCollectionAssertions<Property> assertions,
+        ContainProperty<TEntity, TProperty>(this GenericCollectionAssertions<Property> assertions,
             Expression<Func<TEntity, TProperty>> selector, TProperty currentValue)
     {
         string? currentValueString = currentValue?.ToString();

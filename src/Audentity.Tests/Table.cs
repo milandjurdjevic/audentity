@@ -1,6 +1,6 @@
 namespace Audentity.Tests;
 
-public class Entity
+public class Table
 {
     public Guid Id { get; set; }
     public string Property { get; set; } = String.Empty;

@@ -4,96 +4,95 @@ public class AuditableTests
 {
     [Theory]
     [AutoData]
-    public void Collect_SingleAdded_ChangeHasPrimaryKeyProperty(Database database, Entity entity)
+    public void Collect_SingleAdded_ChangeHasPrimaryKeyProperty(Database database, Table entity)
     {
-        database.Set<Entity>().Add(entity);
-        Auditable.Collect(database.ChangeTracker).Single().Properties.Should()
-            .ContainPrimaryKey<Entity, Guid>(e => e.Id);
+        database.Set<Table>().Add(entity);
+        database.ChangeTracker.Audit().Single().Properties.Should()
+            .ContainPrimaryKey<Table, Guid>(e => e.Id);
     }
 
     [Theory]
     [AutoData]
-    public void Collect_SingleModified_ChangeHasModifiedProperty(Database database, Entity entity, string currentValue)
+    public void Collect_SingleModified_ChangeHasModifiedProperty(Database database, Table entity, string currentValue)
     {
-        database.Set<Entity>().Add(entity);
+        database.Set<Table>().Add(entity);
         database.SaveChanges();
         string originalValue = entity.Property;
         entity.Property = currentValue;
 
-        Auditable.Collect(database.ChangeTracker).Single().Properties.Should()
-            .ContainModifiedProperty<Entity, string>(e => e.Property, originalValue, currentValue);
+        database.ChangeTracker.Audit().Single().Properties.Should()
+            .ContainModifiedProperty<Table, string>(e => e.Property, originalValue, currentValue);
     }
 
     [Theory]
     [AutoData]
-    public void Collect_SingleOwnedModified_ChangeHasModifiedProperty(Database database, Entity entity, Owned current)
+    public void Collect_SingleOwnedModified_ChangeHasModifiedProperty(Database database, Table entity, Owned current)
     {
-        database.Set<Entity>().Add(entity);
+        database.Set<Table>().Add(entity);
         database.SaveChanges();
         Owned original = entity.Owned;
         entity.Owned = current;
 
-        Auditable.Collect(database.ChangeTracker).Single().Properties.Should()
-            .ContainModifiedProperty<Entity, string>(e => e.Owned.Value, original.Value, current.Value);
+        database.ChangeTracker.Audit().Single().Properties.Should()
+            .ContainModifiedProperty<Table, string>(e => e.Owned.Value, original.Value, current.Value);
     }
 
     [Theory]
     [AutoData]
-    public void Collect_SingleAdded_ChangeHasAllPropertiesAndTheirValues(Database database, Entity entity)
+    public void Collect_SingleAdded_ChangeHasAllPropertiesAndTheirValues(Database database, Table entity)
     {
-        database.Set<Entity>().Add(entity);
-        Auditable auditable = Auditable.Collect(database.ChangeTracker).Single();
-        auditable.Properties.Should()
-            .ContainAddedProperty<Entity, Guid>(e => e.Id, entity.Id)
+        database.Set<Table>().Add(entity);
+        IEnumerable<Entity> enumerable = database.ChangeTracker.Audit();
+        enumerable.Single().Properties.Should()
+            .ContainProperty<Table, Guid>(e => e.Id, entity.Id)
             .And
-            .ContainAddedProperty<Entity, string>(e => e.Property, entity.Property)
+            .ContainProperty<Table, string>(e => e.Property, entity.Property)
             .And
-            .ContainAddedProperty<Entity, string>(e => e.Owned.Value, entity.Owned.Value);
+            .ContainProperty<Table, string>(e => e.Owned.Value, entity.Owned.Value);
     }
 
     [Theory]
     [AutoData]
-    public void Collect_RangeAdded_ChangesHaveCountOfTrackedEntities(Database database, Entity[] entities)
+    public void Collect_RangeAdded_ChangesHaveCountOfTrackedEntities(Database database, Table[] entities)
     {
-        database.Set<Entity>().AddRange(entities);
-        Auditable.Collect(database.ChangeTracker).Should().HaveCount(entities.Length);
+        database.Set<Table>().AddRange(entities);
+        database.ChangeTracker.Audit().Should().HaveCount(entities.Length);
     }
 
     [Theory]
     [AutoData]
-    public void Collect_SingleAdded_ChangeHasEntityName(Database database, Entity entity)
+    public void Collect_SingleAdded_ChangeHasEntityName(Database database, Table entity)
     {
-        database.Set<Entity>().Add(entity);
+        database.Set<Table>().Add(entity);
         string? entityName = entity.GetType().FullName;
-        Auditable.Collect(database.ChangeTracker).Single().Name.Should().Be(entityName);
+        database.ChangeTracker.Audit().Single().Name.Should().Be(entityName);
     }
 
     [Theory]
     [AutoData]
-    public void Collect_SingleAdded_ChangeHasAddedState(Database database, Entity entity)
+    public void Collect_SingleAdded_ChangeHasAddedState(Database database, Table entity)
     {
-        database.Set<Entity>().Add(entity);
-        Auditable.Collect(database.ChangeTracker).Single().State.Should().Be(EntityState.Added);
+        database.Set<Table>().Add(entity);
+        database.ChangeTracker.Audit().Single().State.Should().Be(EntityState.Added);
     }
 
     [Theory]
     [AutoData]
-    public void Collect_SingleModified_ChangeHasModifiedState(Database database, Entity entity, string name)
+    public void Collect_SingleModified_ChangeHasModifiedState(Database database, Table entity, string name)
     {
-        database.Set<Entity>().Add(entity);
+        database.Set<Table>().Add(entity);
         database.SaveChanges();
         entity.Property = name;
-        Auditable auditable = Auditable.Collect(database.ChangeTracker).Single();
-        auditable.State.Should().Be(EntityState.Modified);
+        database.ChangeTracker.Audit().Single().State.Should().Be(EntityState.Modified);
     }
 
     [Theory]
     [AutoData]
-    public void Collect_SingleDeleted_ChangeHasDeletedState(Database database, Entity entity)
+    public void Collect_SingleDeleted_ChangeHasDeletedState(Database database, Table entity)
     {
-        database.Set<Entity>().Add(entity);
+        database.Set<Table>().Add(entity);
         database.SaveChanges();
-        database.Set<Entity>().Remove(entity);
-        Auditable.Collect(database.ChangeTracker).Single().State.Should().Be(EntityState.Deleted);
+        database.Set<Table>().Remove(entity);
+        database.ChangeTracker.Audit().Single().State.Should().Be(EntityState.Deleted);
     }
 }
