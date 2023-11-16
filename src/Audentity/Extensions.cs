@@ -50,11 +50,7 @@ public static class Extensions
             IEnumerable<Property> properties = reference.TargetEntry
                 .Properties
                 .Where(IsNotPrimaryKey)
-                .Select(p => p.ToProperty() with
-                {
-                    Name = $"{referencePath}:{p.Metadata.Name}",
-                    OriginalValue = originalValues?.GetValueOrDefault(p.Metadata.Name)
-                })
+                .Select(p => p.ToReferenceProperty(referencePath, originalValues))
                 .Concat(GetReferenceProperties(reference.TargetEntry, entities, referencePath));
 
             foreach (Property property in properties)
@@ -62,6 +58,16 @@ public static class Extensions
                 yield return property;
             }
         }
+    }
+
+    private static Property ToReferenceProperty(this PropertyEntry entry, string referencePath,
+        IReadOnlyDictionary<string, string?>? originalValues)
+    {
+        return entry.ToProperty() with
+        {
+            Name = $"{referencePath}:{entry.Metadata.Name}",
+            OriginalValue = originalValues?.GetValueOrDefault(entry.Metadata.Name)
+        };
     }
 
     private static IEnumerable<EntityEntry> GetDeletedReferences(this EntityEntry entry,
