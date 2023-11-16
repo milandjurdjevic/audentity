@@ -1,0 +1,172 @@
+﻿[
+  {
+    "Properties": [
+      {
+        "IsPrimaryKey": true,
+        "OriginalValue": "Guid_1",
+        "CurrentValue": "Guid_1",
+        "Name": "Id",
+        "Owner": "Audentity.Tests.Model"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_2",
+        "CurrentValue": "Guid_2",
+        "Name": "Property",
+        "Owner": "Audentity.Tests.Model"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_3",
+        "CurrentValue": "Guid_3",
+        "Name": "Owned:Value",
+        "Owner": "Audentity.Tests.Owned"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_4",
+        "CurrentValue": "Guid_4",
+        "Name": "Owned:Immutable:Value",
+        "Owner": "Audentity.Tests.Immutable"
+      }
+    ],
+    "State": "Deleted",
+    "Name": "Audentity.Tests.Model"
+  },
+  {
+    "Properties": [
+      {
+        "IsPrimaryKey": true,
+        "OriginalValue": "Guid_5",
+        "CurrentValue": "Guid_5",
+        "Name": "Id",
+        "Owner": "Audentity.Tests.Model"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_6",
+        "CurrentValue": "Guid_6",
+        "Name": "Property",
+        "Owner": "Audentity.Tests.Model"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_7",
+        "CurrentValue": "Guid_7",
+        "Name": "Owned:Value",
+        "Owner": "Audentity.Tests.Owned"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_8",
+        "CurrentValue": "Guid_8",
+        "Name": "Owned:Immutable:Value",
+        "Owner": "Audentity.Tests.Immutable"
+      }
+    ],
+    "State": "Deleted",
+    "Name": "Audentity.Tests.Model"
+  },
+  {
+    "Properties": [
+      {
+        "IsPrimaryKey": true,
+        "OriginalValue": "Guid_9",
+        "CurrentValue": "Guid_9",
+        "Name": "Id",
+        "Owner": "Audentity.Tests.Model"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_10",
+        "CurrentValue": "Guid_10",
+        "Name": "Property",
+        "Owner": "Audentity.Tests.Model"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_11",
+        "CurrentValue": "Guid_11",
+        "Name": "Owned:Value",
+        "Owner": "Audentity.Tests.Owned"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_12",
+        "CurrentValue": "Guid_12",
+        "Name": "Owned:Immutable:Value",
+        "Owner": "Audentity.Tests.Immutable"
+      }
+    ],
+    "State": "Deleted",
+    "Name": "Audentity.Tests.Model"
+  },
+  {
+    "Properties": [
+      {
+        "IsPrimaryKey": true,
+        "OriginalValue": "Guid_13",
+        "CurrentValue": "Guid_13",
+        "Name": "Id",
+        "Owner": "Audentity.Tests.Model"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_14",
+        "CurrentValue": "Guid_14",
+        "Name": "Property",
+        "Owner": "Audentity.Tests.Model"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_15",
+        "CurrentValue": "Guid_15",
+        "Name": "Owned:Value",
+        "Owner": "Audentity.Tests.Owned"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_16",
+        "CurrentValue": "Guid_16",
+        "Name": "Owned:Immutable:Value",
+        "Owner": "Audentity.Tests.Immutable"
+      }
+    ],
+    "State": "Deleted",
+    "Name": "Audentity.Tests.Model"
+  },
+  {
+    "Properties": [
+      {
+        "IsPrimaryKey": true,
+        "OriginalValue": "Guid_17",
+        "CurrentValue": "Guid_17",
+        "Name": "Id",
+        "Owner": "Audentity.Tests.Model"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_18",
+        "CurrentValue": "Guid_18",
+        "Name": "Property",
+        "Owner": "Audentity.Tests.Model"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_19",
+        "CurrentValue": "Guid_19",
+        "Name": "Owned:Value",
+        "Owner": "Audentity.Tests.Owned"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_20",
+        "CurrentValue": "Guid_20",
+        "Name": "Owned:Immutable:Value",
+        "Owner": "Audentity.Tests.Immutable"
+      }
+    ],
+    "State": "Deleted",
+    "Name": "Audentity.Tests.Model"
+  }
+]
