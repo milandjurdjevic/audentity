@@ -1,0 +1,36 @@
+﻿[
+  {
+    "Properties": [
+      {
+        "IsPrimaryKey": true,
+        "OriginalValue": "Guid_1",
+        "CurrentValue": "Guid_1",
+        "Name": "Id",
+        "Owner": "Audentity.Tests.Model"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_2",
+        "CurrentValue": "Guid_3",
+        "Name": "Property",
+        "Owner": "Audentity.Tests.Model"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_4",
+        "CurrentValue": "Guid_5",
+        "Name": "Owned:Value",
+        "Owner": "Audentity.Tests.Owned"
+      },
+      {
+        "IsPrimaryKey": false,
+        "OriginalValue": "Guid_6",
+        "CurrentValue": "Guid_7",
+        "Name": "Owned:Immutable:Value",
+        "Owner": "Audentity.Tests.Immutable"
+      }
+    ],
+    "State": "Modified",
+    "Name": "Audentity.Tests.Model"
+  }
+]

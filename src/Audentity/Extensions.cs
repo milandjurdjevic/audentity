@@ -10,7 +10,7 @@ public static class Extensions
         return new Property
         {
             IsPrimaryKey = entry.Metadata.IsPrimaryKey(),
-            OriginalValue = entry.EntityEntry.State == EntityState.Added ? null : entry.OriginalValue?.ToString(),
+            OriginalValue = entry.OriginalValue?.ToString(),
             CurrentValue = entry.CurrentValue?.ToString(),
             Name = entry.Metadata.Name,
             Owner = entry.Metadata.DeclaringEntityType.Name
@@ -61,13 +61,12 @@ public static class Extensions
     }
 
     private static Property ToReferenceProperty(this PropertyEntry entry, string referencePath,
-        IReadOnlyDictionary<string, string?>? originalValues)
+        IReadOnlyDictionary<string, string?>? values)
     {
-        return entry.ToProperty() with
-        {
-            Name = $"{referencePath}:{entry.Metadata.Name}",
-            OriginalValue = originalValues?.GetValueOrDefault(entry.Metadata.Name)
-        };
+        Property property = entry.ToProperty() with { Name = $"{referencePath}:{entry.Metadata.Name}" };
+        return values is not null
+            ? property with { OriginalValue = values.GetValueOrDefault(entry.Metadata.Name) }
+            : property;
     }
 
     private static IEnumerable<EntityEntry> GetDeletedReferences(this EntityEntry entry,
