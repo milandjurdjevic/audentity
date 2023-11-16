@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Audentity;
 
@@ -20,50 +19,59 @@ public static class Extensions
 
     public static IEnumerable<Entity> Audit(this ChangeTracker tracker)
     {
-        IEnumerable<EntityEntry> cache = tracker.Entries().ToArray();
-        return cache.Where(IsCollectable).Select(e => e.ToEntity(cache));
+        EntityEntry[] entries = tracker.Entries().ToArray();
+        return entries.Where(HasChanges).Select(e => e.ToEntity(entries));
     }
 
-    private static Entity ToEntity(this EntityEntry entity, IEnumerable<EntityEntry> cache)
+    private static Entity ToEntity(this EntityEntry entry, EntityEntry[] entries)
     {
-        IEnumerable<MemberEntry> members = entity.Members.ToArray();
-        IEnumerable<Property> properties = members.OfType<PropertyEntry>()
-            .Select(ToProperty)
-            .Concat(members.OfType<ReferenceEntry>()
-                .Where(IsOwned)
-                .Select(ToOwned)
-                .SelectMany(cache.ToReferenceProperties));
+        IEnumerable<Property> properties = entry.Properties.Select(ToProperty)
+            .Concat(GetReferenceProperties(entry, entries));
 
-        return new Entity { Properties = properties, State = entity.State, Name = entity.Metadata.Name };
+        return new Entity { Properties = properties, State = entry.State, Name = entry.Metadata.Name };
     }
 
-    private static IEnumerable<Property> ToReferenceProperties(this IEnumerable<EntityEntry> entries,
-        (string NavigationName, EntityEntry Target) reference)
+    private static IEnumerable<Property> GetReferenceProperties(EntityEntry entity, EntityEntry[] entities,
+        string path = "")
     {
-        EntityEntry? old = entries.IsOldReference(reference.Target).FirstOrDefault();
-        return reference.Target.Properties.Where(IsNotPrimaryKey)
-            .Select(property => property.ToReferenceProperty(old, reference.NavigationName));
-    }
-
-    private static Property ToReferenceProperty(this PropertyEntry entry, EntityEntry? old, string navigationName)
-    {
-        PropertyEntry? originalProperty = old?.Properties
-            .FirstOrDefault(e => e.HasSameMetadata(entry.Metadata));
-
-        Property property = entry.ToProperty();
-
-        return property with
+        foreach (NavigationEntry navigation in entity.Navigations.Where(n => n.Metadata.TargetEntityType.IsOwned()))
         {
-            Name = $"{navigationName}:{property.Name}", OriginalValue = originalProperty?.OriginalValue?.ToString()
-        };
+            if (navigation is not ReferenceEntry { TargetEntry: not null } reference)
+            {
+                continue;
+            }
+
+            Dictionary<string, string?>? originalValues = reference.TargetEntry
+                .GetDeletedReferences(entities)
+                .FirstOrDefault()?
+                .Properties
+                .ToDictionary(p => p.Metadata.Name, p => p.CurrentValue?.ToString());
+            string referencePath = $"{path}:{navigation.Metadata.Name}".TrimStart(':');
+            IEnumerable<Property> properties = reference.TargetEntry
+                .Properties
+                .Where(IsNotPrimaryKey)
+                .Select(p => p.ToProperty() with
+                {
+                    Name = $"{referencePath}:{p.Metadata.Name}",
+                    OriginalValue = originalValues?.GetValueOrDefault(p.Metadata.Name)
+                })
+                .Concat(GetReferenceProperties(reference.TargetEntry, entities, referencePath));
+
+            foreach (Property property in properties)
+            {
+                yield return property;
+            }
+        }
     }
 
-    private static IEnumerable<EntityEntry> IsOldReference(this IEnumerable<EntityEntry> entries, EntityEntry target)
+    private static IEnumerable<EntityEntry> GetDeletedReferences(this EntityEntry entry,
+        IEnumerable<EntityEntry> entries)
     {
-        IOrderedEnumerable<string> keys = target.Properties.SelectKeys();
+        IOrderedEnumerable<string> keys = entry.Properties.SelectKeys();
         return entries.Where(e => e.State == EntityState.Deleted &&
                                   e.Metadata.IsOwned() &&
-                                  e.Metadata == target.Metadata && e.Properties.SelectKeys().SequenceEqual(keys));
+                                  e.Metadata == entry.Metadata &&
+                                  e.Properties.SelectKeys().SequenceEqual(keys));
     }
 
     private static IOrderedEnumerable<string> SelectKeys(this IEnumerable<PropertyEntry> properties)
@@ -73,14 +81,9 @@ public static class Extensions
             .Order();
     }
 
-    private static (string NavigationName, EntityEntry Target) ToOwned(ReferenceEntry reference)
+    private static bool IsPrimaryKey(PropertyEntry entry)
     {
-        return (reference.Metadata.Name, reference.TargetEntry!);
-    }
-
-    private static bool IsOwned(ReferenceEntry entry)
-    {
-        return entry.TargetEntry?.Metadata.IsOwned() == true;
+        return entry.Metadata.IsPrimaryKey();
     }
 
     private static bool IsNotPrimaryKey(PropertyEntry entry)
@@ -88,17 +91,7 @@ public static class Extensions
         return !IsPrimaryKey(entry);
     }
 
-    private static bool IsPrimaryKey(PropertyEntry entry)
-    {
-        return entry.Metadata.IsPrimaryKey();
-    }
-
-    private static bool HasSameMetadata(this PropertyEntry property, IReadOnlyPropertyBase metadata)
-    {
-        return property.Metadata.Name == metadata.Name;
-    }
-
-    private static bool IsCollectable(EntityEntry entry)
+    private static bool HasChanges(EntityEntry entry)
     {
         bool changed = entry.State is EntityState.Added or EntityState.Modified or EntityState.Deleted;
         return !entry.Metadata.IsOwned() && (changed || entry.Navigations.Any(n => n.IsModified));

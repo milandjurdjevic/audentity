@@ -11,7 +11,7 @@ public class Database : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        modelBuilder.Entity<Table>()
-            .OwnsOne(e => e.OwnedProperty);
+        modelBuilder.Entity<RootEntity>()
+            .OwnsOne(e => e.Owned, b => b.OwnsOne(o => o.Nested));
     }
 }
