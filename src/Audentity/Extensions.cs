@@ -1,3 +1,5 @@
+using System.Collections.ObjectModel;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
@@ -5,33 +7,39 @@ namespace Audentity;
 
 public static class Extensions
 {
-    private static Property ToProperty(this PropertyEntry entry)
+    public static IEnumerable<EntityLog> Audit(this ChangeTracker tracker)
     {
-        return new Property
+        EntityEntry[] pool = tracker.Entries().ToArray();
+        return pool.Where(e => !IsOwned(e) && IsChanged(e))
+            .Select(e => e.ToLog(pool));
+    }
+
+    private static PropertyLog ToLog(this PropertyEntry entry)
+    {
+        string currentValue = entry.CurrentValue?.ToString() ?? String.Empty;
+        string originalValue = entry.OriginalValue?.ToString() ?? String.Empty;
+        PropertyValue propertyValue = !entry.IsModified
+            ? new PropertyValue(currentValue)
+            : new ModifiedPropertyValue(currentValue, originalValue);
+
+        return new PropertyLog
         {
             IsPrimaryKey = entry.Metadata.IsPrimaryKey(),
-            OriginalValue = entry.OriginalValue?.ToString(),
-            CurrentValue = entry.CurrentValue?.ToString(),
+            Value = propertyValue,
             Name = entry.Metadata.Name,
             Owner = entry.Metadata.DeclaringEntityType.Name
         };
     }
 
-    public static IEnumerable<Entity> Audit(this ChangeTracker tracker)
+    private static EntityLog ToLog(this EntityEntry entry, EntityEntry[] pool)
     {
-        EntityEntry[] entries = tracker.Entries().ToArray();
-        return entries.Where(HasChanges).Select(e => e.ToEntity(entries));
+        IEnumerable<PropertyLog> properties = entry.Properties.Select(ToLog)
+            .Concat(GetReferenceProperties(entry, pool));
+
+        return new EntityLog { Properties = properties, State = entry.State, Name = entry.Metadata.Name };
     }
 
-    private static Entity ToEntity(this EntityEntry entry, EntityEntry[] entries)
-    {
-        IEnumerable<Property> properties = entry.Properties.Select(ToProperty)
-            .Concat(GetReferenceProperties(entry, entries));
-
-        return new Entity { Properties = properties, State = entry.State, Name = entry.Metadata.Name };
-    }
-
-    private static IEnumerable<Property> GetReferenceProperties(EntityEntry entity, EntityEntry[] entities,
+    private static IEnumerable<PropertyLog> GetReferenceProperties(EntityEntry entity, EntityEntry[] pool,
         string path = "")
     {
         foreach (NavigationEntry navigation in entity.Navigations.Where(n => n.Metadata.TargetEntityType.IsOwned()))
@@ -41,42 +49,66 @@ public static class Extensions
                 continue;
             }
 
-            Dictionary<string, string?>? originalValues = reference.TargetEntry
-                .GetDeletedReferences(entities)
-                .FirstOrDefault()?
-                .Properties
-                .ToDictionary(p => p.Metadata.Name, p => p.CurrentValue?.ToString());
+            ReadOnlyDictionary<string, object?> deletedValuesCache = reference.TargetEntry.GetClones(pool)
+                .FirstOrDefault(e => InDifferentState(entity, e) && IsDeleted(e) && IsOwned(e))
+                .CacheCurrentPropertyValues();
+
             string referencePath = $"{path}:{navigation.Metadata.Name}".TrimStart(':');
-            IEnumerable<Property> properties = reference.TargetEntry
+
+            IEnumerable<PropertyLog> properties = reference.TargetEntry
                 .Properties
                 .Where(IsNotPrimaryKey)
-                .Select(p => p.ToReferenceProperty(referencePath, originalValues))
-                .Concat(GetReferenceProperties(reference.TargetEntry, entities, referencePath));
+                .Select(p => p.ToReferenceProperty(deletedValuesCache, referencePath))
+                .Concat(GetReferenceProperties(reference.TargetEntry, pool, referencePath));
 
-            foreach (Property property in properties)
+            foreach (PropertyLog property in properties)
             {
                 yield return property;
             }
         }
     }
 
-    private static Property ToReferenceProperty(this PropertyEntry entry, string referencePath,
-        IReadOnlyDictionary<string, string?>? values)
+    private static bool InDifferentState(EntityEntry left, EntityEntry right)
     {
-        Property property = entry.ToProperty() with { Name = $"{referencePath}:{entry.Metadata.Name}" };
-        return values is not null
-            ? property with { OriginalValue = values.GetValueOrDefault(entry.Metadata.Name) }
-            : property;
+        return right.State != left.State;
     }
 
-    private static IEnumerable<EntityEntry> GetDeletedReferences(this EntityEntry entry,
-        IEnumerable<EntityEntry> entries)
+    private static ReadOnlyDictionary<string, object?> CacheCurrentPropertyValues(this EntityEntry? entry)
     {
-        IOrderedEnumerable<string> keys = entry.Properties.SelectKeys();
-        return entries.Where(e => e.State == EntityState.Deleted &&
-                                  e.Metadata.IsOwned() &&
-                                  e.Metadata == entry.Metadata &&
-                                  e.Properties.SelectKeys().SequenceEqual(keys));
+        return entry is null
+            ? new Dictionary<string, object?>().AsReadOnly()
+            : entry.Properties.ToDictionary(p => p.Metadata.Name, p => p.CurrentValue).AsReadOnly();
+    }
+
+    private static bool IsOwned(EntityEntry entity)
+    {
+        return entity.Metadata.IsOwned();
+    }
+
+    private static bool IsDeleted(EntityEntry entity)
+    {
+        return entity.State is EntityState.Deleted;
+    }
+
+    private static PropertyLog ToReferenceProperty(this PropertyEntry entry,
+        IReadOnlyDictionary<string, object?> originalValues, string referencePath)
+    {
+        PropertyLog property = entry.ToLog() with { Name = $"{referencePath}:{entry.Metadata.Name}" };
+
+        if (!originalValues.ContainsKey(entry.Metadata.Name))
+        {
+            return property;
+        }
+
+        string original = originalValues[entry.Metadata.Name]?.ToString() ?? String.Empty;
+        ModifiedPropertyValue value = new(property.Value.Current, original);
+        return property with { Value = value };
+    }
+
+    private static IEnumerable<EntityEntry> GetClones(this EntityEntry entity, IEnumerable<EntityEntry> pool)
+    {
+        IOrderedEnumerable<string> keys = entity.Properties.SelectKeys();
+        return pool.Where(e => e.Metadata == entity.Metadata && e.Properties.SelectKeys().SequenceEqual(keys));
     }
 
     private static IOrderedEnumerable<string> SelectKeys(this IEnumerable<PropertyEntry> properties)
@@ -96,9 +128,9 @@ public static class Extensions
         return !IsPrimaryKey(entry);
     }
 
-    private static bool HasChanges(EntityEntry entry)
+    private static bool IsChanged(EntityEntry entry)
     {
         bool changed = entry.State is EntityState.Added or EntityState.Modified or EntityState.Deleted;
-        return !entry.Metadata.IsOwned() && (changed || entry.Navigations.Any(n => n.IsModified));
+        return changed || entry.Navigations.Any(n => n.IsModified);
     }
 }

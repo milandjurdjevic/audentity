@@ -15,8 +15,8 @@ public class AuditTests
     [Fact]
     public Task RangeAdded_Collects()
     {
-        IEnumerable<Model> entities = Enumerable.Range(0, 5).Select(_ => new Model());
-        _database.AddRange(entities);
+        Model[] entities = { new(), new() };
+        _database.Set<Model>().AddRange(entities);
         return Verify(_database.ChangeTracker.Audit());
     }
 
@@ -35,8 +35,8 @@ public class AuditTests
     [Fact]
     public Task RangeModified_Collects()
     {
-        IEnumerable<Model> entities = Enumerable.Range(0, 5).Select(_ => new Model()).ToArray();
-        _database.AddRange(entities);
+        Model[] entities = { new(), new() };
+        _database.Set<Model>().AddRange(entities);
         _database.SaveChanges();
 
         foreach (Model entity in entities)
@@ -62,10 +62,10 @@ public class AuditTests
     [Fact]
     public Task RangeDeleted_Collects()
     {
-        IEnumerable<Model> entities = Enumerable.Range(0, 5).Select(_ => new Model()).ToArray();
-        _database.AddRange(entities);
+        Model[] entities = { new(), new() };
+        _database.Set<Model>().AddRange(entities);
         _database.SaveChanges();
-        _database.RemoveRange(entities);
+        _database.Set<Model>().RemoveRange(entities);
         return Verify(_database.ChangeTracker.Audit());
     }
 }

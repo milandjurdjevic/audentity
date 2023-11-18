@@ -3,31 +3,35 @@
     "Properties": [
       {
         "IsPrimaryKey": true,
-        "OriginalValue": "Guid_1",
-        "CurrentValue": "Guid_1",
         "Name": "Id",
-        "Owner": "Audentity.Tests.Model"
+        "Owner": "Audentity.Tests.Model",
+        "Value": {
+          "Current": "Guid_1"
+        }
       },
       {
         "IsPrimaryKey": false,
-        "OriginalValue": "Guid_2",
-        "CurrentValue": "Guid_2",
         "Name": "Property",
-        "Owner": "Audentity.Tests.Model"
+        "Owner": "Audentity.Tests.Model",
+        "Value": {
+          "Current": "Guid_2"
+        }
       },
       {
         "IsPrimaryKey": false,
-        "OriginalValue": "Guid_3",
-        "CurrentValue": "Guid_3",
         "Name": "Owned:Value",
-        "Owner": "Audentity.Tests.Owned"
+        "Owner": "Audentity.Tests.Owned",
+        "Value": {
+          "Current": "Guid_3"
+        }
       },
       {
         "IsPrimaryKey": false,
-        "OriginalValue": "Guid_4",
-        "CurrentValue": "Guid_4",
         "Name": "Owned:Immutable:Value",
-        "Owner": "Audentity.Tests.Immutable"
+        "Owner": "Audentity.Tests.Immutable",
+        "Value": {
+          "Current": "Guid_4"
+        }
       }
     ],
     "State": "Deleted",
