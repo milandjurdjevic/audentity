@@ -6,6 +6,26 @@ public class AuditTests
     private readonly Database _database = new();
 
     [Fact]
+    public Task ReferenceRemoved_Collects()
+    {
+        Model model = new();
+        _database.Add(model);
+        _database.SaveChanges();
+        model.Owned = null;
+        return Verify(_database.ChangeTracker.Audit());
+    }
+
+    [Fact]
+    public Task NestedReferenceRemoved_Collects()
+    {
+        Model model = new();
+        _database.Add(model);
+        _database.SaveChanges();
+        model.Owned!.Immutable = null;
+        return Verify(_database.ChangeTracker.Audit());
+    }
+
+    [Fact]
     public Task Added_Collects()
     {
         _database.Add(new Model());
@@ -27,8 +47,8 @@ public class AuditTests
         _database.Add(entity);
         _database.SaveChanges();
         entity.Property = Guid.NewGuid().ToString();
-        entity.Owned.Value = Guid.NewGuid().ToString();
-        entity.Owned.Immutable = entity.Owned.Immutable with { Value = Guid.NewGuid().ToString() };
+        entity.Owned!.Value = Guid.NewGuid().ToString();
+        entity.Owned.Immutable = entity.Owned.Immutable! with { Value = Guid.NewGuid().ToString() };
         return Verify(_database.ChangeTracker.Audit());
     }
 
@@ -42,8 +62,8 @@ public class AuditTests
         foreach (Model entity in entities)
         {
             entity.Property = Guid.NewGuid().ToString();
-            entity.Owned.Value = Guid.NewGuid().ToString();
-            entity.Owned.Immutable = entity.Owned.Immutable with { Value = Guid.NewGuid().ToString() };
+            entity.Owned!.Value = Guid.NewGuid().ToString();
+            entity.Owned.Immutable = entity.Owned.Immutable! with { Value = Guid.NewGuid().ToString() };
         }
 
         return Verify(_database.ChangeTracker.Audit());
