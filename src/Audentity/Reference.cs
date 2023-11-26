@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Audentity.Tracking;
+namespace Audentity;
 
 public record Reference
 {

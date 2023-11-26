@@ -3,65 +3,65 @@
     "Name": "Audentity.Tests.Project",
     "Properties": [
       {
-        "Name": "Id",
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
         "IsPrimaryKey": true,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Id"
       },
       {
-        "Name": "Name",
         "CurrentValue": "Project1",
         "OriginalValue": "Project1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Name"
       },
       {
-        "Name": "TenantId",
         "OriginalValue": "Guid_2",
         "IsPrimaryKey": false,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "TenantId"
       }
     ],
     "References": [
       {
-        "Name": "Tenant",
-        "Target": "Audentity.Tests.Tenant",
         "Links": [],
-        "IsCollection": false
+        "IsCollection": false,
+        "Name": "Tenant",
+        "Target": "Audentity.Tests.Tenant"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_3"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_4"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_5"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       }
     ],
     "State": "Modified",
@@ -71,65 +71,65 @@
     "Name": "Audentity.Tests.Project",
     "Properties": [
       {
-        "Name": "Id",
         "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
         "IsPrimaryKey": true,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Id"
       },
       {
-        "Name": "Name",
         "CurrentValue": "Project2",
         "OriginalValue": "Project2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Name"
       },
       {
-        "Name": "TenantId",
         "OriginalValue": "Guid_2",
         "IsPrimaryKey": false,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "TenantId"
       }
     ],
     "References": [
       {
-        "Name": "Tenant",
-        "Target": "Audentity.Tests.Tenant",
         "Links": [],
-        "IsCollection": false
+        "IsCollection": false,
+        "Name": "Tenant",
+        "Target": "Audentity.Tests.Tenant"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_3"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_4"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_5"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       }
     ],
     "State": "Modified",
@@ -139,65 +139,65 @@
     "Name": "Audentity.Tests.Project",
     "Properties": [
       {
-        "Name": "Id",
         "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
         "IsPrimaryKey": true,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Id"
       },
       {
-        "Name": "Name",
         "CurrentValue": "Project3",
         "OriginalValue": "Project3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Name"
       },
       {
-        "Name": "TenantId",
         "OriginalValue": "Guid_2",
         "IsPrimaryKey": false,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "TenantId"
       }
     ],
     "References": [
       {
-        "Name": "Tenant",
-        "Target": "Audentity.Tests.Tenant",
         "Links": [],
-        "IsCollection": false
+        "IsCollection": false,
+        "Name": "Tenant",
+        "Target": "Audentity.Tests.Tenant"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_3"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_4"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_5"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       }
     ],
     "State": "Modified",
@@ -207,70 +207,70 @@
     "Name": "Audentity.Tests.User",
     "Properties": [
       {
-        "Name": "Id",
         "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
         "IsPrimaryKey": true,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Id"
       },
       {
-        "Name": "Name",
         "CurrentValue": "User1",
         "OriginalValue": "User1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Name"
       },
       {
-        "Name": "TenantId",
         "OriginalValue": "Guid_2",
         "IsPrimaryKey": false,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "TenantId"
       }
     ],
     "References": [
       {
-        "Name": "Address",
-        "Target": "Audentity.Tests.Address",
         "Links": [
           {
             "Name": "UserId",
             "Value": "Guid_3"
           }
         ],
-        "IsCollection": false
+        "IsCollection": false,
+        "Name": "Address",
+        "Target": "Audentity.Tests.Address"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_1"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_6"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_7"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       }
     ],
     "State": "Modified",
@@ -280,70 +280,70 @@
     "Name": "Audentity.Tests.User",
     "Properties": [
       {
-        "Name": "Id",
         "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
         "IsPrimaryKey": true,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Id"
       },
       {
-        "Name": "Name",
         "CurrentValue": "User2",
         "OriginalValue": "User2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Name"
       },
       {
-        "Name": "TenantId",
         "OriginalValue": "Guid_2",
         "IsPrimaryKey": false,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "TenantId"
       }
     ],
     "References": [
       {
-        "Name": "Address",
-        "Target": "Audentity.Tests.Address",
         "Links": [
           {
             "Name": "UserId",
             "Value": "Guid_4"
           }
         ],
-        "IsCollection": false
+        "IsCollection": false,
+        "Name": "Address",
+        "Target": "Audentity.Tests.Address"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_1"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_6"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_7"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       }
     ],
     "State": "Modified",
@@ -353,70 +353,70 @@
     "Name": "Audentity.Tests.User",
     "Properties": [
       {
-        "Name": "Id",
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
         "IsPrimaryKey": true,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Id"
       },
       {
-        "Name": "Name",
         "CurrentValue": "User3",
         "OriginalValue": "User3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Name"
       },
       {
-        "Name": "TenantId",
         "OriginalValue": "Guid_2",
         "IsPrimaryKey": false,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "TenantId"
       }
     ],
     "References": [
       {
-        "Name": "Address",
-        "Target": "Audentity.Tests.Address",
         "Links": [
           {
             "Name": "UserId",
             "Value": "Guid_5"
           }
         ],
-        "IsCollection": false
+        "IsCollection": false,
+        "Name": "Address",
+        "Target": "Audentity.Tests.Address"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_1"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_6"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_7"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       }
     ],
     "State": "Modified",
@@ -426,86 +426,86 @@
     "Name": "Audentity.Tests.Tenant",
     "Properties": [
       {
-        "Name": "Id",
         "CurrentValue": "Guid_2",
         "OriginalValue": "Guid_2",
         "IsPrimaryKey": true,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Id"
       },
       {
-        "Name": "Name",
         "CurrentValue": "Tenant1",
         "OriginalValue": "Tenant1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Name"
       }
     ],
     "References": [
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_1"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_6"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_7"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_3"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_4"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_5"
           }
         ],
-        "IsCollection": true
+        "IsCollection": true,
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       }
     ],
     "State": "Deleted",
@@ -515,56 +515,56 @@
     "Name": "Audentity.Tests.Address",
     "Properties": [
       {
-        "Name": "UserId",
         "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "UserId"
       },
       {
-        "Name": "City",
         "CurrentValue": "City1",
         "OriginalValue": "City1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "City"
       },
       {
-        "Name": "State",
         "CurrentValue": "State1",
         "OriginalValue": "State1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "State"
       },
       {
-        "Name": "Street",
         "CurrentValue": "Street1",
         "OriginalValue": "Street1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Street"
       }
     ],
     "References": [
       {
-        "Name": "Building",
-        "Target": "Audentity.Tests.Building",
         "Links": [
           {
             "Name": "AddressUserId",
             "Value": "Guid_3"
           }
         ],
-        "IsCollection": false
+        "IsCollection": false,
+        "Name": "Building",
+        "Target": "Audentity.Tests.Building"
       },
       {
-        "Name": "ZipCode",
-        "Target": "Audentity.Tests.ZipCode",
         "Links": [
           {
             "Name": "AddressUserId",
             "Value": "Guid_3"
           }
         ],
-        "IsCollection": false
+        "IsCollection": false,
+        "Name": "ZipCode",
+        "Target": "Audentity.Tests.ZipCode"
       }
     ],
     "State": "Unchanged",
@@ -574,38 +574,38 @@
     "Name": "Audentity.Tests.Building",
     "Properties": [
       {
-        "Name": "AddressUserId",
         "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "AddressUserId"
       },
       {
-        "Name": "Apartment",
         "CurrentValue": "11",
         "OriginalValue": "11",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Apartment"
       },
       {
-        "Name": "Floor",
         "CurrentValue": "1",
         "OriginalValue": "1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Floor"
       }
     ],
     "References": [
       {
-        "Name": "Number",
-        "Target": "Audentity.Tests.BuildingNumber",
         "Links": [
           {
             "Name": "BuildingAddressUserId",
             "Value": "Guid_3"
           }
         ],
-        "IsCollection": false
+        "IsCollection": false,
+        "Name": "Number",
+        "Target": "Audentity.Tests.BuildingNumber"
       }
     ],
     "State": "Unchanged",
@@ -615,25 +615,25 @@
     "Name": "Audentity.Tests.BuildingNumber",
     "Properties": [
       {
-        "Name": "BuildingAddressUserId",
         "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "BuildingAddressUserId"
       },
       {
-        "Name": "Prefix",
         "CurrentValue": "1",
         "OriginalValue": "1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Prefix"
       },
       {
-        "Name": "Suffix",
         "CurrentValue": "A",
         "OriginalValue": "A",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Suffix"
       }
     ],
     "References": [],
@@ -644,18 +644,18 @@
     "Name": "Audentity.Tests.ZipCode",
     "Properties": [
       {
-        "Name": "AddressUserId",
         "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "AddressUserId"
       },
       {
-        "Name": "Value",
         "CurrentValue": "Zip1",
         "OriginalValue": "Zip1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Value"
       }
     ],
     "References": [],
@@ -666,56 +666,56 @@
     "Name": "Audentity.Tests.Address",
     "Properties": [
       {
-        "Name": "UserId",
         "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "UserId"
       },
       {
-        "Name": "City",
         "CurrentValue": "City2",
         "OriginalValue": "City2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "City"
       },
       {
-        "Name": "State",
         "CurrentValue": "State2",
         "OriginalValue": "State2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "State"
       },
       {
-        "Name": "Street",
         "CurrentValue": "Street2",
         "OriginalValue": "Street2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Street"
       }
     ],
     "References": [
       {
-        "Name": "Building",
-        "Target": "Audentity.Tests.Building",
         "Links": [
           {
             "Name": "AddressUserId",
             "Value": "Guid_4"
           }
         ],
-        "IsCollection": false
+        "IsCollection": false,
+        "Name": "Building",
+        "Target": "Audentity.Tests.Building"
       },
       {
-        "Name": "ZipCode",
-        "Target": "Audentity.Tests.ZipCode",
         "Links": [
           {
             "Name": "AddressUserId",
             "Value": "Guid_4"
           }
         ],
-        "IsCollection": false
+        "IsCollection": false,
+        "Name": "ZipCode",
+        "Target": "Audentity.Tests.ZipCode"
       }
     ],
     "State": "Unchanged",
@@ -725,38 +725,38 @@
     "Name": "Audentity.Tests.Building",
     "Properties": [
       {
-        "Name": "AddressUserId",
         "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "AddressUserId"
       },
       {
-        "Name": "Apartment",
         "CurrentValue": "12",
         "OriginalValue": "12",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Apartment"
       },
       {
-        "Name": "Floor",
         "CurrentValue": "2",
         "OriginalValue": "2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Floor"
       }
     ],
     "References": [
       {
-        "Name": "Number",
-        "Target": "Audentity.Tests.BuildingNumber",
         "Links": [
           {
             "Name": "BuildingAddressUserId",
             "Value": "Guid_4"
           }
         ],
-        "IsCollection": false
+        "IsCollection": false,
+        "Name": "Number",
+        "Target": "Audentity.Tests.BuildingNumber"
       }
     ],
     "State": "Unchanged",
@@ -766,25 +766,25 @@
     "Name": "Audentity.Tests.BuildingNumber",
     "Properties": [
       {
-        "Name": "BuildingAddressUserId",
         "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "BuildingAddressUserId"
       },
       {
-        "Name": "Prefix",
         "CurrentValue": "2",
         "OriginalValue": "2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Prefix"
       },
       {
-        "Name": "Suffix",
         "CurrentValue": "A",
         "OriginalValue": "A",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Suffix"
       }
     ],
     "References": [],
@@ -795,18 +795,18 @@
     "Name": "Audentity.Tests.ZipCode",
     "Properties": [
       {
-        "Name": "AddressUserId",
         "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "AddressUserId"
       },
       {
-        "Name": "Value",
         "CurrentValue": "Zip2",
         "OriginalValue": "Zip2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Value"
       }
     ],
     "References": [],
@@ -817,56 +817,56 @@
     "Name": "Audentity.Tests.Address",
     "Properties": [
       {
-        "Name": "UserId",
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "UserId"
       },
       {
-        "Name": "City",
         "CurrentValue": "City3",
         "OriginalValue": "City3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "City"
       },
       {
-        "Name": "State",
         "CurrentValue": "State3",
         "OriginalValue": "State3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "State"
       },
       {
-        "Name": "Street",
         "CurrentValue": "Street3",
         "OriginalValue": "Street3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Street"
       }
     ],
     "References": [
       {
-        "Name": "Building",
-        "Target": "Audentity.Tests.Building",
         "Links": [
           {
             "Name": "AddressUserId",
             "Value": "Guid_5"
           }
         ],
-        "IsCollection": false
+        "IsCollection": false,
+        "Name": "Building",
+        "Target": "Audentity.Tests.Building"
       },
       {
-        "Name": "ZipCode",
-        "Target": "Audentity.Tests.ZipCode",
         "Links": [
           {
             "Name": "AddressUserId",
             "Value": "Guid_5"
           }
         ],
-        "IsCollection": false
+        "IsCollection": false,
+        "Name": "ZipCode",
+        "Target": "Audentity.Tests.ZipCode"
       }
     ],
     "State": "Unchanged",
@@ -876,38 +876,38 @@
     "Name": "Audentity.Tests.Building",
     "Properties": [
       {
-        "Name": "AddressUserId",
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "AddressUserId"
       },
       {
-        "Name": "Apartment",
         "CurrentValue": "13",
         "OriginalValue": "13",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Apartment"
       },
       {
-        "Name": "Floor",
         "CurrentValue": "3",
         "OriginalValue": "3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Floor"
       }
     ],
     "References": [
       {
-        "Name": "Number",
-        "Target": "Audentity.Tests.BuildingNumber",
         "Links": [
           {
             "Name": "BuildingAddressUserId",
             "Value": "Guid_5"
           }
         ],
-        "IsCollection": false
+        "IsCollection": false,
+        "Name": "Number",
+        "Target": "Audentity.Tests.BuildingNumber"
       }
     ],
     "State": "Unchanged",
@@ -917,25 +917,25 @@
     "Name": "Audentity.Tests.BuildingNumber",
     "Properties": [
       {
-        "Name": "BuildingAddressUserId",
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "BuildingAddressUserId"
       },
       {
-        "Name": "Prefix",
         "CurrentValue": "3",
         "OriginalValue": "3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Prefix"
       },
       {
-        "Name": "Suffix",
         "CurrentValue": "A",
         "OriginalValue": "A",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Suffix"
       }
     ],
     "References": [],
@@ -946,18 +946,18 @@
     "Name": "Audentity.Tests.ZipCode",
     "Properties": [
       {
-        "Name": "AddressUserId",
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "AddressUserId"
       },
       {
-        "Name": "Value",
         "CurrentValue": "Zip3",
         "OriginalValue": "Zip3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false
+        "IsForeignKey": false,
+        "Name": "Value"
       }
     ],
     "References": [],
@@ -968,18 +968,18 @@
     "Name": "ProjectUser",
     "Properties": [
       {
-        "Name": "ProjectsId",
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
         "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "UsersId"
       }
     ],
     "References": [],
@@ -990,18 +990,18 @@
     "Name": "ProjectUser",
     "Properties": [
       {
-        "Name": "ProjectsId",
         "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
         "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "UsersId"
       }
     ],
     "References": [],
@@ -1012,18 +1012,18 @@
     "Name": "ProjectUser",
     "Properties": [
       {
-        "Name": "ProjectsId",
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
         "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "UsersId"
       }
     ],
     "References": [],
@@ -1034,18 +1034,18 @@
     "Name": "ProjectUser",
     "Properties": [
       {
-        "Name": "ProjectsId",
         "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
         "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "UsersId"
       }
     ],
     "References": [],
@@ -1056,18 +1056,18 @@
     "Name": "ProjectUser",
     "Properties": [
       {
-        "Name": "ProjectsId",
         "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
         "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "UsersId"
       }
     ],
     "References": [],
@@ -1078,18 +1078,18 @@
     "Name": "ProjectUser",
     "Properties": [
       {
-        "Name": "ProjectsId",
         "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
         "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "UsersId"
       }
     ],
     "References": [],
@@ -1100,18 +1100,18 @@
     "Name": "ProjectUser",
     "Properties": [
       {
-        "Name": "ProjectsId",
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "UsersId"
       }
     ],
     "References": [],
@@ -1122,18 +1122,18 @@
     "Name": "ProjectUser",
     "Properties": [
       {
-        "Name": "ProjectsId",
         "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "UsersId"
       }
     ],
     "References": [],
@@ -1144,18 +1144,18 @@
     "Name": "ProjectUser",
     "Properties": [
       {
-        "Name": "ProjectsId",
         "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
         "IsPrimaryKey": true,
-        "IsForeignKey": true
+        "IsForeignKey": true,
+        "Name": "UsersId"
       }
     ],
     "References": [],

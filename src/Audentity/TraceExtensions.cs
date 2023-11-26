@@ -1,7 +1,5 @@
 using System.Collections.Immutable;
 
-using Audentity.Tracking;
-
 namespace Audentity;
 
 public static class TraceExtensions
