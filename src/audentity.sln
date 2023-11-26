@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audentity", "Audentity\Aude
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audentity.Tests", "Audentity.Tests\Audentity.Tests.csproj", "{FCD70416-5931-42F4-8CDB-08EAEB1496E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audentity.Benchmarks", "Audentity.Benchmarks\Audentity.Benchmarks.csproj", "{FC81451B-A4B4-467D-8BA1-8277D9BDE524}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{FCD70416-5931-42F4-8CDB-08EAEB1496E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCD70416-5931-42F4-8CDB-08EAEB1496E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCD70416-5931-42F4-8CDB-08EAEB1496E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC81451B-A4B4-467D-8BA1-8277D9BDE524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC81451B-A4B4-467D-8BA1-8277D9BDE524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC81451B-A4B4-467D-8BA1-8277D9BDE524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC81451B-A4B4-467D-8BA1-8277D9BDE524}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

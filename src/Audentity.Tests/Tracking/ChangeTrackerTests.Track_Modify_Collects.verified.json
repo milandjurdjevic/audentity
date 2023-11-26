@@ -1,0 +1,943 @@
+﻿[
+  {
+    "Name": "Audentity.Tests.Tracking.Data.Tenant",
+    "Properties": [
+      {
+        "Name": "Id",
+        "CurrentValue": "Guid_1",
+        "OriginalValue": "Guid_1",
+        "IsPrimaryKey": true,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Name",
+        "CurrentValue": "Tenant1Updated",
+        "OriginalValue": "Tenant1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [
+      {
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_2"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_3"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_4"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Users",
+        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_5"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Users",
+        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_6"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Users",
+        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_7"
+          }
+        ],
+        "IsCollection": true
+      }
+    ],
+    "State": "Modified",
+    "IsOwned": false
+  },
+  {
+    "Name": "Audentity.Tests.Tracking.Data.Project",
+    "Properties": [
+      {
+        "Name": "Id",
+        "CurrentValue": "Guid_2",
+        "OriginalValue": "Guid_2",
+        "IsPrimaryKey": true,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Name",
+        "CurrentValue": "Project1Updated",
+        "OriginalValue": "Project1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "TenantId",
+        "CurrentValue": "Guid_1",
+        "OriginalValue": "Guid_1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": true
+      }
+    ],
+    "References": [
+      {
+        "Name": "Tenant",
+        "Target": "Audentity.Tests.Tracking.Data.Tenant",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_1"
+          }
+        ],
+        "IsCollection": false
+      },
+      {
+        "Name": "Users",
+        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_5"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Users",
+        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_6"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Users",
+        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_7"
+          }
+        ],
+        "IsCollection": true
+      }
+    ],
+    "State": "Modified",
+    "IsOwned": false
+  },
+  {
+    "Name": "Audentity.Tests.Tracking.Data.User",
+    "Properties": [
+      {
+        "Name": "Id",
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
+        "IsPrimaryKey": true,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Name",
+        "CurrentValue": "User1Updated",
+        "OriginalValue": "User1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "TenantId",
+        "CurrentValue": "Guid_1",
+        "OriginalValue": "Guid_1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": true
+      }
+    ],
+    "References": [
+      {
+        "Name": "Address",
+        "Target": "Audentity.Tests.Tracking.Data.Address",
+        "Links": [
+          {
+            "Name": "UserId",
+            "Value": "Guid_5"
+          }
+        ],
+        "IsCollection": false
+      },
+      {
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_2"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_3"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_4"
+          }
+        ],
+        "IsCollection": true
+      }
+    ],
+    "State": "Modified",
+    "IsOwned": false
+  },
+  {
+    "Name": "Audentity.Tests.Tracking.Data.Address",
+    "Properties": [
+      {
+        "Name": "UserId",
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "City",
+        "CurrentValue": "City1",
+        "OriginalValue": "City1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "State",
+        "CurrentValue": "State1",
+        "OriginalValue": "State1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Street",
+        "CurrentValue": "Street1",
+        "OriginalValue": "Street1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [
+      {
+        "Name": "ZipCode",
+        "Target": "Audentity.Tests.Tracking.Data.ZipCode",
+        "Links": [
+          {
+            "Name": "AddressUserId",
+            "Value": "Guid_5"
+          }
+        ],
+        "IsCollection": false
+      }
+    ],
+    "State": "Unchanged",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.Tracking.Data.ZipCode",
+    "Properties": [
+      {
+        "Name": "AddressUserId",
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "Value",
+        "CurrentValue": "Zip1",
+        "OriginalValue": "Zip1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [],
+    "State": "Unchanged",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.Tracking.Data.Project",
+    "Properties": [
+      {
+        "Name": "Id",
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
+        "IsPrimaryKey": true,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Name",
+        "CurrentValue": "Project2",
+        "OriginalValue": "Project2",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "TenantId",
+        "CurrentValue": "Guid_1",
+        "OriginalValue": "Guid_1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": true
+      }
+    ],
+    "References": [
+      {
+        "Name": "Tenant",
+        "Target": "Audentity.Tests.Tracking.Data.Tenant",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_1"
+          }
+        ],
+        "IsCollection": false
+      },
+      {
+        "Name": "Users",
+        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_5"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Users",
+        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_6"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Users",
+        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_7"
+          }
+        ],
+        "IsCollection": true
+      }
+    ],
+    "State": "Unchanged",
+    "IsOwned": false
+  },
+  {
+    "Name": "Audentity.Tests.Tracking.Data.User",
+    "Properties": [
+      {
+        "Name": "Id",
+        "CurrentValue": "Guid_6",
+        "OriginalValue": "Guid_6",
+        "IsPrimaryKey": true,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Name",
+        "CurrentValue": "User2",
+        "OriginalValue": "User2",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "TenantId",
+        "CurrentValue": "Guid_1",
+        "OriginalValue": "Guid_1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": true
+      }
+    ],
+    "References": [
+      {
+        "Name": "Address",
+        "Target": "Audentity.Tests.Tracking.Data.Address",
+        "Links": [
+          {
+            "Name": "UserId",
+            "Value": "Guid_6"
+          }
+        ],
+        "IsCollection": false
+      },
+      {
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_2"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_3"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_4"
+          }
+        ],
+        "IsCollection": true
+      }
+    ],
+    "State": "Unchanged",
+    "IsOwned": false
+  },
+  {
+    "Name": "Audentity.Tests.Tracking.Data.Address",
+    "Properties": [
+      {
+        "Name": "UserId",
+        "CurrentValue": "Guid_6",
+        "OriginalValue": "Guid_6",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "City",
+        "CurrentValue": "City2",
+        "OriginalValue": "City2",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "State",
+        "CurrentValue": "State2",
+        "OriginalValue": "State2",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Street",
+        "CurrentValue": "Street2",
+        "OriginalValue": "Street2",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [
+      {
+        "Name": "ZipCode",
+        "Target": "Audentity.Tests.Tracking.Data.ZipCode",
+        "Links": [
+          {
+            "Name": "AddressUserId",
+            "Value": "Guid_6"
+          }
+        ],
+        "IsCollection": false
+      }
+    ],
+    "State": "Unchanged",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.Tracking.Data.ZipCode",
+    "Properties": [
+      {
+        "Name": "AddressUserId",
+        "CurrentValue": "Guid_6",
+        "OriginalValue": "Guid_6",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "Value",
+        "CurrentValue": "Zip2",
+        "OriginalValue": "Zip2",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [],
+    "State": "Unchanged",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.Tracking.Data.Project",
+    "Properties": [
+      {
+        "Name": "Id",
+        "CurrentValue": "Guid_4",
+        "OriginalValue": "Guid_4",
+        "IsPrimaryKey": true,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Name",
+        "CurrentValue": "Project3",
+        "OriginalValue": "Project3",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "TenantId",
+        "CurrentValue": "Guid_1",
+        "OriginalValue": "Guid_1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": true
+      }
+    ],
+    "References": [
+      {
+        "Name": "Tenant",
+        "Target": "Audentity.Tests.Tracking.Data.Tenant",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_1"
+          }
+        ],
+        "IsCollection": false
+      },
+      {
+        "Name": "Users",
+        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_5"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Users",
+        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_6"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Users",
+        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_7"
+          }
+        ],
+        "IsCollection": true
+      }
+    ],
+    "State": "Unchanged",
+    "IsOwned": false
+  },
+  {
+    "Name": "Audentity.Tests.Tracking.Data.User",
+    "Properties": [
+      {
+        "Name": "Id",
+        "CurrentValue": "Guid_7",
+        "OriginalValue": "Guid_7",
+        "IsPrimaryKey": true,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Name",
+        "CurrentValue": "User3",
+        "OriginalValue": "User3",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "TenantId",
+        "CurrentValue": "Guid_1",
+        "OriginalValue": "Guid_1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": true
+      }
+    ],
+    "References": [
+      {
+        "Name": "Address",
+        "Target": "Audentity.Tests.Tracking.Data.Address",
+        "Links": [
+          {
+            "Name": "UserId",
+            "Value": "Guid_7"
+          }
+        ],
+        "IsCollection": false
+      },
+      {
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_2"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_3"
+          }
+        ],
+        "IsCollection": true
+      },
+      {
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Links": [
+          {
+            "Name": "Id",
+            "Value": "Guid_4"
+          }
+        ],
+        "IsCollection": true
+      }
+    ],
+    "State": "Unchanged",
+    "IsOwned": false
+  },
+  {
+    "Name": "Audentity.Tests.Tracking.Data.Address",
+    "Properties": [
+      {
+        "Name": "UserId",
+        "CurrentValue": "Guid_7",
+        "OriginalValue": "Guid_7",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "City",
+        "CurrentValue": "City3",
+        "OriginalValue": "City3",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "State",
+        "CurrentValue": "State3",
+        "OriginalValue": "State3",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Street",
+        "CurrentValue": "Street3",
+        "OriginalValue": "Street3",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [
+      {
+        "Name": "ZipCode",
+        "Target": "Audentity.Tests.Tracking.Data.ZipCode",
+        "Links": [
+          {
+            "Name": "AddressUserId",
+            "Value": "Guid_7"
+          }
+        ],
+        "IsCollection": false
+      }
+    ],
+    "State": "Unchanged",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.Tracking.Data.ZipCode",
+    "Properties": [
+      {
+        "Name": "AddressUserId",
+        "CurrentValue": "Guid_7",
+        "OriginalValue": "Guid_7",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "Value",
+        "CurrentValue": "Zip3",
+        "OriginalValue": "Zip3",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [],
+    "State": "Unchanged",
+    "IsOwned": true
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "Name": "ProjectsId",
+        "CurrentValue": "Guid_2",
+        "OriginalValue": "Guid_2",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "UsersId",
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      }
+    ],
+    "References": [],
+    "State": "Unchanged",
+    "IsOwned": false
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "Name": "ProjectsId",
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "UsersId",
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      }
+    ],
+    "References": [],
+    "State": "Unchanged",
+    "IsOwned": false
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "Name": "ProjectsId",
+        "CurrentValue": "Guid_2",
+        "OriginalValue": "Guid_2",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "UsersId",
+        "CurrentValue": "Guid_6",
+        "OriginalValue": "Guid_6",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      }
+    ],
+    "References": [],
+    "State": "Unchanged",
+    "IsOwned": false
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "Name": "ProjectsId",
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "UsersId",
+        "CurrentValue": "Guid_6",
+        "OriginalValue": "Guid_6",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      }
+    ],
+    "References": [],
+    "State": "Unchanged",
+    "IsOwned": false
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "Name": "ProjectsId",
+        "CurrentValue": "Guid_4",
+        "OriginalValue": "Guid_4",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "UsersId",
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      }
+    ],
+    "References": [],
+    "State": "Unchanged",
+    "IsOwned": false
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "Name": "ProjectsId",
+        "CurrentValue": "Guid_4",
+        "OriginalValue": "Guid_4",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "UsersId",
+        "CurrentValue": "Guid_6",
+        "OriginalValue": "Guid_6",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      }
+    ],
+    "References": [],
+    "State": "Unchanged",
+    "IsOwned": false
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "Name": "ProjectsId",
+        "CurrentValue": "Guid_2",
+        "OriginalValue": "Guid_2",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "UsersId",
+        "CurrentValue": "Guid_7",
+        "OriginalValue": "Guid_7",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      }
+    ],
+    "References": [],
+    "State": "Unchanged",
+    "IsOwned": false
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "Name": "ProjectsId",
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "UsersId",
+        "CurrentValue": "Guid_7",
+        "OriginalValue": "Guid_7",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      }
+    ],
+    "References": [],
+    "State": "Unchanged",
+    "IsOwned": false
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "Name": "ProjectsId",
+        "CurrentValue": "Guid_4",
+        "OriginalValue": "Guid_4",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "UsersId",
+        "CurrentValue": "Guid_7",
+        "OriginalValue": "Guid_7",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      }
+    ],
+    "References": [],
+    "State": "Unchanged",
+    "IsOwned": false
+  }
+]
