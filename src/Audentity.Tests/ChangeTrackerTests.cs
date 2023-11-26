@@ -39,7 +39,7 @@ public class ChangeTrackerTests
     public Task Traces_Add_Collects()
     {
         _database.Add(_tenant);
-        IEnumerable<Trace> traces = _database.ChangeTracker.Traces();
+        IEnumerable<Trace> traces = _database.ChangeTracker.Entries().ToTraces();
         return Verify(traces);
     }
 
@@ -51,7 +51,7 @@ public class ChangeTrackerTests
         _tenant.Name += "Updated";
         _tenant.Users.First().Name += "Updated";
         _tenant.Projects.First().Name += "Updated";
-        IEnumerable<Trace> traces = _database.ChangeTracker.Traces();
+        IEnumerable<Trace> traces = _database.ChangeTracker.Entries().ToTraces();
         return Verify(traces);
     }
 
@@ -61,7 +61,7 @@ public class ChangeTrackerTests
         _database.Add(_tenant);
         _database.SaveChanges();
         _database.Remove(_tenant);
-        IEnumerable<Trace> traces = _database.ChangeTracker.Traces();
+        IEnumerable<Trace> traces = _database.ChangeTracker.Entries().ToTraces();
         return Verify(traces);
     }
 }

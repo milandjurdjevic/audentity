@@ -56,6 +56,6 @@ public class Executor
     [Benchmark]
     public void TrackAdded()
     {
-        _ = _database.ChangeTracker.Traces();
+        _ = _database.ChangeTracker.Entries().ToTraces();
     }
 }

@@ -9,9 +9,9 @@ namespace Audentity;
 
 public static class Extensions
 {
-    public static IReadOnlyCollection<Trace> Traces(this ChangeTracker tracker)
+    public static IReadOnlyCollection<Trace> ToTraces(this IEnumerable<EntityEntry> entries)
     {
-        return tracker.Entries().Select(ToTrace).ToImmutableList();
+        return entries.Select(ToTrace).ToImmutableList();
     }
 
     private static Property ToProperty(PropertyEntry entry)
