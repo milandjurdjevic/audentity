@@ -38,6 +38,10 @@ public class Database : DbContext
             builder.OwnsOne(u => u.Address, addressBuilder =>
             {
                 addressBuilder.OwnsOne(a => a.ZipCode);
+                addressBuilder.OwnsOne(a => a.Building, buildingBuilder =>
+                {
+                    buildingBuilder.OwnsOne(b => b.Number);
+                });
             });
         }
     }

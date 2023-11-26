@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Audentity;
 
-public static class Extensions
+public static class EntryExtensions
 {
-    public static IReadOnlyCollection<Trace> ToTraces(this IEnumerable<EntityEntry> entries)
+    public static IEnumerable<Trace> ToTraces(this IEnumerable<EntityEntry> entries)
     {
-        return entries.Select(ToTrace).ToImmutableList();
+        return entries.Select(ToTrace);
     }
 
     private static Property ToProperty(PropertyEntry entry)

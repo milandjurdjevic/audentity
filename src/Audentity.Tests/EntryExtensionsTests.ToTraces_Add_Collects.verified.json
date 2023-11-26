@@ -11,7 +11,7 @@
       },
       {
         "Name": "Name",
-        "CurrentValue": "Tenant1Updated",
+        "CurrentValue": "Tenant1",
         "OriginalValue": "Tenant1",
         "IsPrimaryKey": false,
         "IsForeignKey": false
@@ -85,7 +85,7 @@
         "IsCollection": true
       }
     ],
-    "State": "Modified",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -100,7 +100,7 @@
       },
       {
         "Name": "Name",
-        "CurrentValue": "Project1Updated",
+        "CurrentValue": "Project1",
         "OriginalValue": "Project1",
         "IsPrimaryKey": false,
         "IsForeignKey": false
@@ -159,7 +159,7 @@
         "IsCollection": true
       }
     ],
-    "State": "Modified",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -174,7 +174,7 @@
       },
       {
         "Name": "Name",
-        "CurrentValue": "User1Updated",
+        "CurrentValue": "User1",
         "OriginalValue": "User1",
         "IsPrimaryKey": false,
         "IsForeignKey": false
@@ -233,7 +233,7 @@
         "IsCollection": true
       }
     ],
-    "State": "Modified",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -270,6 +270,17 @@
     ],
     "References": [
       {
+        "Name": "Building",
+        "Target": "Audentity.Tests.Building",
+        "Links": [
+          {
+            "Name": "AddressUserId",
+            "Value": "Guid_5"
+          }
+        ],
+        "IsCollection": false
+      },
+      {
         "Name": "ZipCode",
         "Target": "Audentity.Tests.ZipCode",
         "Links": [
@@ -281,7 +292,77 @@
         "IsCollection": false
       }
     ],
-    "State": "Unchanged",
+    "State": "Added",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.Building",
+    "Properties": [
+      {
+        "Name": "AddressUserId",
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "Apartment",
+        "CurrentValue": "11",
+        "OriginalValue": "11",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Floor",
+        "CurrentValue": "1",
+        "OriginalValue": "1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [
+      {
+        "Name": "Number",
+        "Target": "Audentity.Tests.BuildingNumber",
+        "Links": [
+          {
+            "Name": "BuildingAddressUserId",
+            "Value": "Guid_5"
+          }
+        ],
+        "IsCollection": false
+      }
+    ],
+    "State": "Added",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.BuildingNumber",
+    "Properties": [
+      {
+        "Name": "BuildingAddressUserId",
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "Prefix",
+        "CurrentValue": "1",
+        "OriginalValue": "1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Suffix",
+        "CurrentValue": "A",
+        "OriginalValue": "A",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [],
+    "State": "Added",
     "IsOwned": true
   },
   {
@@ -303,7 +384,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": true
   },
   {
@@ -377,7 +458,7 @@
         "IsCollection": true
       }
     ],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -451,7 +532,7 @@
         "IsCollection": true
       }
     ],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -488,6 +569,17 @@
     ],
     "References": [
       {
+        "Name": "Building",
+        "Target": "Audentity.Tests.Building",
+        "Links": [
+          {
+            "Name": "AddressUserId",
+            "Value": "Guid_6"
+          }
+        ],
+        "IsCollection": false
+      },
+      {
         "Name": "ZipCode",
         "Target": "Audentity.Tests.ZipCode",
         "Links": [
@@ -499,7 +591,77 @@
         "IsCollection": false
       }
     ],
-    "State": "Unchanged",
+    "State": "Added",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.Building",
+    "Properties": [
+      {
+        "Name": "AddressUserId",
+        "CurrentValue": "Guid_6",
+        "OriginalValue": "Guid_6",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "Apartment",
+        "CurrentValue": "12",
+        "OriginalValue": "12",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Floor",
+        "CurrentValue": "2",
+        "OriginalValue": "2",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [
+      {
+        "Name": "Number",
+        "Target": "Audentity.Tests.BuildingNumber",
+        "Links": [
+          {
+            "Name": "BuildingAddressUserId",
+            "Value": "Guid_6"
+          }
+        ],
+        "IsCollection": false
+      }
+    ],
+    "State": "Added",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.BuildingNumber",
+    "Properties": [
+      {
+        "Name": "BuildingAddressUserId",
+        "CurrentValue": "Guid_6",
+        "OriginalValue": "Guid_6",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "Prefix",
+        "CurrentValue": "2",
+        "OriginalValue": "2",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Suffix",
+        "CurrentValue": "A",
+        "OriginalValue": "A",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [],
+    "State": "Added",
     "IsOwned": true
   },
   {
@@ -521,7 +683,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": true
   },
   {
@@ -595,7 +757,7 @@
         "IsCollection": true
       }
     ],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -669,7 +831,7 @@
         "IsCollection": true
       }
     ],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -706,6 +868,17 @@
     ],
     "References": [
       {
+        "Name": "Building",
+        "Target": "Audentity.Tests.Building",
+        "Links": [
+          {
+            "Name": "AddressUserId",
+            "Value": "Guid_7"
+          }
+        ],
+        "IsCollection": false
+      },
+      {
         "Name": "ZipCode",
         "Target": "Audentity.Tests.ZipCode",
         "Links": [
@@ -717,7 +890,77 @@
         "IsCollection": false
       }
     ],
-    "State": "Unchanged",
+    "State": "Added",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.Building",
+    "Properties": [
+      {
+        "Name": "AddressUserId",
+        "CurrentValue": "Guid_7",
+        "OriginalValue": "Guid_7",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "Apartment",
+        "CurrentValue": "13",
+        "OriginalValue": "13",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Floor",
+        "CurrentValue": "3",
+        "OriginalValue": "3",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [
+      {
+        "Name": "Number",
+        "Target": "Audentity.Tests.BuildingNumber",
+        "Links": [
+          {
+            "Name": "BuildingAddressUserId",
+            "Value": "Guid_7"
+          }
+        ],
+        "IsCollection": false
+      }
+    ],
+    "State": "Added",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.BuildingNumber",
+    "Properties": [
+      {
+        "Name": "BuildingAddressUserId",
+        "CurrentValue": "Guid_7",
+        "OriginalValue": "Guid_7",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "Prefix",
+        "CurrentValue": "3",
+        "OriginalValue": "3",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Suffix",
+        "CurrentValue": "A",
+        "OriginalValue": "A",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [],
+    "State": "Added",
     "IsOwned": true
   },
   {
@@ -739,7 +982,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": true
   },
   {
@@ -761,7 +1004,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -783,7 +1026,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -805,7 +1048,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -827,7 +1070,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -849,7 +1092,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -871,7 +1114,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -893,7 +1136,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -915,7 +1158,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -937,7 +1180,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   }
 ]

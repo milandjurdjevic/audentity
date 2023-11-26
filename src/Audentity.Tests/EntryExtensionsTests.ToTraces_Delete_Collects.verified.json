@@ -545,6 +545,17 @@
     ],
     "References": [
       {
+        "Name": "Building",
+        "Target": "Audentity.Tests.Building",
+        "Links": [
+          {
+            "Name": "AddressUserId",
+            "Value": "Guid_3"
+          }
+        ],
+        "IsCollection": false
+      },
+      {
         "Name": "ZipCode",
         "Target": "Audentity.Tests.ZipCode",
         "Links": [
@@ -556,6 +567,76 @@
         "IsCollection": false
       }
     ],
+    "State": "Unchanged",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.Building",
+    "Properties": [
+      {
+        "Name": "AddressUserId",
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "Apartment",
+        "CurrentValue": "11",
+        "OriginalValue": "11",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Floor",
+        "CurrentValue": "1",
+        "OriginalValue": "1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [
+      {
+        "Name": "Number",
+        "Target": "Audentity.Tests.BuildingNumber",
+        "Links": [
+          {
+            "Name": "BuildingAddressUserId",
+            "Value": "Guid_3"
+          }
+        ],
+        "IsCollection": false
+      }
+    ],
+    "State": "Unchanged",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.BuildingNumber",
+    "Properties": [
+      {
+        "Name": "BuildingAddressUserId",
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "Prefix",
+        "CurrentValue": "1",
+        "OriginalValue": "1",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Suffix",
+        "CurrentValue": "A",
+        "OriginalValue": "A",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [],
     "State": "Unchanged",
     "IsOwned": true
   },
@@ -615,6 +696,17 @@
     ],
     "References": [
       {
+        "Name": "Building",
+        "Target": "Audentity.Tests.Building",
+        "Links": [
+          {
+            "Name": "AddressUserId",
+            "Value": "Guid_4"
+          }
+        ],
+        "IsCollection": false
+      },
+      {
         "Name": "ZipCode",
         "Target": "Audentity.Tests.ZipCode",
         "Links": [
@@ -626,6 +718,76 @@
         "IsCollection": false
       }
     ],
+    "State": "Unchanged",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.Building",
+    "Properties": [
+      {
+        "Name": "AddressUserId",
+        "CurrentValue": "Guid_4",
+        "OriginalValue": "Guid_4",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "Apartment",
+        "CurrentValue": "12",
+        "OriginalValue": "12",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Floor",
+        "CurrentValue": "2",
+        "OriginalValue": "2",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [
+      {
+        "Name": "Number",
+        "Target": "Audentity.Tests.BuildingNumber",
+        "Links": [
+          {
+            "Name": "BuildingAddressUserId",
+            "Value": "Guid_4"
+          }
+        ],
+        "IsCollection": false
+      }
+    ],
+    "State": "Unchanged",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.BuildingNumber",
+    "Properties": [
+      {
+        "Name": "BuildingAddressUserId",
+        "CurrentValue": "Guid_4",
+        "OriginalValue": "Guid_4",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "Prefix",
+        "CurrentValue": "2",
+        "OriginalValue": "2",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Suffix",
+        "CurrentValue": "A",
+        "OriginalValue": "A",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [],
     "State": "Unchanged",
     "IsOwned": true
   },
@@ -685,6 +847,17 @@
     ],
     "References": [
       {
+        "Name": "Building",
+        "Target": "Audentity.Tests.Building",
+        "Links": [
+          {
+            "Name": "AddressUserId",
+            "Value": "Guid_5"
+          }
+        ],
+        "IsCollection": false
+      },
+      {
         "Name": "ZipCode",
         "Target": "Audentity.Tests.ZipCode",
         "Links": [
@@ -696,6 +869,76 @@
         "IsCollection": false
       }
     ],
+    "State": "Unchanged",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.Building",
+    "Properties": [
+      {
+        "Name": "AddressUserId",
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "Apartment",
+        "CurrentValue": "13",
+        "OriginalValue": "13",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Floor",
+        "CurrentValue": "3",
+        "OriginalValue": "3",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [
+      {
+        "Name": "Number",
+        "Target": "Audentity.Tests.BuildingNumber",
+        "Links": [
+          {
+            "Name": "BuildingAddressUserId",
+            "Value": "Guid_5"
+          }
+        ],
+        "IsCollection": false
+      }
+    ],
+    "State": "Unchanged",
+    "IsOwned": true
+  },
+  {
+    "Name": "Audentity.Tests.BuildingNumber",
+    "Properties": [
+      {
+        "Name": "BuildingAddressUserId",
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
+        "IsPrimaryKey": true,
+        "IsForeignKey": true
+      },
+      {
+        "Name": "Prefix",
+        "CurrentValue": "3",
+        "OriginalValue": "3",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      },
+      {
+        "Name": "Suffix",
+        "CurrentValue": "A",
+        "OriginalValue": "A",
+        "IsPrimaryKey": false,
+        "IsForeignKey": false
+      }
+    ],
+    "References": [],
     "State": "Unchanged",
     "IsOwned": true
   },
