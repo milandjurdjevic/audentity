@@ -58,7 +58,7 @@ public class Executor
     {
         _ = _database.ChangeTracker
             .Entries()
-            .ToTraces();
+            .Select(Trace.Create);
     }
 
     [Benchmark]
@@ -66,8 +66,8 @@ public class Executor
     {
         _ = _database.ChangeTracker
             .Entries()
-            .ToTraces()
-            .AggregateOwned();
+            .Select(Trace.Create)
+            .Link();
     }
 }
 //

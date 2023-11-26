@@ -6,7 +6,7 @@ namespace Audentity;
 
 public static class TraceExtensions
 {
-    public static IEnumerable<Trace> AggregateOwned(this IEnumerable<Trace> traces)
+    public static IEnumerable<Trace> Link(this IEnumerable<Trace> traces)
     {
         traces = traces.ToImmutableList();
 

@@ -3,18 +3,17 @@ using System.Collections.Immutable;
 namespace Audentity.Tests;
 
 [UsesVerify]
-public class TraceExtensionsTests
+public class TraceLinkTests
 {
     private readonly Database _database = new();
 
     [Fact]
-    public Task AggregateOwned_AggregatesOwnedTraceProperties()
+    public Task Link_LinksOwnedTraceProperties()
     {
         _database.AddRange(Seeding.Seed());
-        IEnumerable<Trace> traces = _database.ChangeTracker
-            .Entries()
-            .ToTraces()
-            .AggregateOwned()
+        IEnumerable<Trace> traces = _database.ChangeTracker.Entries()
+            .Select(Trace.Create)
+            .Link()
             .ToImmutableList();
 
         return Verify(traces);
