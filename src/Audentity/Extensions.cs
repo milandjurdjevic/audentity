@@ -1,13 +1,17 @@
+using System.Collections.Immutable;
+
+using Audentity.Tracking;
+
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Audentity.Tracking;
+namespace Audentity;
 
 public static class Extensions
 {
-    public static IEnumerable<Trace> Track(this ChangeTracker tracker)
+    public static IReadOnlyCollection<Trace> Traces(this ChangeTracker tracker)
     {
-        return tracker.Entries().Select(ToTrace);
+        return tracker.Entries().Select(ToTrace).ToImmutableList();
     }
 
     private static Property ToProperty(PropertyEntry entry)
@@ -27,8 +31,8 @@ public static class Extensions
         {
             State = entity.State,
             IsOwned = entity.Metadata.IsOwned(),
-            Properties = entity.Properties.Select(ToProperty),
-            References = entity.Navigations.SelectMany(ToReference)
+            Properties = entity.Properties.Select(ToProperty).ToImmutableList(),
+            References = entity.Navigations.SelectMany(ToReference).ToImmutableList()
         };
     }
 
@@ -47,6 +51,7 @@ public static class Extensions
                     Links = reference.TargetEntry.Properties
                         .Where(p => p.Metadata.IsPrimaryKey())
                         .Select(p => new Link(p.Metadata.Name, p.CurrentValue?.ToString() ?? String.Empty))
+                        .ToImmutableList()
                 };
                 break;
 
@@ -61,7 +66,7 @@ public static class Extensions
                             {
                                 string? value = p.PropertyInfo?.GetValue(entity)?.ToString();
                                 return new Link(p.Name, value ?? String.Empty);
-                            })
+                            }).ToImmutableList()
                     };
                 }
 

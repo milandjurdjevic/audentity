@@ -1,9 +1,9 @@
-namespace Audentity.Tests.Tracking.Data;
+namespace Audentity.Benchmarks;
 
-public class User
+public class Tenant
 {
     public Guid Id { get; set; }
     public string Name { get; set; } = String.Empty;
-    public Address? Address { get; set; } = new();
+    public IEnumerable<User> Users { get; set; } = Enumerable.Empty<User>();
     public IEnumerable<Project> Projects { get; set; } = Enumerable.Empty<Project>();
 }

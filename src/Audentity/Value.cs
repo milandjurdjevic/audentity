@@ -1,4 +1,4 @@
-namespace Audentity.Tracking;
+namespace Audentity;
 
 public record Value(string? Current, string? Original)
 {

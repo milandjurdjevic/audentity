@@ -1,4 +1,4 @@
-namespace Audentity.Tests.Tracking.Data;
+namespace Audentity.Tests;
 
 public record Address
 {

@@ -1,4 +1,4 @@
-namespace Audentity.Tracking;
+namespace Audentity;
 
 public record Property(string Name)
 {

@@ -8,5 +8,6 @@ public static class Module
     public static void Initialize()
     {
         VerifierSettings.UseStrictJson();
+        VerifierSettings.DontIgnoreEmptyCollections();
     }
 }

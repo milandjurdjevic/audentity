@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Audentity.Tests.Tracking.Data;
+namespace Audentity.Tests;
 
 public class Database : DbContext
 {

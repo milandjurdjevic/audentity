@@ -1,6 +1,6 @@
 ﻿[
   {
-    "Name": "Audentity.Tests.Tracking.Data.Tenant",
+    "Name": "Audentity.Tests.Tenant",
     "Properties": [
       {
         "Name": "Id",
@@ -11,7 +11,7 @@
       },
       {
         "Name": "Name",
-        "CurrentValue": "Tenant1Updated",
+        "CurrentValue": "Tenant1",
         "OriginalValue": "Tenant1",
         "IsPrimaryKey": false,
         "IsForeignKey": false
@@ -20,7 +20,7 @@
     "References": [
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
@@ -31,7 +31,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
@@ -42,7 +42,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
@@ -53,7 +53,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
@@ -64,7 +64,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
@@ -75,7 +75,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
@@ -85,11 +85,11 @@
         "IsCollection": true
       }
     ],
-    "State": "Modified",
+    "State": "Added",
     "IsOwned": false
   },
   {
-    "Name": "Audentity.Tests.Tracking.Data.Project",
+    "Name": "Audentity.Tests.Project",
     "Properties": [
       {
         "Name": "Id",
@@ -100,7 +100,7 @@
       },
       {
         "Name": "Name",
-        "CurrentValue": "Project1Updated",
+        "CurrentValue": "Project1",
         "OriginalValue": "Project1",
         "IsPrimaryKey": false,
         "IsForeignKey": false
@@ -116,7 +116,7 @@
     "References": [
       {
         "Name": "Tenant",
-        "Target": "Audentity.Tests.Tracking.Data.Tenant",
+        "Target": "Audentity.Tests.Tenant",
         "Links": [
           {
             "Name": "Id",
@@ -127,7 +127,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
@@ -138,7 +138,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
@@ -149,7 +149,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
@@ -159,11 +159,11 @@
         "IsCollection": true
       }
     ],
-    "State": "Modified",
+    "State": "Added",
     "IsOwned": false
   },
   {
-    "Name": "Audentity.Tests.Tracking.Data.User",
+    "Name": "Audentity.Tests.User",
     "Properties": [
       {
         "Name": "Id",
@@ -174,7 +174,7 @@
       },
       {
         "Name": "Name",
-        "CurrentValue": "User1Updated",
+        "CurrentValue": "User1",
         "OriginalValue": "User1",
         "IsPrimaryKey": false,
         "IsForeignKey": false
@@ -190,7 +190,7 @@
     "References": [
       {
         "Name": "Address",
-        "Target": "Audentity.Tests.Tracking.Data.Address",
+        "Target": "Audentity.Tests.Address",
         "Links": [
           {
             "Name": "UserId",
@@ -201,7 +201,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
@@ -212,7 +212,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
@@ -223,7 +223,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
@@ -233,11 +233,11 @@
         "IsCollection": true
       }
     ],
-    "State": "Modified",
+    "State": "Added",
     "IsOwned": false
   },
   {
-    "Name": "Audentity.Tests.Tracking.Data.Address",
+    "Name": "Audentity.Tests.Address",
     "Properties": [
       {
         "Name": "UserId",
@@ -271,7 +271,7 @@
     "References": [
       {
         "Name": "ZipCode",
-        "Target": "Audentity.Tests.Tracking.Data.ZipCode",
+        "Target": "Audentity.Tests.ZipCode",
         "Links": [
           {
             "Name": "AddressUserId",
@@ -281,11 +281,11 @@
         "IsCollection": false
       }
     ],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": true
   },
   {
-    "Name": "Audentity.Tests.Tracking.Data.ZipCode",
+    "Name": "Audentity.Tests.ZipCode",
     "Properties": [
       {
         "Name": "AddressUserId",
@@ -303,11 +303,11 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": true
   },
   {
-    "Name": "Audentity.Tests.Tracking.Data.Project",
+    "Name": "Audentity.Tests.Project",
     "Properties": [
       {
         "Name": "Id",
@@ -334,7 +334,7 @@
     "References": [
       {
         "Name": "Tenant",
-        "Target": "Audentity.Tests.Tracking.Data.Tenant",
+        "Target": "Audentity.Tests.Tenant",
         "Links": [
           {
             "Name": "Id",
@@ -345,7 +345,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
@@ -356,7 +356,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
@@ -367,7 +367,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
@@ -377,11 +377,11 @@
         "IsCollection": true
       }
     ],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
-    "Name": "Audentity.Tests.Tracking.Data.User",
+    "Name": "Audentity.Tests.User",
     "Properties": [
       {
         "Name": "Id",
@@ -408,7 +408,7 @@
     "References": [
       {
         "Name": "Address",
-        "Target": "Audentity.Tests.Tracking.Data.Address",
+        "Target": "Audentity.Tests.Address",
         "Links": [
           {
             "Name": "UserId",
@@ -419,7 +419,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
@@ -430,7 +430,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
@@ -441,7 +441,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
@@ -451,11 +451,11 @@
         "IsCollection": true
       }
     ],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
-    "Name": "Audentity.Tests.Tracking.Data.Address",
+    "Name": "Audentity.Tests.Address",
     "Properties": [
       {
         "Name": "UserId",
@@ -489,7 +489,7 @@
     "References": [
       {
         "Name": "ZipCode",
-        "Target": "Audentity.Tests.Tracking.Data.ZipCode",
+        "Target": "Audentity.Tests.ZipCode",
         "Links": [
           {
             "Name": "AddressUserId",
@@ -499,11 +499,11 @@
         "IsCollection": false
       }
     ],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": true
   },
   {
-    "Name": "Audentity.Tests.Tracking.Data.ZipCode",
+    "Name": "Audentity.Tests.ZipCode",
     "Properties": [
       {
         "Name": "AddressUserId",
@@ -521,11 +521,11 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": true
   },
   {
-    "Name": "Audentity.Tests.Tracking.Data.Project",
+    "Name": "Audentity.Tests.Project",
     "Properties": [
       {
         "Name": "Id",
@@ -552,7 +552,7 @@
     "References": [
       {
         "Name": "Tenant",
-        "Target": "Audentity.Tests.Tracking.Data.Tenant",
+        "Target": "Audentity.Tests.Tenant",
         "Links": [
           {
             "Name": "Id",
@@ -563,7 +563,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
@@ -574,7 +574,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
@@ -585,7 +585,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.Tracking.Data.User",
+        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
@@ -595,11 +595,11 @@
         "IsCollection": true
       }
     ],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
-    "Name": "Audentity.Tests.Tracking.Data.User",
+    "Name": "Audentity.Tests.User",
     "Properties": [
       {
         "Name": "Id",
@@ -626,7 +626,7 @@
     "References": [
       {
         "Name": "Address",
-        "Target": "Audentity.Tests.Tracking.Data.Address",
+        "Target": "Audentity.Tests.Address",
         "Links": [
           {
             "Name": "UserId",
@@ -637,7 +637,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
@@ -648,7 +648,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
@@ -659,7 +659,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Tracking.Data.Project",
+        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
@@ -669,11 +669,11 @@
         "IsCollection": true
       }
     ],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
-    "Name": "Audentity.Tests.Tracking.Data.Address",
+    "Name": "Audentity.Tests.Address",
     "Properties": [
       {
         "Name": "UserId",
@@ -707,7 +707,7 @@
     "References": [
       {
         "Name": "ZipCode",
-        "Target": "Audentity.Tests.Tracking.Data.ZipCode",
+        "Target": "Audentity.Tests.ZipCode",
         "Links": [
           {
             "Name": "AddressUserId",
@@ -717,11 +717,11 @@
         "IsCollection": false
       }
     ],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": true
   },
   {
-    "Name": "Audentity.Tests.Tracking.Data.ZipCode",
+    "Name": "Audentity.Tests.ZipCode",
     "Properties": [
       {
         "Name": "AddressUserId",
@@ -739,7 +739,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": true
   },
   {
@@ -761,7 +761,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -783,7 +783,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -805,7 +805,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -827,7 +827,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -849,7 +849,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -871,7 +871,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -893,7 +893,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -915,7 +915,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   },
   {
@@ -937,7 +937,7 @@
       }
     ],
     "References": [],
-    "State": "Unchanged",
+    "State": "Added",
     "IsOwned": false
   }
 ]

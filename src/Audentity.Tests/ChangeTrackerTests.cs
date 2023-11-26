@@ -1,7 +1,4 @@
-using Audentity.Tests.Tracking.Data;
-using Audentity.Tracking;
-
-namespace Audentity.Tests.Tracking;
+namespace Audentity.Tests;
 
 [UsesVerify]
 public class ChangeTrackerTests
@@ -39,32 +36,32 @@ public class ChangeTrackerTests
     }
 
     [Fact]
-    public Task Track_Add_Collects()
+    public Task Traces_Add_Collects()
     {
         _database.Add(_tenant);
-        IEnumerable<Trace> traces = _database.ChangeTracker.Track();
+        IEnumerable<Trace> traces = _database.ChangeTracker.Traces();
         return Verify(traces);
     }
 
     [Fact]
-    public Task Track_Modify_Collects()
+    public Task Traces_Modify_Collects()
     {
         _database.Add(_tenant);
         _database.SaveChanges();
         _tenant.Name += "Updated";
         _tenant.Users.First().Name += "Updated";
         _tenant.Projects.First().Name += "Updated";
-        IEnumerable<Trace> traces = _database.ChangeTracker.Track();
+        IEnumerable<Trace> traces = _database.ChangeTracker.Traces();
         return Verify(traces);
     }
 
     [Fact]
-    public Task Track_Delete_Collects()
+    public Task Traces_Delete_Collects()
     {
         _database.Add(_tenant);
         _database.SaveChanges();
         _database.Remove(_tenant);
-        IEnumerable<Trace> traces = _database.ChangeTracker.Track();
+        IEnumerable<Trace> traces = _database.ChangeTracker.Traces();
         return Verify(traces);
     }
 }

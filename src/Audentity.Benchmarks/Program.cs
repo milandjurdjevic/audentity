@@ -1,3 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using Audentity.Benchmarks;
 
-Console.WriteLine("Hello, World!");
+using BenchmarkDotNet.Running;
+
+BenchmarkRunner.Run<Executor>();

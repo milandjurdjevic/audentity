@@ -1,4 +1,4 @@
-namespace Audentity.Tests.Tracking.Data;
+namespace Audentity.Benchmarks;
 
 public class Project
 {
