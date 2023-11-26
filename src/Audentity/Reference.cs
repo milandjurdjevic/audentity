@@ -6,15 +6,19 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Audentity.Tracking;
 
-public record Reference(string Name, string Target)
+public record Reference
 {
     public IReadOnlyCollection<Link> Links { get; init; } = ReadOnlyCollection<Link>.Empty;
     public bool IsCollection { get; init; }
+    public string Name { get; init; } = String.Empty;
+    public string Target { get; init; } = String.Empty;
 
     public static IEnumerable<Reference> Create(NavigationEntry navigation)
     {
-        Reference result = new(navigation.Metadata.Name, navigation.Metadata.TargetEntityType.Name)
+        Reference result = new()
         {
+            Name = navigation.Metadata.Name,
+            Target = navigation.Metadata.TargetEntityType.Name,
             IsCollection = navigation.Metadata.IsCollection
         };
 
