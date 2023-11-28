@@ -25,4 +25,31 @@ public record Trace
             References = entity.Navigations.SelectMany(Reference.Create).ToImmutableList()
         };
     }
+
+    public Trace Join(ImmutableList<Trace> traces)
+    {
+        IEnumerable<Property> joined = Join(References, traces).Where(p => !p.IsPrimaryKey);
+        return this with { Properties = Properties.Concat(joined).ToImmutableList() };
+    }
+
+    private static IEnumerable<Property> Join(IEnumerable<Reference> references, ImmutableList<Trace> traces)
+    {
+        foreach (Reference reference in references)
+        {
+            if (traces.SingleOrDefault(t => reference.IsReferencing(t)) is not { } trace)
+            {
+                continue;
+            }
+
+            foreach (Property property in trace.Properties)
+            {
+                yield return property.AsLinked(reference);
+            }
+
+            foreach (Property property in Join(trace.References, traces))
+            {
+                yield return property.AsLinked(reference);
+            }
+        }
+    }
 }

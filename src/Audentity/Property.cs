@@ -21,4 +21,9 @@ public record Property
             IsForeignKey = entry.Metadata.IsForeignKey()
         };
     }
+
+    public Property AsLinked(Reference reference)
+    {
+        return this with { Name = $"{reference.Name}/{Name}" };
+    }
 }
