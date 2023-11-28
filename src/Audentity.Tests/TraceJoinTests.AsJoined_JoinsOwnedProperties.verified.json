@@ -25,7 +25,6 @@
             "Value": "Guid_2"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -36,7 +35,6 @@
             "Value": "Guid_3"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -47,7 +45,6 @@
             "Value": "Guid_4"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -58,7 +55,6 @@
             "Value": "Guid_5"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       },
@@ -69,7 +65,6 @@
             "Value": "Guid_6"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       },
@@ -80,7 +75,6 @@
             "Value": "Guid_7"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       }
@@ -121,7 +115,6 @@
             "Value": "Guid_1"
           }
         ],
-        "IsCollection": false,
         "Name": "Tenant",
         "Target": "Audentity.Tests.Tenant"
       },
@@ -132,7 +125,6 @@
             "Value": "Guid_5"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       },
@@ -143,7 +135,6 @@
             "Value": "Guid_6"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       },
@@ -154,7 +145,6 @@
             "Value": "Guid_7"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       }
@@ -251,7 +241,6 @@
             "Value": "Guid_2"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -262,7 +251,6 @@
             "Value": "Guid_3"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -273,7 +261,6 @@
             "Value": "Guid_4"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       }
@@ -314,7 +301,6 @@
             "Value": "Guid_1"
           }
         ],
-        "IsCollection": false,
         "Name": "Tenant",
         "Target": "Audentity.Tests.Tenant"
       },
@@ -325,7 +311,6 @@
             "Value": "Guid_5"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       },
@@ -336,7 +321,6 @@
             "Value": "Guid_6"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       },
@@ -347,7 +331,6 @@
             "Value": "Guid_7"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       }
@@ -444,7 +427,6 @@
             "Value": "Guid_2"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -455,7 +437,6 @@
             "Value": "Guid_3"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -466,7 +447,6 @@
             "Value": "Guid_4"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       }
@@ -507,7 +487,6 @@
             "Value": "Guid_1"
           }
         ],
-        "IsCollection": false,
         "Name": "Tenant",
         "Target": "Audentity.Tests.Tenant"
       },
@@ -518,7 +497,6 @@
             "Value": "Guid_5"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       },
@@ -529,7 +507,6 @@
             "Value": "Guid_6"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       },
@@ -540,7 +517,6 @@
             "Value": "Guid_7"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       }
@@ -637,7 +613,6 @@
             "Value": "Guid_2"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -648,7 +623,6 @@
             "Value": "Guid_3"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -659,7 +633,6 @@
             "Value": "Guid_4"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       }
@@ -693,7 +666,6 @@
             "Value": "Guid_9"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -704,7 +676,6 @@
             "Value": "Guid_10"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -715,7 +686,6 @@
             "Value": "Guid_11"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -726,7 +696,6 @@
             "Value": "Guid_12"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       },
@@ -737,7 +706,6 @@
             "Value": "Guid_13"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       },
@@ -748,7 +716,6 @@
             "Value": "Guid_14"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       }
@@ -789,7 +756,6 @@
             "Value": "Guid_8"
           }
         ],
-        "IsCollection": false,
         "Name": "Tenant",
         "Target": "Audentity.Tests.Tenant"
       },
@@ -800,7 +766,6 @@
             "Value": "Guid_12"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       },
@@ -811,7 +776,6 @@
             "Value": "Guid_13"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       },
@@ -822,7 +786,6 @@
             "Value": "Guid_14"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       }
@@ -919,7 +882,6 @@
             "Value": "Guid_9"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -930,7 +892,6 @@
             "Value": "Guid_10"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -941,7 +902,6 @@
             "Value": "Guid_11"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       }
@@ -982,7 +942,6 @@
             "Value": "Guid_8"
           }
         ],
-        "IsCollection": false,
         "Name": "Tenant",
         "Target": "Audentity.Tests.Tenant"
       },
@@ -993,7 +952,6 @@
             "Value": "Guid_12"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       },
@@ -1004,7 +962,6 @@
             "Value": "Guid_13"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       },
@@ -1015,7 +972,6 @@
             "Value": "Guid_14"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       }
@@ -1112,7 +1068,6 @@
             "Value": "Guid_9"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -1123,7 +1078,6 @@
             "Value": "Guid_10"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -1134,7 +1088,6 @@
             "Value": "Guid_11"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       }
@@ -1175,7 +1128,6 @@
             "Value": "Guid_8"
           }
         ],
-        "IsCollection": false,
         "Name": "Tenant",
         "Target": "Audentity.Tests.Tenant"
       },
@@ -1186,7 +1138,6 @@
             "Value": "Guid_12"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       },
@@ -1197,7 +1148,6 @@
             "Value": "Guid_13"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       },
@@ -1208,7 +1158,6 @@
             "Value": "Guid_14"
           }
         ],
-        "IsCollection": true,
         "Name": "Users",
         "Target": "Audentity.Tests.User"
       }
@@ -1305,7 +1254,6 @@
             "Value": "Guid_9"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -1316,7 +1264,6 @@
             "Value": "Guid_10"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       },
@@ -1327,7 +1274,6 @@
             "Value": "Guid_11"
           }
         ],
-        "IsCollection": true,
         "Name": "Projects",
         "Target": "Audentity.Tests.Project"
       }
