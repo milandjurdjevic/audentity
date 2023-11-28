@@ -6,14 +6,12 @@
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
         "IsPrimaryKey": true,
-        "IsForeignKey": false,
         "Name": "Id"
       },
       {
         "CurrentValue": "Tenant1",
         "OriginalValue": "Tenant1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Name"
       }
     ],
@@ -90,21 +88,18 @@
         "CurrentValue": "Guid_2",
         "OriginalValue": "Guid_2",
         "IsPrimaryKey": true,
-        "IsForeignKey": false,
         "Name": "Id"
       },
       {
         "CurrentValue": "Project1",
         "OriginalValue": "Project1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
         "IsPrimaryKey": false,
-        "IsForeignKey": true,
         "Name": "TenantId"
       }
     ],
@@ -161,77 +156,66 @@
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
         "IsPrimaryKey": true,
-        "IsForeignKey": false,
         "Name": "Id"
       },
       {
         "CurrentValue": "User1",
         "OriginalValue": "User1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
         "IsPrimaryKey": false,
-        "IsForeignKey": true,
         "Name": "TenantId"
       },
       {
         "CurrentValue": "City1",
         "OriginalValue": "City1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/City"
       },
       {
         "CurrentValue": "State1",
         "OriginalValue": "State1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/State"
       },
       {
         "CurrentValue": "Street1",
         "OriginalValue": "Street1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Street"
       },
       {
         "CurrentValue": "11",
         "OriginalValue": "11",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Apartment"
       },
       {
         "CurrentValue": "1",
         "OriginalValue": "1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Floor"
       },
       {
         "CurrentValue": "1",
         "OriginalValue": "1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Number/Prefix"
       },
       {
         "CurrentValue": "A",
         "OriginalValue": "A",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Number/Suffix"
       },
       {
         "CurrentValue": "Zip1",
         "OriginalValue": "Zip1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/ZipCode/Value"
       }
     ],
@@ -278,21 +262,18 @@
         "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
         "IsPrimaryKey": true,
-        "IsForeignKey": false,
         "Name": "Id"
       },
       {
         "CurrentValue": "Project2",
         "OriginalValue": "Project2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
         "IsPrimaryKey": false,
-        "IsForeignKey": true,
         "Name": "TenantId"
       }
     ],
@@ -349,77 +330,66 @@
         "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
         "IsPrimaryKey": true,
-        "IsForeignKey": false,
         "Name": "Id"
       },
       {
         "CurrentValue": "User2",
         "OriginalValue": "User2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
         "IsPrimaryKey": false,
-        "IsForeignKey": true,
         "Name": "TenantId"
       },
       {
         "CurrentValue": "City2",
         "OriginalValue": "City2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/City"
       },
       {
         "CurrentValue": "State2",
         "OriginalValue": "State2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/State"
       },
       {
         "CurrentValue": "Street2",
         "OriginalValue": "Street2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Street"
       },
       {
         "CurrentValue": "12",
         "OriginalValue": "12",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Apartment"
       },
       {
         "CurrentValue": "2",
         "OriginalValue": "2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Floor"
       },
       {
         "CurrentValue": "2",
         "OriginalValue": "2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Number/Prefix"
       },
       {
         "CurrentValue": "A",
         "OriginalValue": "A",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Number/Suffix"
       },
       {
         "CurrentValue": "Zip2",
         "OriginalValue": "Zip2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/ZipCode/Value"
       }
     ],
@@ -466,21 +436,18 @@
         "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
         "IsPrimaryKey": true,
-        "IsForeignKey": false,
         "Name": "Id"
       },
       {
         "CurrentValue": "Project3",
         "OriginalValue": "Project3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
         "IsPrimaryKey": false,
-        "IsForeignKey": true,
         "Name": "TenantId"
       }
     ],
@@ -537,77 +504,66 @@
         "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
         "IsPrimaryKey": true,
-        "IsForeignKey": false,
         "Name": "Id"
       },
       {
         "CurrentValue": "User3",
         "OriginalValue": "User3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
         "IsPrimaryKey": false,
-        "IsForeignKey": true,
         "Name": "TenantId"
       },
       {
         "CurrentValue": "City3",
         "OriginalValue": "City3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/City"
       },
       {
         "CurrentValue": "State3",
         "OriginalValue": "State3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/State"
       },
       {
         "CurrentValue": "Street3",
         "OriginalValue": "Street3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Street"
       },
       {
         "CurrentValue": "13",
         "OriginalValue": "13",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Apartment"
       },
       {
         "CurrentValue": "3",
         "OriginalValue": "3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Floor"
       },
       {
         "CurrentValue": "3",
         "OriginalValue": "3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Number/Prefix"
       },
       {
         "CurrentValue": "A",
         "OriginalValue": "A",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Number/Suffix"
       },
       {
         "CurrentValue": "Zip3",
         "OriginalValue": "Zip3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/ZipCode/Value"
       }
     ],
@@ -654,14 +610,12 @@
         "CurrentValue": "Guid_8",
         "OriginalValue": "Guid_8",
         "IsPrimaryKey": true,
-        "IsForeignKey": false,
         "Name": "Id"
       },
       {
         "CurrentValue": "Tenant2",
         "OriginalValue": "Tenant2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Name"
       }
     ],
@@ -738,21 +692,18 @@
         "CurrentValue": "Guid_9",
         "OriginalValue": "Guid_9",
         "IsPrimaryKey": true,
-        "IsForeignKey": false,
         "Name": "Id"
       },
       {
         "CurrentValue": "Project1",
         "OriginalValue": "Project1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_8",
         "OriginalValue": "Guid_8",
         "IsPrimaryKey": false,
-        "IsForeignKey": true,
         "Name": "TenantId"
       }
     ],
@@ -809,77 +760,66 @@
         "CurrentValue": "Guid_12",
         "OriginalValue": "Guid_12",
         "IsPrimaryKey": true,
-        "IsForeignKey": false,
         "Name": "Id"
       },
       {
         "CurrentValue": "User1",
         "OriginalValue": "User1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_8",
         "OriginalValue": "Guid_8",
         "IsPrimaryKey": false,
-        "IsForeignKey": true,
         "Name": "TenantId"
       },
       {
         "CurrentValue": "City1",
         "OriginalValue": "City1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/City"
       },
       {
         "CurrentValue": "State1",
         "OriginalValue": "State1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/State"
       },
       {
         "CurrentValue": "Street1",
         "OriginalValue": "Street1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Street"
       },
       {
         "CurrentValue": "11",
         "OriginalValue": "11",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Apartment"
       },
       {
         "CurrentValue": "1",
         "OriginalValue": "1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Floor"
       },
       {
         "CurrentValue": "1",
         "OriginalValue": "1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Number/Prefix"
       },
       {
         "CurrentValue": "A",
         "OriginalValue": "A",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Number/Suffix"
       },
       {
         "CurrentValue": "Zip1",
         "OriginalValue": "Zip1",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/ZipCode/Value"
       }
     ],
@@ -926,21 +866,18 @@
         "CurrentValue": "Guid_10",
         "OriginalValue": "Guid_10",
         "IsPrimaryKey": true,
-        "IsForeignKey": false,
         "Name": "Id"
       },
       {
         "CurrentValue": "Project2",
         "OriginalValue": "Project2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_8",
         "OriginalValue": "Guid_8",
         "IsPrimaryKey": false,
-        "IsForeignKey": true,
         "Name": "TenantId"
       }
     ],
@@ -997,77 +934,66 @@
         "CurrentValue": "Guid_13",
         "OriginalValue": "Guid_13",
         "IsPrimaryKey": true,
-        "IsForeignKey": false,
         "Name": "Id"
       },
       {
         "CurrentValue": "User2",
         "OriginalValue": "User2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_8",
         "OriginalValue": "Guid_8",
         "IsPrimaryKey": false,
-        "IsForeignKey": true,
         "Name": "TenantId"
       },
       {
         "CurrentValue": "City2",
         "OriginalValue": "City2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/City"
       },
       {
         "CurrentValue": "State2",
         "OriginalValue": "State2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/State"
       },
       {
         "CurrentValue": "Street2",
         "OriginalValue": "Street2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Street"
       },
       {
         "CurrentValue": "12",
         "OriginalValue": "12",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Apartment"
       },
       {
         "CurrentValue": "2",
         "OriginalValue": "2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Floor"
       },
       {
         "CurrentValue": "2",
         "OriginalValue": "2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Number/Prefix"
       },
       {
         "CurrentValue": "A",
         "OriginalValue": "A",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Number/Suffix"
       },
       {
         "CurrentValue": "Zip2",
         "OriginalValue": "Zip2",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/ZipCode/Value"
       }
     ],
@@ -1114,21 +1040,18 @@
         "CurrentValue": "Guid_11",
         "OriginalValue": "Guid_11",
         "IsPrimaryKey": true,
-        "IsForeignKey": false,
         "Name": "Id"
       },
       {
         "CurrentValue": "Project3",
         "OriginalValue": "Project3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_8",
         "OriginalValue": "Guid_8",
         "IsPrimaryKey": false,
-        "IsForeignKey": true,
         "Name": "TenantId"
       }
     ],
@@ -1185,77 +1108,66 @@
         "CurrentValue": "Guid_14",
         "OriginalValue": "Guid_14",
         "IsPrimaryKey": true,
-        "IsForeignKey": false,
         "Name": "Id"
       },
       {
         "CurrentValue": "User3",
         "OriginalValue": "User3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_8",
         "OriginalValue": "Guid_8",
         "IsPrimaryKey": false,
-        "IsForeignKey": true,
         "Name": "TenantId"
       },
       {
         "CurrentValue": "City3",
         "OriginalValue": "City3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/City"
       },
       {
         "CurrentValue": "State3",
         "OriginalValue": "State3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/State"
       },
       {
         "CurrentValue": "Street3",
         "OriginalValue": "Street3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Street"
       },
       {
         "CurrentValue": "13",
         "OriginalValue": "13",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Apartment"
       },
       {
         "CurrentValue": "3",
         "OriginalValue": "3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Floor"
       },
       {
         "CurrentValue": "3",
         "OriginalValue": "3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Number/Prefix"
       },
       {
         "CurrentValue": "A",
         "OriginalValue": "A",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/Building/Number/Suffix"
       },
       {
         "CurrentValue": "Zip3",
         "OriginalValue": "Zip3",
         "IsPrimaryKey": false,
-        "IsForeignKey": false,
         "Name": "Address/ZipCode/Value"
       }
     ],
@@ -1302,14 +1214,12 @@
         "CurrentValue": "Guid_2",
         "OriginalValue": "Guid_2",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1325,14 +1235,12 @@
         "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1348,14 +1256,12 @@
         "CurrentValue": "Guid_2",
         "OriginalValue": "Guid_2",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1371,14 +1277,12 @@
         "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1394,14 +1298,12 @@
         "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1417,14 +1319,12 @@
         "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1440,14 +1340,12 @@
         "CurrentValue": "Guid_2",
         "OriginalValue": "Guid_2",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1463,14 +1361,12 @@
         "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1486,14 +1382,12 @@
         "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1509,14 +1403,12 @@
         "CurrentValue": "Guid_9",
         "OriginalValue": "Guid_9",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_12",
         "OriginalValue": "Guid_12",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1532,14 +1424,12 @@
         "CurrentValue": "Guid_10",
         "OriginalValue": "Guid_10",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_12",
         "OriginalValue": "Guid_12",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1555,14 +1445,12 @@
         "CurrentValue": "Guid_9",
         "OriginalValue": "Guid_9",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_13",
         "OriginalValue": "Guid_13",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1578,14 +1466,12 @@
         "CurrentValue": "Guid_10",
         "OriginalValue": "Guid_10",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_13",
         "OriginalValue": "Guid_13",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1601,14 +1487,12 @@
         "CurrentValue": "Guid_11",
         "OriginalValue": "Guid_11",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_12",
         "OriginalValue": "Guid_12",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1624,14 +1508,12 @@
         "CurrentValue": "Guid_11",
         "OriginalValue": "Guid_11",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_13",
         "OriginalValue": "Guid_13",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1647,14 +1529,12 @@
         "CurrentValue": "Guid_9",
         "OriginalValue": "Guid_9",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_14",
         "OriginalValue": "Guid_14",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1670,14 +1550,12 @@
         "CurrentValue": "Guid_10",
         "OriginalValue": "Guid_10",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_14",
         "OriginalValue": "Guid_14",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
@@ -1693,14 +1571,12 @@
         "CurrentValue": "Guid_11",
         "OriginalValue": "Guid_11",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "ProjectsId"
       },
       {
         "CurrentValue": "Guid_14",
         "OriginalValue": "Guid_14",
         "IsPrimaryKey": true,
-        "IsForeignKey": true,
         "Name": "UsersId"
       }
     ],
