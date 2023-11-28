@@ -49,12 +49,12 @@ public record Trace
 
             foreach (Property property in trace.Properties)
             {
-                yield return property.AsLinked(reference);
+                yield return property.AsJoined(reference);
             }
 
             foreach (Property property in Join(trace.References, traces))
             {
-                yield return property.AsLinked(reference);
+                yield return property.AsJoined(reference);
             }
         }
     }

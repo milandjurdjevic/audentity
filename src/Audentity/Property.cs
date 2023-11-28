@@ -7,7 +7,6 @@ public record Property
     public string? CurrentValue { get; init; }
     public string? OriginalValue { get; init; }
     public bool IsPrimaryKey { get; init; }
-    public bool IsForeignKey { get; init; }
     public string Name { get; init; } = String.Empty;
 
     public static Property Create(PropertyEntry entry)
@@ -17,12 +16,11 @@ public record Property
             Name = entry.Metadata.Name,
             CurrentValue = entry.CurrentValue?.ToString(),
             OriginalValue = entry.OriginalValue?.ToString(),
-            IsPrimaryKey = entry.Metadata.IsPrimaryKey(),
-            IsForeignKey = entry.Metadata.IsForeignKey()
+            IsPrimaryKey = entry.Metadata.IsPrimaryKey()
         };
     }
 
-    public Property AsLinked(Reference reference)
+    public Property AsJoined(Reference reference)
     {
         return this with { Name = $"{reference.Name}/{Name}" };
     }
