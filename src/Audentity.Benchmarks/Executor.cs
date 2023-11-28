@@ -54,11 +54,11 @@ public class Executor
     public int Count { get; set; }
 
     [Benchmark]
-    public void ToTrace()
+    public void ToTraces()
     {
         _ = _database.ChangeTracker
             .Entries()
-            .ToTrace();
+            .ToTraces();
     }
 
     [Benchmark]
@@ -66,7 +66,7 @@ public class Executor
     {
         _ = _database.ChangeTracker
             .Entries()
-            .ToTrace()
+            .ToTraces()
             .AsJoined();
     }
 }
