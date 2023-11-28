@@ -9,7 +9,6 @@ namespace Audentity;
 public record Reference
 {
     public IReadOnlyCollection<Link> Links { get; init; } = ReadOnlyCollection<Link>.Empty;
-    public bool IsCollection { get; init; }
     public string Name { get; init; } = String.Empty;
     public string Target { get; init; } = String.Empty;
 
@@ -18,8 +17,7 @@ public record Reference
         Reference result = new()
         {
             Name = navigation.Metadata.Name,
-            Target = navigation.Metadata.TargetEntityType.Name,
-            IsCollection = navigation.Metadata.IsCollection
+            Target = navigation.Metadata.TargetEntityType.Name
         };
 
         switch (navigation)
