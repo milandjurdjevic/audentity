@@ -8,11 +8,13 @@ namespace Audentity;
 
 public record Trace
 {
+    private Trace() { }
+
     public string Name { get; private init; } = String.Empty;
-    public IReadOnlyCollection<Property> Properties { get; init; } = ReadOnlyCollection<Property>.Empty;
-    public IReadOnlyCollection<Reference> References { get; init; } = ReadOnlyCollection<Reference>.Empty;
-    public EntityState State { get; init; } = EntityState.Unchanged;
-    public bool IsOwned { get; init; }
+    public IReadOnlyCollection<Property> Properties { get; private init; } = ReadOnlyCollection<Property>.Empty;
+    public IReadOnlyCollection<Reference> References { get; private init; } = ReadOnlyCollection<Reference>.Empty;
+    public EntityState State { get; private init; } = EntityState.Unchanged;
+    public bool IsOwned { get; private init; }
 
     internal static Trace Create(EntityEntry entity)
     {

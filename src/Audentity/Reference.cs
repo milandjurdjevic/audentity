@@ -8,9 +8,11 @@ namespace Audentity;
 
 public record Reference
 {
-    public IReadOnlyCollection<Link> Links { get; init; } = ReadOnlyCollection<Link>.Empty;
-    public string Name { get; init; } = String.Empty;
-    public string Target { get; init; } = String.Empty;
+    private Reference() { }
+    
+    public IReadOnlyCollection<Link> Links { get; private init; } = ReadOnlyCollection<Link>.Empty;
+    public string Name { get; private init; } = String.Empty;
+    public string Target { get; private init; } = String.Empty;
 
     internal static IEnumerable<Reference> Create(NavigationEntry navigation)
     {
@@ -27,7 +29,7 @@ public record Reference
                 {
                     Links = reference.TargetEntry.Properties
                         .Where(p => p.Metadata.IsPrimaryKey())
-                        .Select(p => new Link(p.Metadata.Name, p.CurrentValue?.ToString() ?? String.Empty))
+                        .Select(p => Link.CreateLink(p))
                         .ToImmutableList()
                 };
                 break;
@@ -39,11 +41,7 @@ public record Reference
                     yield return result with
                     {
                         Links = properties.Where(p => p.IsPrimaryKey())
-                            .Select(p =>
-                            {
-                                string? value = p.PropertyInfo?.GetValue(entity)?.ToString();
-                                return new Link(p.Name, value ?? String.Empty);
-                            }).ToImmutableList()
+                            .Select(p => Link.CreateLink(p, entity)).ToImmutableList()
                     };
                 }
 

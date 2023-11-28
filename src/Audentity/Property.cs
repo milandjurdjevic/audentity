@@ -4,10 +4,12 @@ namespace Audentity;
 
 public record Property
 {
-    public string? CurrentValue { get; init; }
-    public string? OriginalValue { get; init; }
-    public bool IsPrimaryKey { get; init; }
-    public string Name { get; init; } = String.Empty;
+    private Property() { }
+
+    public string? CurrentValue { get; private init; }
+    public string? OriginalValue { get; private init; }
+    public bool IsPrimaryKey { get; private init; }
+    public string Name { get; private init; } = String.Empty;
 
     internal static Property Create(PropertyEntry entry)
     {
