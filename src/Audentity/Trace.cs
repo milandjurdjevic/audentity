@@ -13,6 +13,7 @@ public record Trace
     public IReadOnlyCollection<Reference> References { get; init; } = ReadOnlyCollection<Reference>.Empty;
     public EntityState State { get; init; } = EntityState.Unchanged;
     public bool IsOwned { get; init; }
+    public bool IsVirtual { get; init; }
 
     public static Trace Create(EntityEntry entity)
     {
@@ -22,7 +23,11 @@ public record Trace
             State = entity.State,
             IsOwned = entity.Metadata.IsOwned(),
             Properties = entity.Properties.Select(Property.Create).ToImmutableList(),
-            References = entity.Navigations.SelectMany(Reference.Create).ToImmutableList()
+            References = entity.Navigations.SelectMany(Reference.Create).ToImmutableList(),
+            // For N:N relationships, change tracking will generate a "virtual" entry that represents the reference
+            // between them, if such an entity does not exist in the source code itself.Those entries will be
+            // represented as a string and object dictionary. 
+            IsVirtual = entity.Metadata.ClrType == typeof(Dictionary<string, object>)
         };
     }
 

@@ -80,7 +80,8 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": false
   },
   {
     "Name": "Audentity.Tests.Project",
@@ -150,7 +151,8 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": false
   },
   {
     "Name": "Audentity.Tests.User",
@@ -266,7 +268,8 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": false
   },
   {
     "Name": "Audentity.Tests.Project",
@@ -336,7 +339,8 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": false
   },
   {
     "Name": "Audentity.Tests.User",
@@ -452,7 +456,8 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": false
   },
   {
     "Name": "Audentity.Tests.Project",
@@ -522,7 +527,8 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": false
   },
   {
     "Name": "Audentity.Tests.User",
@@ -638,7 +644,8 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": false
   },
   {
     "Name": "Audentity.Tests.Tenant",
@@ -721,7 +728,8 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": false
   },
   {
     "Name": "Audentity.Tests.Project",
@@ -791,7 +799,8 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": false
   },
   {
     "Name": "Audentity.Tests.User",
@@ -907,7 +916,8 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": false
   },
   {
     "Name": "Audentity.Tests.Project",
@@ -977,7 +987,8 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": false
   },
   {
     "Name": "Audentity.Tests.User",
@@ -1093,7 +1104,8 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": false
   },
   {
     "Name": "Audentity.Tests.Project",
@@ -1163,7 +1175,8 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": false
   },
   {
     "Name": "Audentity.Tests.User",
@@ -1279,7 +1292,8 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": false
   },
   {
     "Name": "ProjectUser",
@@ -1301,7 +1315,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1323,7 +1338,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1345,7 +1361,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1367,7 +1384,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1389,7 +1407,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1411,7 +1430,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1433,7 +1453,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1455,7 +1476,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1477,7 +1499,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1499,7 +1522,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1521,7 +1545,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1543,7 +1568,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1565,7 +1591,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1587,7 +1614,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1609,7 +1637,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1631,7 +1660,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1653,7 +1683,8 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   },
   {
     "Name": "ProjectUser",
@@ -1675,6 +1706,7 @@
     ],
     "References": [],
     "State": "Added",
-    "IsOwned": false
+    "IsOwned": false,
+    "IsVirtual": true
   }
 ]
