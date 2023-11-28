@@ -78,8 +78,7 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": false
+    "IsOwned": false
   },
   {
     "Name": "Audentity.Tests.Project",
@@ -146,8 +145,7 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": false
+    "IsOwned": false
   },
   {
     "Name": "Audentity.Tests.User",
@@ -252,8 +250,7 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": false
+    "IsOwned": false
   },
   {
     "Name": "Audentity.Tests.Project",
@@ -320,8 +317,7 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": false
+    "IsOwned": false
   },
   {
     "Name": "Audentity.Tests.User",
@@ -426,8 +422,7 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": false
+    "IsOwned": false
   },
   {
     "Name": "Audentity.Tests.Project",
@@ -494,8 +489,7 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": false
+    "IsOwned": false
   },
   {
     "Name": "Audentity.Tests.User",
@@ -600,8 +594,7 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": false
+    "IsOwned": false
   },
   {
     "Name": "Audentity.Tests.Tenant",
@@ -682,8 +675,7 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": false
+    "IsOwned": false
   },
   {
     "Name": "Audentity.Tests.Project",
@@ -750,8 +742,7 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": false
+    "IsOwned": false
   },
   {
     "Name": "Audentity.Tests.User",
@@ -856,8 +847,7 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": false
+    "IsOwned": false
   },
   {
     "Name": "Audentity.Tests.Project",
@@ -924,8 +914,7 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": false
+    "IsOwned": false
   },
   {
     "Name": "Audentity.Tests.User",
@@ -1030,8 +1019,7 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": false
+    "IsOwned": false
   },
   {
     "Name": "Audentity.Tests.Project",
@@ -1098,8 +1086,7 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": false
+    "IsOwned": false
   },
   {
     "Name": "Audentity.Tests.User",
@@ -1204,385 +1191,6 @@
       }
     ],
     "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": false
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_2",
-        "OriginalValue": "Guid_2",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_5",
-        "OriginalValue": "Guid_5",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_3",
-        "OriginalValue": "Guid_3",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_5",
-        "OriginalValue": "Guid_5",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_2",
-        "OriginalValue": "Guid_2",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_6",
-        "OriginalValue": "Guid_6",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_3",
-        "OriginalValue": "Guid_3",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_6",
-        "OriginalValue": "Guid_6",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_4",
-        "OriginalValue": "Guid_4",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_5",
-        "OriginalValue": "Guid_5",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_4",
-        "OriginalValue": "Guid_4",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_6",
-        "OriginalValue": "Guid_6",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_2",
-        "OriginalValue": "Guid_2",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_7",
-        "OriginalValue": "Guid_7",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_3",
-        "OriginalValue": "Guid_3",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_7",
-        "OriginalValue": "Guid_7",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_4",
-        "OriginalValue": "Guid_4",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_7",
-        "OriginalValue": "Guid_7",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_9",
-        "OriginalValue": "Guid_9",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_12",
-        "OriginalValue": "Guid_12",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_10",
-        "OriginalValue": "Guid_10",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_12",
-        "OriginalValue": "Guid_12",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_9",
-        "OriginalValue": "Guid_9",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_13",
-        "OriginalValue": "Guid_13",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_10",
-        "OriginalValue": "Guid_10",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_13",
-        "OriginalValue": "Guid_13",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_11",
-        "OriginalValue": "Guid_11",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_12",
-        "OriginalValue": "Guid_12",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_11",
-        "OriginalValue": "Guid_11",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_13",
-        "OriginalValue": "Guid_13",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_9",
-        "OriginalValue": "Guid_9",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_14",
-        "OriginalValue": "Guid_14",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_10",
-        "OriginalValue": "Guid_10",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_14",
-        "OriginalValue": "Guid_14",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
-  },
-  {
-    "Name": "ProjectUser",
-    "Properties": [
-      {
-        "CurrentValue": "Guid_11",
-        "OriginalValue": "Guid_11",
-        "IsPrimaryKey": true,
-        "Name": "ProjectsId"
-      },
-      {
-        "CurrentValue": "Guid_14",
-        "OriginalValue": "Guid_14",
-        "IsPrimaryKey": true,
-        "Name": "UsersId"
-      }
-    ],
-    "References": [],
-    "State": "Added",
-    "IsOwned": false,
-    "IsVirtual": true
+    "IsOwned": false
   }
 ]
