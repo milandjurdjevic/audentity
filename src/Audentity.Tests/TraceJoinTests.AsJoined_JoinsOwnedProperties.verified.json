@@ -247,17 +247,6 @@
       {
         "Links": [
           {
-            "Name": "UserId",
-            "Value": "Guid_5"
-          }
-        ],
-        "IsCollection": false,
-        "Name": "Address",
-        "Target": "Audentity.Tests.Address"
-      },
-      {
-        "Links": [
-          {
             "Name": "Id",
             "Value": "Guid_2"
           }
@@ -451,17 +440,6 @@
       {
         "Links": [
           {
-            "Name": "UserId",
-            "Value": "Guid_6"
-          }
-        ],
-        "IsCollection": false,
-        "Name": "Address",
-        "Target": "Audentity.Tests.Address"
-      },
-      {
-        "Links": [
-          {
             "Name": "Id",
             "Value": "Guid_2"
           }
@@ -652,17 +630,6 @@
       }
     ],
     "References": [
-      {
-        "Links": [
-          {
-            "Name": "UserId",
-            "Value": "Guid_7"
-          }
-        ],
-        "IsCollection": false,
-        "Name": "Address",
-        "Target": "Audentity.Tests.Address"
-      },
       {
         "Links": [
           {
@@ -948,17 +915,6 @@
       {
         "Links": [
           {
-            "Name": "UserId",
-            "Value": "Guid_12"
-          }
-        ],
-        "IsCollection": false,
-        "Name": "Address",
-        "Target": "Audentity.Tests.Address"
-      },
-      {
-        "Links": [
-          {
             "Name": "Id",
             "Value": "Guid_9"
           }
@@ -1152,17 +1108,6 @@
       {
         "Links": [
           {
-            "Name": "UserId",
-            "Value": "Guid_13"
-          }
-        ],
-        "IsCollection": false,
-        "Name": "Address",
-        "Target": "Audentity.Tests.Address"
-      },
-      {
-        "Links": [
-          {
             "Name": "Id",
             "Value": "Guid_9"
           }
@@ -1353,17 +1298,6 @@
       }
     ],
     "References": [
-      {
-        "Links": [
-          {
-            "Name": "UserId",
-            "Value": "Guid_14"
-          }
-        ],
-        "IsCollection": false,
-        "Name": "Address",
-        "Target": "Audentity.Tests.Address"
-      },
       {
         "Links": [
           {

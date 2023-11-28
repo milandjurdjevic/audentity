@@ -28,8 +28,9 @@ public record Trace
 
     public Trace Join(ImmutableList<Trace> traces)
     {
-        IEnumerable<Property> joined = Join(References, traces).Where(p => !p.IsPrimaryKey);
-        return this with { Properties = Properties.Concat(joined).ToImmutableList() };
+        IEnumerable<Reference> references = References.Where(r => !traces.Any(r.IsReferencing));
+        IEnumerable<Property> properties = Properties.Concat(Join(References, traces).Where(p => !p.IsPrimaryKey));
+        return this with { Properties = properties.ToImmutableList(), References = references.ToImmutableList() };
     }
 
     private static IEnumerable<Property> Join(IEnumerable<Reference> references, ImmutableList<Trace> traces)

@@ -1,12 +1,12 @@
 namespace Audentity.Tests;
 
 [UsesVerify]
-public class TraceLinkTests
+public class TraceJoinTests
 {
     private readonly Database _database = new();
 
     [Fact]
-    public Task Link_LinksOwnedTraceProperties()
+    public Task AsJoined_JoinsOwnedProperties()
     {
         _database.AddRange(Seeding.Seed());
         IEnumerable<Trace> traces = _database.ChangeTracker.Entries()
