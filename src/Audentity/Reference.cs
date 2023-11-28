@@ -12,7 +12,7 @@ public record Reference
     public string Name { get; init; } = String.Empty;
     public string Target { get; init; } = String.Empty;
 
-    public static IEnumerable<Reference> Create(NavigationEntry navigation)
+    internal static IEnumerable<Reference> Create(NavigationEntry navigation)
     {
         Reference result = new()
         {
@@ -55,7 +55,7 @@ public record Reference
         }
     }
 
-    public bool IsReferencing(Trace trace)
+    internal bool IsReferencing(Trace trace)
     {
         ImmutableList<Property> keys = trace.Properties.Where(p => p.IsPrimaryKey).ToImmutableList();
         return trace.Name == Target && Links.All(l => keys.Any(p => p.Name == l.Name && p.CurrentValue == l.Value));

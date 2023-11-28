@@ -9,7 +9,7 @@ public record Property
     public bool IsPrimaryKey { get; init; }
     public string Name { get; init; } = String.Empty;
 
-    public static Property Create(PropertyEntry entry)
+    internal static Property Create(PropertyEntry entry)
     {
         return new Property
         {
@@ -20,7 +20,7 @@ public record Property
         };
     }
 
-    public Property AsJoined(Reference reference)
+    internal Property AsJoined(Reference reference)
     {
         return this with { Name = $"{reference.Name}/{Name}" };
     }

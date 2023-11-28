@@ -10,8 +10,7 @@ public class TraceCreateTests
     public Task AddEntity_Collects()
     {
         _database.Add(_tenant);
-        IEnumerable<Trace> traces = _database.ChangeTracker.Entries().Select(Trace.Create);
-        return Verify(traces);
+        return Verify(_database.ChangeTracker.Entries().ToTrace());
     }
 
     [Fact]
@@ -24,7 +23,7 @@ public class TraceCreateTests
         _tenant.Projects.First().Name += "Updated";
         IEnumerable<Trace> traces = _database.ChangeTracker
             .Entries()
-            .Select(Trace.Create);
+            .ToTrace();
         return Verify(traces);
     }
 
@@ -36,7 +35,7 @@ public class TraceCreateTests
         _database.Remove(_tenant);
         IEnumerable<Trace> traces = _database.ChangeTracker
             .Entries()
-            .Select(Trace.Create);
+            .ToTrace();
         return Verify(traces);
     }
 }

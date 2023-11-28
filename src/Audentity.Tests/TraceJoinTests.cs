@@ -10,7 +10,7 @@ public class TraceJoinTests
     {
         _database.AddRange(Seeding.Seed());
         IEnumerable<Trace> traces = _database.ChangeTracker.Entries()
-            .Select(Trace.Create)
+            .ToTrace()
             .AsJoined();
 
         return Verify(traces);
