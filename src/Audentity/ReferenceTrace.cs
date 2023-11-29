@@ -6,20 +6,19 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Audentity;
 
-public record Reference
+public record ReferenceTrace
 {
-    private Reference() { }
-    
-    public IReadOnlyCollection<Link> Links { get; private init; } = ReadOnlyCollection<Link>.Empty;
+    private ReferenceTrace() { }
+
+    public IReadOnlyCollection<LinkTrace> Links { get; private init; } = ReadOnlyCollection<LinkTrace>.Empty;
     public string Name { get; private init; } = String.Empty;
     public string Target { get; private init; } = String.Empty;
 
-    internal static IEnumerable<Reference> Create(NavigationEntry navigation)
+    internal static IEnumerable<ReferenceTrace> Create(NavigationEntry navigation)
     {
-        Reference result = new()
+        ReferenceTrace result = new()
         {
-            Name = navigation.Metadata.Name,
-            Target = navigation.Metadata.TargetEntityType.Name
+            Name = navigation.Metadata.Name, Target = navigation.Metadata.TargetEntityType.Name
         };
 
         switch (navigation)
@@ -29,7 +28,7 @@ public record Reference
                 {
                     Links = reference.TargetEntry.Properties
                         .Where(p => p.Metadata.IsPrimaryKey())
-                        .Select(p => Link.CreateLink(p))
+                        .Select(p => LinkTrace.Create(p))
                         .ToImmutableList()
                 };
                 break;
@@ -41,7 +40,7 @@ public record Reference
                     yield return result with
                     {
                         Links = properties.Where(p => p.IsPrimaryKey())
-                            .Select(p => Link.CreateLink(p, entity))
+                            .Select(p => LinkTrace.Create(p, entity))
                             .ToImmutableList()
                     };
                 }

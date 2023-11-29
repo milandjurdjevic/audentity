@@ -3,22 +3,22 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Audentity;
 
-public record Link
+public record LinkTrace
 {
-    private Link() { }
+    private LinkTrace() { }
     public string Name { get; private init; } = String.Empty;
     public string Value { get; private init; } = String.Empty;
 
-    public static Link CreateLink(IProperty property, object entity)
+    internal static LinkTrace Create(IProperty property, object entity)
     {
-        return new Link
+        return new LinkTrace
         {
             Name = property.Name, Value = property.PropertyInfo?.GetValue(entity)?.ToString() ?? String.Empty
         };
     }
 
-    public static Link CreateLink(PropertyEntry entry)
+    internal static LinkTrace Create(PropertyEntry entry)
     {
-        return new Link { Name = entry.Metadata.Name, Value = entry.CurrentValue?.ToString() ?? String.Empty };
+        return new LinkTrace { Name = entry.Metadata.Name, Value = entry.CurrentValue?.ToString() ?? String.Empty };
     }
 }

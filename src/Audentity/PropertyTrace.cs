@@ -2,18 +2,18 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Audentity;
 
-public record Property
+public record PropertyTrace
 {
-    private Property() { }
+    private PropertyTrace() { }
 
     public string? CurrentValue { get; private init; }
     public string? OriginalValue { get; private init; }
     public bool IsPrimaryKey { get; private init; }
     public string Name { get; private init; } = String.Empty;
 
-    internal static Property Create(PropertyEntry entry)
+    internal static PropertyTrace Create(PropertyEntry entry)
     {
-        return new Property
+        return new PropertyTrace
         {
             Name = entry.Metadata.Name,
             CurrentValue = entry.CurrentValue?.ToString(),
