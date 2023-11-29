@@ -21,9 +21,4 @@ public record Property
             IsPrimaryKey = entry.Metadata.IsPrimaryKey()
         };
     }
-
-    internal Property AsJoined(Reference reference)
-    {
-        return this with { Name = $"{reference.Name}/{Name}" };
-    }
 }

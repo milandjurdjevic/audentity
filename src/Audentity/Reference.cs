@@ -53,10 +53,4 @@ public record Reference
                 break;
         }
     }
-
-    internal bool IsReferencing(Trace trace)
-    {
-        ImmutableList<Property> keys = trace.Properties.Where(p => p.IsPrimaryKey).ToImmutableList();
-        return trace.Name == Target && Links.All(l => keys.Any(p => p.Name == l.Name && p.CurrentValue == l.Value));
-    }
 }

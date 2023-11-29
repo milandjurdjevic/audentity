@@ -60,13 +60,4 @@ public class Executor
             .Entries()
             .ToTraces();
     }
-
-    [Benchmark]
-    public void AsJoined()
-    {
-        _ = _database.ChangeTracker
-            .Entries()
-            .ToTraces()
-            .AsJoined();
-    }
 }
