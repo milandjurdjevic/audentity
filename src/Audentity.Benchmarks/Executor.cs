@@ -54,7 +54,7 @@ public class Executor
     public int Count { get; set; }
 
     [Benchmark]
-    public void ToTraces()
+    public void ToAudit()
     {
         _ = _database.ChangeTracker.Entries()
             .ToAudit();
