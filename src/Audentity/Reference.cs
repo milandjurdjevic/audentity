@@ -41,7 +41,8 @@ public record Reference
                     yield return result with
                     {
                         Links = properties.Where(p => p.IsPrimaryKey())
-                            .Select(p => Link.CreateLink(p, entity)).ToImmutableList()
+                            .Select(p => Link.CreateLink(p, entity))
+                            .ToImmutableList()
                     };
                 }
 
