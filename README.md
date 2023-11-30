@@ -1,6 +1,6 @@
 ![logo](logo.png)
 
-## Auditing library for Entity Framework
+## Auditing library for Entity Framework [![latest version](https://img.shields.io/nuget/v/Audentity)](https://www.nuget.org/packages/Audentity)
 
 The Audentity project is designed to enhance data integrity and accountability within applications utilizing the Entity Framework
 for data access. By integrating specialized auditing functionality, the project enables developers to effortlessly track
