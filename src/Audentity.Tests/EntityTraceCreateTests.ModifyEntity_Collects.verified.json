@@ -5,13 +5,11 @@
       {
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
-        "IsPrimaryKey": true,
         "Name": "Id"
       },
       {
         "CurrentValue": "Tenant1Updated",
         "OriginalValue": "Tenant1",
-        "IsPrimaryKey": false,
         "Name": "Name"
       }
     ],
@@ -77,8 +75,7 @@
         "Target": "Audentity.Tests.User"
       }
     ],
-    "State": "Modified",
-    "IsOwned": false
+    "State": "Modified"
   },
   {
     "Name": "Audentity.Tests.Project",
@@ -86,19 +83,16 @@
       {
         "CurrentValue": "Guid_2",
         "OriginalValue": "Guid_2",
-        "IsPrimaryKey": true,
         "Name": "Id"
       },
       {
         "CurrentValue": "Project1Updated",
         "OriginalValue": "Project1",
-        "IsPrimaryKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
-        "IsPrimaryKey": false,
         "Name": "TenantId"
       }
     ],
@@ -144,8 +138,7 @@
         "Target": "Audentity.Tests.User"
       }
     ],
-    "State": "Modified",
-    "IsOwned": false
+    "State": "Modified"
   },
   {
     "Name": "Audentity.Tests.User",
@@ -153,19 +146,16 @@
       {
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
-        "IsPrimaryKey": true,
         "Name": "Id"
       },
       {
         "CurrentValue": "User1Updated",
         "OriginalValue": "User1",
-        "IsPrimaryKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
-        "IsPrimaryKey": false,
         "Name": "TenantId"
       }
     ],
@@ -211,8 +201,7 @@
         "Target": "Audentity.Tests.Project"
       }
     ],
-    "State": "Modified",
-    "IsOwned": false
+    "State": "Modified"
   },
   {
     "Name": "Audentity.Tests.Address",
@@ -220,25 +209,21 @@
       {
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
-        "IsPrimaryKey": true,
         "Name": "UserId"
       },
       {
         "CurrentValue": "City1",
         "OriginalValue": "City1",
-        "IsPrimaryKey": false,
         "Name": "City"
       },
       {
         "CurrentValue": "State1",
         "OriginalValue": "State1",
-        "IsPrimaryKey": false,
         "Name": "State"
       },
       {
         "CurrentValue": "Street1",
         "OriginalValue": "Street1",
-        "IsPrimaryKey": false,
         "Name": "Street"
       }
     ],
@@ -264,8 +249,7 @@
         "Target": "Audentity.Tests.ZipCode"
       }
     ],
-    "State": "Unchanged",
-    "IsOwned": true
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.Building",
@@ -273,19 +257,16 @@
       {
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
-        "IsPrimaryKey": true,
         "Name": "AddressUserId"
       },
       {
         "CurrentValue": "11",
         "OriginalValue": "11",
-        "IsPrimaryKey": false,
         "Name": "Apartment"
       },
       {
         "CurrentValue": "1",
         "OriginalValue": "1",
-        "IsPrimaryKey": false,
         "Name": "Floor"
       }
     ],
@@ -301,8 +282,7 @@
         "Target": "Audentity.Tests.BuildingNumber"
       }
     ],
-    "State": "Unchanged",
-    "IsOwned": true
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.BuildingNumber",
@@ -310,25 +290,21 @@
       {
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
-        "IsPrimaryKey": true,
         "Name": "BuildingAddressUserId"
       },
       {
         "CurrentValue": "1",
         "OriginalValue": "1",
-        "IsPrimaryKey": false,
         "Name": "Prefix"
       },
       {
         "CurrentValue": "A",
         "OriginalValue": "A",
-        "IsPrimaryKey": false,
         "Name": "Suffix"
       }
     ],
     "References": [],
-    "State": "Unchanged",
-    "IsOwned": true
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.ZipCode",
@@ -336,19 +312,16 @@
       {
         "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
-        "IsPrimaryKey": true,
         "Name": "AddressUserId"
       },
       {
         "CurrentValue": "Zip1",
         "OriginalValue": "Zip1",
-        "IsPrimaryKey": false,
         "Name": "Value"
       }
     ],
     "References": [],
-    "State": "Unchanged",
-    "IsOwned": true
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.Project",
@@ -356,19 +329,16 @@
       {
         "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
-        "IsPrimaryKey": true,
         "Name": "Id"
       },
       {
         "CurrentValue": "Project2",
         "OriginalValue": "Project2",
-        "IsPrimaryKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
-        "IsPrimaryKey": false,
         "Name": "TenantId"
       }
     ],
@@ -414,8 +384,7 @@
         "Target": "Audentity.Tests.User"
       }
     ],
-    "State": "Unchanged",
-    "IsOwned": false
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.User",
@@ -423,19 +392,16 @@
       {
         "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
-        "IsPrimaryKey": true,
         "Name": "Id"
       },
       {
         "CurrentValue": "User2",
         "OriginalValue": "User2",
-        "IsPrimaryKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
-        "IsPrimaryKey": false,
         "Name": "TenantId"
       }
     ],
@@ -481,8 +447,7 @@
         "Target": "Audentity.Tests.Project"
       }
     ],
-    "State": "Unchanged",
-    "IsOwned": false
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.Address",
@@ -490,25 +455,21 @@
       {
         "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
-        "IsPrimaryKey": true,
         "Name": "UserId"
       },
       {
         "CurrentValue": "City2",
         "OriginalValue": "City2",
-        "IsPrimaryKey": false,
         "Name": "City"
       },
       {
         "CurrentValue": "State2",
         "OriginalValue": "State2",
-        "IsPrimaryKey": false,
         "Name": "State"
       },
       {
         "CurrentValue": "Street2",
         "OriginalValue": "Street2",
-        "IsPrimaryKey": false,
         "Name": "Street"
       }
     ],
@@ -534,8 +495,7 @@
         "Target": "Audentity.Tests.ZipCode"
       }
     ],
-    "State": "Unchanged",
-    "IsOwned": true
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.Building",
@@ -543,19 +503,16 @@
       {
         "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
-        "IsPrimaryKey": true,
         "Name": "AddressUserId"
       },
       {
         "CurrentValue": "12",
         "OriginalValue": "12",
-        "IsPrimaryKey": false,
         "Name": "Apartment"
       },
       {
         "CurrentValue": "2",
         "OriginalValue": "2",
-        "IsPrimaryKey": false,
         "Name": "Floor"
       }
     ],
@@ -571,8 +528,7 @@
         "Target": "Audentity.Tests.BuildingNumber"
       }
     ],
-    "State": "Unchanged",
-    "IsOwned": true
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.BuildingNumber",
@@ -580,25 +536,21 @@
       {
         "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
-        "IsPrimaryKey": true,
         "Name": "BuildingAddressUserId"
       },
       {
         "CurrentValue": "2",
         "OriginalValue": "2",
-        "IsPrimaryKey": false,
         "Name": "Prefix"
       },
       {
         "CurrentValue": "A",
         "OriginalValue": "A",
-        "IsPrimaryKey": false,
         "Name": "Suffix"
       }
     ],
     "References": [],
-    "State": "Unchanged",
-    "IsOwned": true
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.ZipCode",
@@ -606,19 +558,16 @@
       {
         "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
-        "IsPrimaryKey": true,
         "Name": "AddressUserId"
       },
       {
         "CurrentValue": "Zip2",
         "OriginalValue": "Zip2",
-        "IsPrimaryKey": false,
         "Name": "Value"
       }
     ],
     "References": [],
-    "State": "Unchanged",
-    "IsOwned": true
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.Project",
@@ -626,19 +575,16 @@
       {
         "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
-        "IsPrimaryKey": true,
         "Name": "Id"
       },
       {
         "CurrentValue": "Project3",
         "OriginalValue": "Project3",
-        "IsPrimaryKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
-        "IsPrimaryKey": false,
         "Name": "TenantId"
       }
     ],
@@ -684,8 +630,7 @@
         "Target": "Audentity.Tests.User"
       }
     ],
-    "State": "Unchanged",
-    "IsOwned": false
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.User",
@@ -693,19 +638,16 @@
       {
         "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
-        "IsPrimaryKey": true,
         "Name": "Id"
       },
       {
         "CurrentValue": "User3",
         "OriginalValue": "User3",
-        "IsPrimaryKey": false,
         "Name": "Name"
       },
       {
         "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
-        "IsPrimaryKey": false,
         "Name": "TenantId"
       }
     ],
@@ -751,8 +693,7 @@
         "Target": "Audentity.Tests.Project"
       }
     ],
-    "State": "Unchanged",
-    "IsOwned": false
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.Address",
@@ -760,25 +701,21 @@
       {
         "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
-        "IsPrimaryKey": true,
         "Name": "UserId"
       },
       {
         "CurrentValue": "City3",
         "OriginalValue": "City3",
-        "IsPrimaryKey": false,
         "Name": "City"
       },
       {
         "CurrentValue": "State3",
         "OriginalValue": "State3",
-        "IsPrimaryKey": false,
         "Name": "State"
       },
       {
         "CurrentValue": "Street3",
         "OriginalValue": "Street3",
-        "IsPrimaryKey": false,
         "Name": "Street"
       }
     ],
@@ -804,8 +741,7 @@
         "Target": "Audentity.Tests.ZipCode"
       }
     ],
-    "State": "Unchanged",
-    "IsOwned": true
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.Building",
@@ -813,19 +749,16 @@
       {
         "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
-        "IsPrimaryKey": true,
         "Name": "AddressUserId"
       },
       {
         "CurrentValue": "13",
         "OriginalValue": "13",
-        "IsPrimaryKey": false,
         "Name": "Apartment"
       },
       {
         "CurrentValue": "3",
         "OriginalValue": "3",
-        "IsPrimaryKey": false,
         "Name": "Floor"
       }
     ],
@@ -841,8 +774,7 @@
         "Target": "Audentity.Tests.BuildingNumber"
       }
     ],
-    "State": "Unchanged",
-    "IsOwned": true
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.BuildingNumber",
@@ -850,25 +782,21 @@
       {
         "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
-        "IsPrimaryKey": true,
         "Name": "BuildingAddressUserId"
       },
       {
         "CurrentValue": "3",
         "OriginalValue": "3",
-        "IsPrimaryKey": false,
         "Name": "Prefix"
       },
       {
         "CurrentValue": "A",
         "OriginalValue": "A",
-        "IsPrimaryKey": false,
         "Name": "Suffix"
       }
     ],
     "References": [],
-    "State": "Unchanged",
-    "IsOwned": true
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.ZipCode",
@@ -876,18 +804,168 @@
       {
         "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
-        "IsPrimaryKey": true,
         "Name": "AddressUserId"
       },
       {
         "CurrentValue": "Zip3",
         "OriginalValue": "Zip3",
-        "IsPrimaryKey": false,
         "Name": "Value"
       }
     ],
     "References": [],
-    "State": "Unchanged",
-    "IsOwned": true
+    "State": "Unchanged"
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "CurrentValue": "Guid_2",
+        "OriginalValue": "Guid_2",
+        "Name": "ProjectsId"
+      },
+      {
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
+        "Name": "UsersId"
+      }
+    ],
+    "References": [],
+    "State": "Unchanged"
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
+        "Name": "ProjectsId"
+      },
+      {
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
+        "Name": "UsersId"
+      }
+    ],
+    "References": [],
+    "State": "Unchanged"
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "CurrentValue": "Guid_2",
+        "OriginalValue": "Guid_2",
+        "Name": "ProjectsId"
+      },
+      {
+        "CurrentValue": "Guid_6",
+        "OriginalValue": "Guid_6",
+        "Name": "UsersId"
+      }
+    ],
+    "References": [],
+    "State": "Unchanged"
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
+        "Name": "ProjectsId"
+      },
+      {
+        "CurrentValue": "Guid_6",
+        "OriginalValue": "Guid_6",
+        "Name": "UsersId"
+      }
+    ],
+    "References": [],
+    "State": "Unchanged"
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "CurrentValue": "Guid_4",
+        "OriginalValue": "Guid_4",
+        "Name": "ProjectsId"
+      },
+      {
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
+        "Name": "UsersId"
+      }
+    ],
+    "References": [],
+    "State": "Unchanged"
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "CurrentValue": "Guid_4",
+        "OriginalValue": "Guid_4",
+        "Name": "ProjectsId"
+      },
+      {
+        "CurrentValue": "Guid_6",
+        "OriginalValue": "Guid_6",
+        "Name": "UsersId"
+      }
+    ],
+    "References": [],
+    "State": "Unchanged"
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "CurrentValue": "Guid_2",
+        "OriginalValue": "Guid_2",
+        "Name": "ProjectsId"
+      },
+      {
+        "CurrentValue": "Guid_7",
+        "OriginalValue": "Guid_7",
+        "Name": "UsersId"
+      }
+    ],
+    "References": [],
+    "State": "Unchanged"
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
+        "Name": "ProjectsId"
+      },
+      {
+        "CurrentValue": "Guid_7",
+        "OriginalValue": "Guid_7",
+        "Name": "UsersId"
+      }
+    ],
+    "References": [],
+    "State": "Unchanged"
+  },
+  {
+    "Name": "ProjectUser",
+    "Properties": [
+      {
+        "CurrentValue": "Guid_4",
+        "OriginalValue": "Guid_4",
+        "Name": "ProjectsId"
+      },
+      {
+        "CurrentValue": "Guid_7",
+        "OriginalValue": "Guid_7",
+        "Name": "UsersId"
+      }
+    ],
+    "References": [],
+    "State": "Unchanged"
   }
 ]

@@ -1,7 +1,7 @@
 namespace Audentity.Tests;
 
 [UsesVerify]
-public class ToAuditTests
+public class EntityTraceCreateTests
 {
     private readonly Database _database = new();
     private readonly Tenant _tenant = Seeding.Seed().First();
@@ -10,7 +10,10 @@ public class ToAuditTests
     public Task AddEntity_Collects()
     {
         _database.Add(_tenant);
-        return Verify(_database.ChangeTracker.Entries().ToAudit());
+        IEnumerable<EntityTrace> traces = _database.ChangeTracker.Entries()
+            .Select(EntityTrace.FromEntry);
+
+        return Verify(traces);
     }
 
     [Fact]
@@ -23,7 +26,7 @@ public class ToAuditTests
         _tenant.Projects.First().Name += "Updated";
         IEnumerable<EntityTrace> traces = _database.ChangeTracker
             .Entries()
-            .ToAudit();
+            .Select(EntityTrace.FromEntry);
         return Verify(traces);
     }
 
@@ -35,7 +38,7 @@ public class ToAuditTests
         _database.Remove(_tenant);
         IEnumerable<EntityTrace> traces = _database.ChangeTracker
             .Entries()
-            .ToAudit();
+            .Select(EntityTrace.FromEntry);
         return Verify(traces);
     }
 }

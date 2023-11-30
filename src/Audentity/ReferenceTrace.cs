@@ -14,7 +14,7 @@ public record ReferenceTrace
     public string Name { get; private init; } = String.Empty;
     public string Target { get; private init; } = String.Empty;
 
-    internal static IEnumerable<ReferenceTrace> Create(NavigationEntry navigation)
+    internal static IEnumerable<ReferenceTrace> FromEntry(NavigationEntry navigation)
     {
         ReferenceTrace result = new()
         {
@@ -28,7 +28,7 @@ public record ReferenceTrace
                 {
                     Links = reference.TargetEntry.Properties
                         .Where(p => p.Metadata.IsPrimaryKey())
-                        .Select(p => LinkTrace.Create(p))
+                        .Select(LinkTrace.FromEntry)
                         .ToImmutableList()
                 };
                 break;
@@ -40,7 +40,7 @@ public record ReferenceTrace
                     yield return result with
                     {
                         Links = properties.Where(p => p.IsPrimaryKey())
-                            .Select(p => LinkTrace.Create(p, entity))
+                            .Select(p => LinkTrace.FromProperty(p, entity))
                             .ToImmutableList()
                     };
                 }

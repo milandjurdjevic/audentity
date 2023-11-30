@@ -9,7 +9,7 @@ public record LinkTrace
     public string Name { get; private init; } = String.Empty;
     public string Value { get; private init; } = String.Empty;
 
-    internal static LinkTrace Create(IProperty property, object entity)
+    internal static LinkTrace FromProperty(IProperty property, object entity)
     {
         return new LinkTrace
         {
@@ -17,7 +17,7 @@ public record LinkTrace
         };
     }
 
-    internal static LinkTrace Create(PropertyEntry entry)
+    internal static LinkTrace FromEntry(PropertyEntry entry)
     {
         return new LinkTrace { Name = entry.Metadata.Name, Value = entry.CurrentValue?.ToString() ?? String.Empty };
     }

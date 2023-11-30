@@ -54,9 +54,8 @@ public class Executor
     public int Count { get; set; }
 
     [Benchmark]
-    public void ToAudit()
+    public void FromEntry()
     {
-        _ = _database.ChangeTracker.Entries()
-            .ToAudit();
+        _ = _database.ChangeTracker.Entries().Select(EntityTrace.FromEntry);
     }
 }
