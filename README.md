@@ -1,4 +1,4 @@
-![logo](logo.png)
+# Audentity
 
 ## Auditing library for Entity Framework [![latest version](https://img.shields.io/nuget/v/Audentity)](https://www.nuget.org/packages/Audentity)
 
