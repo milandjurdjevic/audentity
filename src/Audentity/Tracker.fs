@@ -100,5 +100,5 @@ module Tracker =
     let private entryIsNotShadow (entry: EntityEntry) =
         not (entry.Metadata.ClrType = typeof<Dictionary<string, obj>>)
 
-    let OfEntries (entries: EntityEntry seq) =
+    let OfEntities (entries: EntityEntry seq) =
         entries |> Seq.filter entryIsNotShadow |> Seq.map entityEntryToEntity

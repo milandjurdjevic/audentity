@@ -10,7 +10,7 @@ public class TrackerTests
     public Task AddEntity_Collects()
     {
         _database.Add(_tenant);
-        IEnumerable<Entity> traces = Tracker.OfEntries(_database.ChangeTracker.Entries());
+        IEnumerable<Entity> traces = Tracker.OfEntities(_database.ChangeTracker.Entries());
         return Verify(traces);
     }
 
@@ -22,7 +22,7 @@ public class TrackerTests
         _tenant.Name += "Updated";
         _tenant.Users.First().Name += "Updated";
         _tenant.Projects.First().Name += "Updated";
-        IEnumerable<Entity> traces = Tracker.OfEntries(_database.ChangeTracker.Entries());
+        IEnumerable<Entity> traces = Tracker.OfEntities(_database.ChangeTracker.Entries());
         return Verify(traces);
     }
 
@@ -32,7 +32,7 @@ public class TrackerTests
         _database.Add(_tenant);
         _database.SaveChanges();
         _database.Remove(_tenant);
-        IEnumerable<Entity> traces = Tracker.OfEntries(_database.ChangeTracker.Entries());
+        IEnumerable<Entity> traces = Tracker.OfEntities(_database.ChangeTracker.Entries());
         return Verify(traces);
     }
 }
