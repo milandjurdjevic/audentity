@@ -1,7 +1,6 @@
 ﻿namespace Audentity
 
 open System
-open System.Collections.Generic
 open Microsoft.EntityFrameworkCore
 open Microsoft.EntityFrameworkCore.ChangeTracking
 open Microsoft.EntityFrameworkCore.Metadata
@@ -53,31 +52,28 @@ module Tracker =
           Target = entry.Metadata.TargetEntityType.Name
           Links = Array.empty }
 
-    let collectionEntryToReference (metadata: INavigationBase) (object: obj) =
+    let collectionEntryObjectToReference (collectionEntry: CollectionEntry) (object: obj) =
         let links =
-            metadata.TargetEntityType.GetProperties()
+            collectionEntry.Metadata.TargetEntityType.GetProperties()
             |> Seq.filter (_.IsPrimaryKey())
             |> Seq.map (objectPropertyToLink object)
             |> Array.ofSeq
 
-        { Name = metadata.Name
-          Target = metadata.TargetEntityType.Name
+        { Name = collectionEntry.Metadata.Name
+          Target = collectionEntry.Metadata.TargetEntityType.Name
           Links = links }
 
     let private collectionEntryToReferences (collectionEntry: CollectionEntry) =
         collectionEntry.CurrentValue
         |> Seq.cast<obj>
-        |> Seq.map (collectionEntryToReference collectionEntry.Metadata)
+        |> Seq.map (collectionEntryObjectToReference collectionEntry)
 
     let private referenceEntryToReference (entry: ReferenceEntry) =
         let links =
-            match tryNullable entry.TargetEntry with
-            | None -> Array.empty
-            | Some some ->
-                some.Properties
-                |> Seq.filter (_.Metadata.IsPrimaryKey())
-                |> Seq.map propertyEntryToLink
-                |> Array.ofSeq
+            entry.TargetEntry.Properties
+            |> Seq.filter (_.Metadata.IsPrimaryKey())
+            |> Seq.map propertyEntryToLink
+            |> Array.ofSeq
 
         { Name = entry.Metadata.Name
           Target = entry.Metadata.TargetEntityType.Name
@@ -97,8 +93,4 @@ module Tracker =
           Properties = entry.Properties |> Seq.map propertyEntryToProperty |> Array.ofSeq
           References = entry.Navigations |> Seq.collect navigationEntryToReferences |> Array.ofSeq }
 
-    let private entryIsNotShadow (entry: EntityEntry) =
-        not (entry.Metadata.ClrType = typeof<Dictionary<string, obj>>)
-
-    let OfEntries (entries: EntityEntry seq) =
-        entries |> Seq.filter entryIsNotShadow |> Seq.map entityEntryToEntity
+    let OfEntries (entries: EntityEntry seq) = entries |> Seq.map entityEntryToEntity
