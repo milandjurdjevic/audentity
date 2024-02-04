@@ -1,971 +1,971 @@
 ﻿[
   {
     "Name": "Audentity.Tests.Tenant",
-    "State": "Modified",
     "Properties": [
       {
-        "Name": "Id",
+        "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
-        "CurrentValue": "Guid_1"
+        "Name": "Id"
       },
       {
-        "Name": "Name",
+        "CurrentValue": "Tenant1Updated",
         "OriginalValue": "Tenant1",
-        "CurrentValue": "Tenant1Updated"
+        "Name": "Name"
       }
     ],
     "References": [
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_2"
           }
-        ]
+        ],
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_3"
           }
-        ]
+        ],
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_4"
           }
-        ]
+        ],
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_5"
           }
-        ]
+        ],
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_6"
           }
-        ]
+        ],
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_7"
           }
-        ]
+        ],
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       }
-    ]
+    ],
+    "State": "Modified"
   },
   {
     "Name": "Audentity.Tests.Project",
-    "State": "Modified",
     "Properties": [
       {
-        "Name": "Id",
+        "CurrentValue": "Guid_2",
         "OriginalValue": "Guid_2",
-        "CurrentValue": "Guid_2"
+        "Name": "Id"
       },
       {
-        "Name": "Name",
+        "CurrentValue": "Project1Updated",
         "OriginalValue": "Project1",
-        "CurrentValue": "Project1Updated"
+        "Name": "Name"
       },
       {
-        "Name": "TenantId",
+        "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
-        "CurrentValue": "Guid_1"
+        "Name": "TenantId"
       }
     ],
     "References": [
       {
-        "Name": "Tenant",
-        "Target": "Audentity.Tests.Tenant",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_1"
           }
-        ]
+        ],
+        "Name": "Tenant",
+        "Target": "Audentity.Tests.Tenant"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_5"
           }
-        ]
+        ],
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_6"
           }
-        ]
+        ],
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_7"
           }
-        ]
+        ],
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       }
-    ]
+    ],
+    "State": "Modified"
   },
   {
     "Name": "Audentity.Tests.User",
-    "State": "Modified",
     "Properties": [
       {
-        "Name": "Id",
+        "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
-        "CurrentValue": "Guid_5"
+        "Name": "Id"
       },
       {
-        "Name": "Name",
+        "CurrentValue": "User1Updated",
         "OriginalValue": "User1",
-        "CurrentValue": "User1Updated"
+        "Name": "Name"
       },
       {
-        "Name": "TenantId",
+        "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
-        "CurrentValue": "Guid_1"
+        "Name": "TenantId"
       }
     ],
     "References": [
       {
-        "Name": "Address",
-        "Target": "Audentity.Tests.Address",
         "Links": [
           {
             "Name": "UserId",
             "Value": "Guid_5"
           }
-        ]
+        ],
+        "Name": "Address",
+        "Target": "Audentity.Tests.Address"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_2"
           }
-        ]
+        ],
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_3"
           }
-        ]
+        ],
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_4"
           }
-        ]
+        ],
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       }
-    ]
+    ],
+    "State": "Modified"
   },
   {
     "Name": "Audentity.Tests.Address",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "UserId",
+        "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
-        "CurrentValue": "Guid_5"
+        "Name": "UserId"
       },
       {
-        "Name": "City",
+        "CurrentValue": "City1",
         "OriginalValue": "City1",
-        "CurrentValue": "City1"
+        "Name": "City"
       },
       {
-        "Name": "State",
+        "CurrentValue": "State1",
         "OriginalValue": "State1",
-        "CurrentValue": "State1"
+        "Name": "State"
       },
       {
-        "Name": "Street",
+        "CurrentValue": "Street1",
         "OriginalValue": "Street1",
-        "CurrentValue": "Street1"
+        "Name": "Street"
       }
     ],
     "References": [
       {
-        "Name": "Building",
-        "Target": "Audentity.Tests.Building",
         "Links": [
           {
             "Name": "AddressUserId",
             "Value": "Guid_5"
           }
-        ]
+        ],
+        "Name": "Building",
+        "Target": "Audentity.Tests.Building"
       },
       {
-        "Name": "ZipCode",
-        "Target": "Audentity.Tests.ZipCode",
         "Links": [
           {
             "Name": "AddressUserId",
             "Value": "Guid_5"
           }
-        ]
+        ],
+        "Name": "ZipCode",
+        "Target": "Audentity.Tests.ZipCode"
       }
-    ]
+    ],
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.Building",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "AddressUserId",
+        "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
-        "CurrentValue": "Guid_5"
+        "Name": "AddressUserId"
       },
       {
-        "Name": "Apartment",
+        "CurrentValue": "11",
         "OriginalValue": "11",
-        "CurrentValue": "11"
+        "Name": "Apartment"
       },
       {
-        "Name": "Floor",
+        "CurrentValue": "1",
         "OriginalValue": "1",
-        "CurrentValue": "1"
+        "Name": "Floor"
       }
     ],
     "References": [
       {
-        "Name": "Number",
-        "Target": "Audentity.Tests.BuildingNumber",
         "Links": [
           {
             "Name": "BuildingAddressUserId",
             "Value": "Guid_5"
           }
-        ]
+        ],
+        "Name": "Number",
+        "Target": "Audentity.Tests.BuildingNumber"
       }
-    ]
+    ],
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.BuildingNumber",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "BuildingAddressUserId",
+        "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
-        "CurrentValue": "Guid_5"
+        "Name": "BuildingAddressUserId"
       },
       {
-        "Name": "Prefix",
+        "CurrentValue": "1",
         "OriginalValue": "1",
-        "CurrentValue": "1"
+        "Name": "Prefix"
       },
       {
-        "Name": "Suffix",
+        "CurrentValue": "A",
         "OriginalValue": "A",
-        "CurrentValue": "A"
+        "Name": "Suffix"
       }
     ],
-    "References": []
+    "References": [],
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.ZipCode",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "AddressUserId",
+        "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
-        "CurrentValue": "Guid_5"
+        "Name": "AddressUserId"
       },
       {
-        "Name": "Value",
+        "CurrentValue": "Zip1",
         "OriginalValue": "Zip1",
-        "CurrentValue": "Zip1"
+        "Name": "Value"
       }
     ],
-    "References": []
+    "References": [],
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.Project",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "Id",
+        "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
-        "CurrentValue": "Guid_3"
+        "Name": "Id"
       },
       {
-        "Name": "Name",
+        "CurrentValue": "Project2",
         "OriginalValue": "Project2",
-        "CurrentValue": "Project2"
+        "Name": "Name"
       },
       {
-        "Name": "TenantId",
+        "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
-        "CurrentValue": "Guid_1"
+        "Name": "TenantId"
       }
     ],
     "References": [
       {
-        "Name": "Tenant",
-        "Target": "Audentity.Tests.Tenant",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_1"
           }
-        ]
+        ],
+        "Name": "Tenant",
+        "Target": "Audentity.Tests.Tenant"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_5"
           }
-        ]
+        ],
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_6"
           }
-        ]
+        ],
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_7"
           }
-        ]
+        ],
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       }
-    ]
+    ],
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.User",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "Id",
+        "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
-        "CurrentValue": "Guid_6"
+        "Name": "Id"
       },
       {
-        "Name": "Name",
+        "CurrentValue": "User2",
         "OriginalValue": "User2",
-        "CurrentValue": "User2"
+        "Name": "Name"
       },
       {
-        "Name": "TenantId",
+        "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
-        "CurrentValue": "Guid_1"
+        "Name": "TenantId"
       }
     ],
     "References": [
       {
-        "Name": "Address",
-        "Target": "Audentity.Tests.Address",
         "Links": [
           {
             "Name": "UserId",
             "Value": "Guid_6"
           }
-        ]
+        ],
+        "Name": "Address",
+        "Target": "Audentity.Tests.Address"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_2"
           }
-        ]
+        ],
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_3"
           }
-        ]
+        ],
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_4"
           }
-        ]
+        ],
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       }
-    ]
+    ],
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.Address",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "UserId",
+        "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
-        "CurrentValue": "Guid_6"
+        "Name": "UserId"
       },
       {
-        "Name": "City",
+        "CurrentValue": "City2",
         "OriginalValue": "City2",
-        "CurrentValue": "City2"
+        "Name": "City"
       },
       {
-        "Name": "State",
+        "CurrentValue": "State2",
         "OriginalValue": "State2",
-        "CurrentValue": "State2"
+        "Name": "State"
       },
       {
-        "Name": "Street",
+        "CurrentValue": "Street2",
         "OriginalValue": "Street2",
-        "CurrentValue": "Street2"
+        "Name": "Street"
       }
     ],
     "References": [
       {
-        "Name": "Building",
-        "Target": "Audentity.Tests.Building",
         "Links": [
           {
             "Name": "AddressUserId",
             "Value": "Guid_6"
           }
-        ]
+        ],
+        "Name": "Building",
+        "Target": "Audentity.Tests.Building"
       },
       {
-        "Name": "ZipCode",
-        "Target": "Audentity.Tests.ZipCode",
         "Links": [
           {
             "Name": "AddressUserId",
             "Value": "Guid_6"
           }
-        ]
+        ],
+        "Name": "ZipCode",
+        "Target": "Audentity.Tests.ZipCode"
       }
-    ]
+    ],
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.Building",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "AddressUserId",
+        "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
-        "CurrentValue": "Guid_6"
+        "Name": "AddressUserId"
       },
       {
-        "Name": "Apartment",
+        "CurrentValue": "12",
         "OriginalValue": "12",
-        "CurrentValue": "12"
+        "Name": "Apartment"
       },
       {
-        "Name": "Floor",
+        "CurrentValue": "2",
         "OriginalValue": "2",
-        "CurrentValue": "2"
+        "Name": "Floor"
       }
     ],
     "References": [
       {
-        "Name": "Number",
-        "Target": "Audentity.Tests.BuildingNumber",
         "Links": [
           {
             "Name": "BuildingAddressUserId",
             "Value": "Guid_6"
           }
-        ]
+        ],
+        "Name": "Number",
+        "Target": "Audentity.Tests.BuildingNumber"
       }
-    ]
+    ],
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.BuildingNumber",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "BuildingAddressUserId",
+        "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
-        "CurrentValue": "Guid_6"
+        "Name": "BuildingAddressUserId"
       },
       {
-        "Name": "Prefix",
+        "CurrentValue": "2",
         "OriginalValue": "2",
-        "CurrentValue": "2"
+        "Name": "Prefix"
       },
       {
-        "Name": "Suffix",
+        "CurrentValue": "A",
         "OriginalValue": "A",
-        "CurrentValue": "A"
+        "Name": "Suffix"
       }
     ],
-    "References": []
+    "References": [],
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.ZipCode",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "AddressUserId",
+        "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
-        "CurrentValue": "Guid_6"
+        "Name": "AddressUserId"
       },
       {
-        "Name": "Value",
+        "CurrentValue": "Zip2",
         "OriginalValue": "Zip2",
-        "CurrentValue": "Zip2"
+        "Name": "Value"
       }
     ],
-    "References": []
+    "References": [],
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.Project",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "Id",
+        "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
-        "CurrentValue": "Guid_4"
+        "Name": "Id"
       },
       {
-        "Name": "Name",
+        "CurrentValue": "Project3",
         "OriginalValue": "Project3",
-        "CurrentValue": "Project3"
+        "Name": "Name"
       },
       {
-        "Name": "TenantId",
+        "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
-        "CurrentValue": "Guid_1"
+        "Name": "TenantId"
       }
     ],
     "References": [
       {
-        "Name": "Tenant",
-        "Target": "Audentity.Tests.Tenant",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_1"
           }
-        ]
+        ],
+        "Name": "Tenant",
+        "Target": "Audentity.Tests.Tenant"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_5"
           }
-        ]
+        ],
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_6"
           }
-        ]
+        ],
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       },
       {
-        "Name": "Users",
-        "Target": "Audentity.Tests.User",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_7"
           }
-        ]
+        ],
+        "Name": "Users",
+        "Target": "Audentity.Tests.User"
       }
-    ]
+    ],
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.User",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "Id",
+        "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
-        "CurrentValue": "Guid_7"
+        "Name": "Id"
       },
       {
-        "Name": "Name",
+        "CurrentValue": "User3",
         "OriginalValue": "User3",
-        "CurrentValue": "User3"
+        "Name": "Name"
       },
       {
-        "Name": "TenantId",
+        "CurrentValue": "Guid_1",
         "OriginalValue": "Guid_1",
-        "CurrentValue": "Guid_1"
+        "Name": "TenantId"
       }
     ],
     "References": [
       {
-        "Name": "Address",
-        "Target": "Audentity.Tests.Address",
         "Links": [
           {
             "Name": "UserId",
             "Value": "Guid_7"
           }
-        ]
+        ],
+        "Name": "Address",
+        "Target": "Audentity.Tests.Address"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_2"
           }
-        ]
+        ],
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_3"
           }
-        ]
+        ],
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       },
       {
-        "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
         "Links": [
           {
             "Name": "Id",
             "Value": "Guid_4"
           }
-        ]
+        ],
+        "Name": "Projects",
+        "Target": "Audentity.Tests.Project"
       }
-    ]
+    ],
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.Address",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "UserId",
+        "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
-        "CurrentValue": "Guid_7"
+        "Name": "UserId"
       },
       {
-        "Name": "City",
+        "CurrentValue": "City3",
         "OriginalValue": "City3",
-        "CurrentValue": "City3"
+        "Name": "City"
       },
       {
-        "Name": "State",
+        "CurrentValue": "State3",
         "OriginalValue": "State3",
-        "CurrentValue": "State3"
+        "Name": "State"
       },
       {
-        "Name": "Street",
+        "CurrentValue": "Street3",
         "OriginalValue": "Street3",
-        "CurrentValue": "Street3"
+        "Name": "Street"
       }
     ],
     "References": [
       {
-        "Name": "Building",
-        "Target": "Audentity.Tests.Building",
         "Links": [
           {
             "Name": "AddressUserId",
             "Value": "Guid_7"
           }
-        ]
+        ],
+        "Name": "Building",
+        "Target": "Audentity.Tests.Building"
       },
       {
-        "Name": "ZipCode",
-        "Target": "Audentity.Tests.ZipCode",
         "Links": [
           {
             "Name": "AddressUserId",
             "Value": "Guid_7"
           }
-        ]
+        ],
+        "Name": "ZipCode",
+        "Target": "Audentity.Tests.ZipCode"
       }
-    ]
+    ],
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.Building",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "AddressUserId",
+        "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
-        "CurrentValue": "Guid_7"
+        "Name": "AddressUserId"
       },
       {
-        "Name": "Apartment",
+        "CurrentValue": "13",
         "OriginalValue": "13",
-        "CurrentValue": "13"
+        "Name": "Apartment"
       },
       {
-        "Name": "Floor",
+        "CurrentValue": "3",
         "OriginalValue": "3",
-        "CurrentValue": "3"
+        "Name": "Floor"
       }
     ],
     "References": [
       {
-        "Name": "Number",
-        "Target": "Audentity.Tests.BuildingNumber",
         "Links": [
           {
             "Name": "BuildingAddressUserId",
             "Value": "Guid_7"
           }
-        ]
+        ],
+        "Name": "Number",
+        "Target": "Audentity.Tests.BuildingNumber"
       }
-    ]
+    ],
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.BuildingNumber",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "BuildingAddressUserId",
+        "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
-        "CurrentValue": "Guid_7"
+        "Name": "BuildingAddressUserId"
       },
       {
-        "Name": "Prefix",
+        "CurrentValue": "3",
         "OriginalValue": "3",
-        "CurrentValue": "3"
+        "Name": "Prefix"
       },
       {
-        "Name": "Suffix",
+        "CurrentValue": "A",
         "OriginalValue": "A",
-        "CurrentValue": "A"
+        "Name": "Suffix"
       }
     ],
-    "References": []
+    "References": [],
+    "State": "Unchanged"
   },
   {
     "Name": "Audentity.Tests.ZipCode",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "AddressUserId",
+        "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
-        "CurrentValue": "Guid_7"
+        "Name": "AddressUserId"
       },
       {
-        "Name": "Value",
+        "CurrentValue": "Zip3",
         "OriginalValue": "Zip3",
-        "CurrentValue": "Zip3"
+        "Name": "Value"
       }
     ],
-    "References": []
+    "References": [],
+    "State": "Unchanged"
   },
   {
     "Name": "ProjectUser",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "ProjectsId",
+        "CurrentValue": "Guid_2",
         "OriginalValue": "Guid_2",
-        "CurrentValue": "Guid_2"
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
+        "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
-        "CurrentValue": "Guid_5"
+        "Name": "UsersId"
       }
     ],
-    "References": []
+    "References": [],
+    "State": "Unchanged"
   },
   {
     "Name": "ProjectUser",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "ProjectsId",
+        "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
-        "CurrentValue": "Guid_3"
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
+        "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
-        "CurrentValue": "Guid_5"
+        "Name": "UsersId"
       }
     ],
-    "References": []
+    "References": [],
+    "State": "Unchanged"
   },
   {
     "Name": "ProjectUser",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "ProjectsId",
+        "CurrentValue": "Guid_2",
         "OriginalValue": "Guid_2",
-        "CurrentValue": "Guid_2"
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
+        "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
-        "CurrentValue": "Guid_6"
+        "Name": "UsersId"
       }
     ],
-    "References": []
+    "References": [],
+    "State": "Unchanged"
   },
   {
     "Name": "ProjectUser",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "ProjectsId",
+        "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
-        "CurrentValue": "Guid_3"
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
+        "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
-        "CurrentValue": "Guid_6"
+        "Name": "UsersId"
       }
     ],
-    "References": []
+    "References": [],
+    "State": "Unchanged"
   },
   {
     "Name": "ProjectUser",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "ProjectsId",
+        "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
-        "CurrentValue": "Guid_4"
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
+        "CurrentValue": "Guid_5",
         "OriginalValue": "Guid_5",
-        "CurrentValue": "Guid_5"
+        "Name": "UsersId"
       }
     ],
-    "References": []
+    "References": [],
+    "State": "Unchanged"
   },
   {
     "Name": "ProjectUser",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "ProjectsId",
+        "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
-        "CurrentValue": "Guid_4"
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
+        "CurrentValue": "Guid_6",
         "OriginalValue": "Guid_6",
-        "CurrentValue": "Guid_6"
+        "Name": "UsersId"
       }
     ],
-    "References": []
+    "References": [],
+    "State": "Unchanged"
   },
   {
     "Name": "ProjectUser",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "ProjectsId",
+        "CurrentValue": "Guid_2",
         "OriginalValue": "Guid_2",
-        "CurrentValue": "Guid_2"
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
+        "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
-        "CurrentValue": "Guid_7"
+        "Name": "UsersId"
       }
     ],
-    "References": []
+    "References": [],
+    "State": "Unchanged"
   },
   {
     "Name": "ProjectUser",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "ProjectsId",
+        "CurrentValue": "Guid_3",
         "OriginalValue": "Guid_3",
-        "CurrentValue": "Guid_3"
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
+        "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
-        "CurrentValue": "Guid_7"
+        "Name": "UsersId"
       }
     ],
-    "References": []
+    "References": [],
+    "State": "Unchanged"
   },
   {
     "Name": "ProjectUser",
-    "State": "Unchanged",
     "Properties": [
       {
-        "Name": "ProjectsId",
+        "CurrentValue": "Guid_4",
         "OriginalValue": "Guid_4",
-        "CurrentValue": "Guid_4"
+        "Name": "ProjectsId"
       },
       {
-        "Name": "UsersId",
+        "CurrentValue": "Guid_7",
         "OriginalValue": "Guid_7",
-        "CurrentValue": "Guid_7"
+        "Name": "UsersId"
       }
     ],
-    "References": []
+    "References": [],
+    "State": "Unchanged"
   }
 ]

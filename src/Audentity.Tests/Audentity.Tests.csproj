@@ -30,7 +30,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Audentity\Audentity.fsproj"/>
+        <ProjectReference Include="..\Audentity\Audentity.csproj"/>
     </ItemGroup>
 
 </Project>
