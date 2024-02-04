@@ -54,8 +54,8 @@ public class Executor
     public int Count { get; set; }
 
     [Benchmark]
-    public void OfEntities()
+    public void OfEntries()
     {
-        _ = Tracker.OfEntities(_database.ChangeTracker.Entries());
+        _ = Tracker.OfEntries(_database.ChangeTracker.Entries());
     }
 }
