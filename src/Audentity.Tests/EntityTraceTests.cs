@@ -1,13 +1,13 @@
 namespace Audentity.Tests;
 
 [UsesVerify]
-public class EntityTraceCreateTests
+public class EntityTraceTests
 {
     private readonly Database _database = new();
     private readonly Tenant _tenant = Seeding.Seed().First();
 
     [Fact]
-    public Task AddEntity_Collects()
+    public Task FromEntry_AddEntity_Collects()
     {
         _database.Add(_tenant);
         IEnumerable<EntityTrace> traces = _database.ChangeTracker.Entries()
@@ -17,7 +17,7 @@ public class EntityTraceCreateTests
     }
 
     [Fact]
-    public Task ModifyEntity_Collects()
+    public Task FromEntry_ModifyEntity_Collects()
     {
         _database.Add(_tenant);
         _database.SaveChanges();
@@ -31,7 +31,7 @@ public class EntityTraceCreateTests
     }
 
     [Fact]
-    public Task DeleteEntity_Collects()
+    public Task FromEntry_DeleteEntity_Collects()
     {
         _database.Add(_tenant);
         _database.SaveChanges();
