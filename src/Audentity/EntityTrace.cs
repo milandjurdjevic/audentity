@@ -5,22 +5,26 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Audentity;
 
-public record EntityTrace
+public record EntityTrace(
+    string Name,
+    EntityState State,
+    IReadOnlyCollection<PropertyTrace> Properties,
+    IReadOnlyCollection<ReferenceTrace> References)
 {
-    private EntityTrace() { }
-    public string Name { get; private init; } = String.Empty;
-    public IReadOnlyCollection<PropertyTrace> Properties { get; private init; } = ImmutableList<PropertyTrace>.Empty;
-    public IReadOnlyCollection<ReferenceTrace> References { get; private init; } = ImmutableList<ReferenceTrace>.Empty;
-    public EntityState State { get; private init; } = EntityState.Unchanged;
-
     public static EntityTrace FromEntry(EntityEntry entry)
     {
-        return new EntityTrace
-        {
-            Name = entry.Metadata.Name,
-            State = entry.State,
-            Properties = entry.Properties.Select(PropertyTrace.FromEntry).ToImmutableList(),
-            References = entry.Navigations.SelectMany(ReferenceTrace.FromEntry).ToImmutableList()
-        };
+        ImmutableList<PropertyTrace> properties =
+            entry
+                .Properties
+                .Select(PropertyTrace.FromEntry)
+                .ToImmutableList();
+
+        ImmutableList<ReferenceTrace> references =
+            entry
+                .Navigations
+                .SelectMany(ReferenceTrace.FromEntry)
+                .ToImmutableList();
+
+        return new EntityTrace(entry.Metadata.Name, entry.State, properties, references);
     }
 }

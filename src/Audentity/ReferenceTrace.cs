@@ -1,25 +1,17 @@
 using System.Collections.Immutable;
-using System.Collections.ObjectModel;
 
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Audentity;
 
-public record ReferenceTrace
+public record ReferenceTrace(string Name, string Target, IReadOnlyCollection<LinkTrace> Links)
 {
-    private ReferenceTrace() { }
-
-    public IReadOnlyCollection<LinkTrace> Links { get; private init; } = ReadOnlyCollection<LinkTrace>.Empty;
-    public string Name { get; private init; } = String.Empty;
-    public string Target { get; private init; } = String.Empty;
-
     internal static IEnumerable<ReferenceTrace> FromEntry(NavigationEntry navigation)
     {
-        ReferenceTrace result = new()
-        {
-            Name = navigation.Metadata.Name, Target = navigation.Metadata.TargetEntityType.Name
-        };
+        string name = navigation.Metadata.Name;
+        string target = navigation.Metadata.TargetEntityType.Name;
+        ReferenceTrace result = new(name, target, ImmutableList<LinkTrace>.Empty);
 
         switch (navigation)
         {
