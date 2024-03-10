@@ -10,7 +10,9 @@ public class EntityTests
     public Task FromEntry_AddEntity_Collects()
     {
         _database.Add(_tenant);
-        IEnumerable<Entity> traces = _database.ChangeTracker.Entries()
+        IEnumerable<Entity> traces = _database
+            .ChangeTracker
+            .Entries()
             .Select(Entity.FromEntry);
 
         return Verify(traces);
@@ -24,7 +26,8 @@ public class EntityTests
         _tenant.Name += "Updated";
         _tenant.Users.First().Name += "Updated";
         _tenant.Projects.First().Name += "Updated";
-        IEnumerable<Entity> traces = _database.ChangeTracker
+        IEnumerable<Entity> traces = _database
+            .ChangeTracker
             .Entries()
             .Select(Entity.FromEntry);
         return Verify(traces);

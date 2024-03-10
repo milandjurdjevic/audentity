@@ -1,6 +1,6 @@
 ﻿[
   {
-    "Name": "Audentity.Tests.Project",
+    "Type": "Project",
     "State": "Modified",
     "Properties": [
       {
@@ -21,12 +21,12 @@
     "References": [
       {
         "Name": "Tenant",
-        "Target": "Audentity.Tests.Tenant",
+        "Type": "Tenant",
         "Links": []
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.User",
+        "Type": "User",
         "Links": [
           {
             "Name": "Id",
@@ -36,7 +36,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.User",
+        "Type": "User",
         "Links": [
           {
             "Name": "Id",
@@ -46,7 +46,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.User",
+        "Type": "User",
         "Links": [
           {
             "Name": "Id",
@@ -57,7 +57,7 @@
     ]
   },
   {
-    "Name": "Audentity.Tests.Project",
+    "Type": "Project",
     "State": "Modified",
     "Properties": [
       {
@@ -78,12 +78,12 @@
     "References": [
       {
         "Name": "Tenant",
-        "Target": "Audentity.Tests.Tenant",
+        "Type": "Tenant",
         "Links": []
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.User",
+        "Type": "User",
         "Links": [
           {
             "Name": "Id",
@@ -93,7 +93,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.User",
+        "Type": "User",
         "Links": [
           {
             "Name": "Id",
@@ -103,7 +103,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.User",
+        "Type": "User",
         "Links": [
           {
             "Name": "Id",
@@ -114,7 +114,7 @@
     ]
   },
   {
-    "Name": "Audentity.Tests.Project",
+    "Type": "Project",
     "State": "Modified",
     "Properties": [
       {
@@ -135,12 +135,12 @@
     "References": [
       {
         "Name": "Tenant",
-        "Target": "Audentity.Tests.Tenant",
+        "Type": "Tenant",
         "Links": []
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.User",
+        "Type": "User",
         "Links": [
           {
             "Name": "Id",
@@ -150,7 +150,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.User",
+        "Type": "User",
         "Links": [
           {
             "Name": "Id",
@@ -160,7 +160,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.User",
+        "Type": "User",
         "Links": [
           {
             "Name": "Id",
@@ -171,7 +171,7 @@
     ]
   },
   {
-    "Name": "Audentity.Tests.User",
+    "Type": "User",
     "State": "Modified",
     "Properties": [
       {
@@ -192,7 +192,7 @@
     "References": [
       {
         "Name": "Address",
-        "Target": "Audentity.Tests.Address",
+        "Type": "Address",
         "Links": [
           {
             "Name": "UserId",
@@ -202,7 +202,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
+        "Type": "Project",
         "Links": [
           {
             "Name": "Id",
@@ -212,7 +212,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
+        "Type": "Project",
         "Links": [
           {
             "Name": "Id",
@@ -222,7 +222,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
+        "Type": "Project",
         "Links": [
           {
             "Name": "Id",
@@ -233,7 +233,7 @@
     ]
   },
   {
-    "Name": "Audentity.Tests.User",
+    "Type": "User",
     "State": "Modified",
     "Properties": [
       {
@@ -254,7 +254,7 @@
     "References": [
       {
         "Name": "Address",
-        "Target": "Audentity.Tests.Address",
+        "Type": "Address",
         "Links": [
           {
             "Name": "UserId",
@@ -264,7 +264,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
+        "Type": "Project",
         "Links": [
           {
             "Name": "Id",
@@ -274,7 +274,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
+        "Type": "Project",
         "Links": [
           {
             "Name": "Id",
@@ -284,7 +284,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
+        "Type": "Project",
         "Links": [
           {
             "Name": "Id",
@@ -295,7 +295,7 @@
     ]
   },
   {
-    "Name": "Audentity.Tests.User",
+    "Type": "User",
     "State": "Modified",
     "Properties": [
       {
@@ -316,7 +316,7 @@
     "References": [
       {
         "Name": "Address",
-        "Target": "Audentity.Tests.Address",
+        "Type": "Address",
         "Links": [
           {
             "Name": "UserId",
@@ -326,7 +326,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
+        "Type": "Project",
         "Links": [
           {
             "Name": "Id",
@@ -336,7 +336,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
+        "Type": "Project",
         "Links": [
           {
             "Name": "Id",
@@ -346,7 +346,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
+        "Type": "Project",
         "Links": [
           {
             "Name": "Id",
@@ -357,7 +357,7 @@
     ]
   },
   {
-    "Name": "Audentity.Tests.Tenant",
+    "Type": "Tenant",
     "State": "Deleted",
     "Properties": [
       {
@@ -374,7 +374,7 @@
     "References": [
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
+        "Type": "Project",
         "Links": [
           {
             "Name": "Id",
@@ -384,7 +384,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
+        "Type": "Project",
         "Links": [
           {
             "Name": "Id",
@@ -394,7 +394,7 @@
       },
       {
         "Name": "Projects",
-        "Target": "Audentity.Tests.Project",
+        "Type": "Project",
         "Links": [
           {
             "Name": "Id",
@@ -404,7 +404,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.User",
+        "Type": "User",
         "Links": [
           {
             "Name": "Id",
@@ -414,7 +414,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.User",
+        "Type": "User",
         "Links": [
           {
             "Name": "Id",
@@ -424,7 +424,7 @@
       },
       {
         "Name": "Users",
-        "Target": "Audentity.Tests.User",
+        "Type": "User",
         "Links": [
           {
             "Name": "Id",
@@ -435,7 +435,7 @@
     ]
   },
   {
-    "Name": "Audentity.Tests.Address",
+    "Type": "Address",
     "State": "Unchanged",
     "Properties": [
       {
@@ -462,7 +462,7 @@
     "References": [
       {
         "Name": "Building",
-        "Target": "Audentity.Tests.Building",
+        "Type": "Building",
         "Links": [
           {
             "Name": "AddressUserId",
@@ -472,7 +472,7 @@
       },
       {
         "Name": "ZipCode",
-        "Target": "Audentity.Tests.ZipCode",
+        "Type": "ZipCode",
         "Links": [
           {
             "Name": "AddressUserId",
@@ -483,7 +483,7 @@
     ]
   },
   {
-    "Name": "Audentity.Tests.Building",
+    "Type": "Building",
     "State": "Unchanged",
     "Properties": [
       {
@@ -505,7 +505,7 @@
     "References": [
       {
         "Name": "Number",
-        "Target": "Audentity.Tests.BuildingNumber",
+        "Type": "BuildingNumber",
         "Links": [
           {
             "Name": "BuildingAddressUserId",
@@ -516,7 +516,7 @@
     ]
   },
   {
-    "Name": "Audentity.Tests.BuildingNumber",
+    "Type": "BuildingNumber",
     "State": "Unchanged",
     "Properties": [
       {
@@ -538,7 +538,7 @@
     "References": []
   },
   {
-    "Name": "Audentity.Tests.ZipCode",
+    "Type": "ZipCode",
     "State": "Unchanged",
     "Properties": [
       {
@@ -555,7 +555,7 @@
     "References": []
   },
   {
-    "Name": "Audentity.Tests.Address",
+    "Type": "Address",
     "State": "Unchanged",
     "Properties": [
       {
@@ -582,7 +582,7 @@
     "References": [
       {
         "Name": "Building",
-        "Target": "Audentity.Tests.Building",
+        "Type": "Building",
         "Links": [
           {
             "Name": "AddressUserId",
@@ -592,7 +592,7 @@
       },
       {
         "Name": "ZipCode",
-        "Target": "Audentity.Tests.ZipCode",
+        "Type": "ZipCode",
         "Links": [
           {
             "Name": "AddressUserId",
@@ -603,7 +603,7 @@
     ]
   },
   {
-    "Name": "Audentity.Tests.Building",
+    "Type": "Building",
     "State": "Unchanged",
     "Properties": [
       {
@@ -625,7 +625,7 @@
     "References": [
       {
         "Name": "Number",
-        "Target": "Audentity.Tests.BuildingNumber",
+        "Type": "BuildingNumber",
         "Links": [
           {
             "Name": "BuildingAddressUserId",
@@ -636,7 +636,7 @@
     ]
   },
   {
-    "Name": "Audentity.Tests.BuildingNumber",
+    "Type": "BuildingNumber",
     "State": "Unchanged",
     "Properties": [
       {
@@ -658,7 +658,7 @@
     "References": []
   },
   {
-    "Name": "Audentity.Tests.ZipCode",
+    "Type": "ZipCode",
     "State": "Unchanged",
     "Properties": [
       {
@@ -675,7 +675,7 @@
     "References": []
   },
   {
-    "Name": "Audentity.Tests.Address",
+    "Type": "Address",
     "State": "Unchanged",
     "Properties": [
       {
@@ -702,7 +702,7 @@
     "References": [
       {
         "Name": "Building",
-        "Target": "Audentity.Tests.Building",
+        "Type": "Building",
         "Links": [
           {
             "Name": "AddressUserId",
@@ -712,7 +712,7 @@
       },
       {
         "Name": "ZipCode",
-        "Target": "Audentity.Tests.ZipCode",
+        "Type": "ZipCode",
         "Links": [
           {
             "Name": "AddressUserId",
@@ -723,7 +723,7 @@
     ]
   },
   {
-    "Name": "Audentity.Tests.Building",
+    "Type": "Building",
     "State": "Unchanged",
     "Properties": [
       {
@@ -745,7 +745,7 @@
     "References": [
       {
         "Name": "Number",
-        "Target": "Audentity.Tests.BuildingNumber",
+        "Type": "BuildingNumber",
         "Links": [
           {
             "Name": "BuildingAddressUserId",
@@ -756,7 +756,7 @@
     ]
   },
   {
-    "Name": "Audentity.Tests.BuildingNumber",
+    "Type": "BuildingNumber",
     "State": "Unchanged",
     "Properties": [
       {
@@ -778,7 +778,7 @@
     "References": []
   },
   {
-    "Name": "Audentity.Tests.ZipCode",
+    "Type": "ZipCode",
     "State": "Unchanged",
     "Properties": [
       {
@@ -795,7 +795,7 @@
     "References": []
   },
   {
-    "Name": "ProjectUser",
+    "Type": "Dictionary<string, object>",
     "State": "Unchanged",
     "Properties": [
       {
@@ -812,7 +812,7 @@
     "References": []
   },
   {
-    "Name": "ProjectUser",
+    "Type": "Dictionary<string, object>",
     "State": "Unchanged",
     "Properties": [
       {
@@ -829,7 +829,7 @@
     "References": []
   },
   {
-    "Name": "ProjectUser",
+    "Type": "Dictionary<string, object>",
     "State": "Unchanged",
     "Properties": [
       {
@@ -846,7 +846,7 @@
     "References": []
   },
   {
-    "Name": "ProjectUser",
+    "Type": "Dictionary<string, object>",
     "State": "Unchanged",
     "Properties": [
       {
@@ -863,7 +863,7 @@
     "References": []
   },
   {
-    "Name": "ProjectUser",
+    "Type": "Dictionary<string, object>",
     "State": "Unchanged",
     "Properties": [
       {
@@ -880,7 +880,7 @@
     "References": []
   },
   {
-    "Name": "ProjectUser",
+    "Type": "Dictionary<string, object>",
     "State": "Unchanged",
     "Properties": [
       {
@@ -897,7 +897,7 @@
     "References": []
   },
   {
-    "Name": "ProjectUser",
+    "Type": "Dictionary<string, object>",
     "State": "Unchanged",
     "Properties": [
       {
@@ -914,7 +914,7 @@
     "References": []
   },
   {
-    "Name": "ProjectUser",
+    "Type": "Dictionary<string, object>",
     "State": "Unchanged",
     "Properties": [
       {
@@ -931,7 +931,7 @@
     "References": []
   },
   {
-    "Name": "ProjectUser",
+    "Type": "Dictionary<string, object>",
     "State": "Unchanged",
     "Properties": [
       {

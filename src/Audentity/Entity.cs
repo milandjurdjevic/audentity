@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 namespace Audentity;
 
 public record Entity(
-    string Name,
+    Type Type,
     EntityState State,
     IReadOnlyCollection<Property> Properties,
     IReadOnlyCollection<Reference> References)
@@ -25,6 +25,6 @@ public record Entity(
                 .SelectMany(Reference.FromEntry)
                 .ToImmutableList();
 
-        return new Entity(entry.Metadata.Name, entry.State, properties, references);
+        return new Entity(entry.Entity.GetType(), entry.State, properties, references);
     }
 }
