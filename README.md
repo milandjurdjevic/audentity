@@ -66,12 +66,12 @@ To exclude them from traces, you can filter all entries by their CLR type before
 ```csharp
 ChangeTracker.Entries()
     .Where(e => e.Metadata.ClrType != typeof(Dictionary<string, object>))
-    .Select(EntityTrace.FromEntry);
+    .Select(Entity.FromEntry);
 ```
 
-### Entity Trace Structure (JSON)
+### Entity Structure (JSON)
 
-Each `EntityTrace` consist of the following properties:
+Each `Entity` consist of the following properties:
 
 - Name - name of the entity that is being tracked.
 - Properties - list of entity properties and their values.

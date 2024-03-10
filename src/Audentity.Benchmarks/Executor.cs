@@ -56,6 +56,6 @@ public class Executor
     [Benchmark]
     public void FromEntry()
     {
-        _ = _database.ChangeTracker.Entries().Select(EntityTrace.FromEntry);
+        _ = _database.ChangeTracker.Entries().Select(Entity.FromEntry);
     }
 }
