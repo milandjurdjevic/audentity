@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Audentity.Tests;
+namespace Audentity.Tests.Fixture;
 
 public class Database : DbContext
 {

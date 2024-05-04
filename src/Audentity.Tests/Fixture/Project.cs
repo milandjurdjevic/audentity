@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Audentity.Tests;
+namespace Audentity.Tests.Fixture;
 
 public class Project
 {

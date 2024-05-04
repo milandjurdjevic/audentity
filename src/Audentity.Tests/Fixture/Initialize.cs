@@ -1,11 +1,11 @@
 using System.Runtime.CompilerServices;
 
-namespace Audentity.Tests;
+namespace Audentity.Tests.Fixture;
 
-public static class Module
+public static class Initialize
 {
     [ModuleInitializer]
-    public static void Initialize()
+    public static void Module()
     {
         VerifierSettings.UseStrictJson();
         VerifierSettings.DontIgnoreEmptyCollections();

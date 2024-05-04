@@ -54,9 +54,9 @@ public class Executor
     public int Count { get; set; }
 
     [Benchmark]
-    public void FromEntry()
+    public void Collect()
     {
-        foreach (EntityTrace _ in _database.ChangeTracker.Entries().Select(EntityTrace.FromEntry))
+        foreach (Trace _ in Audentity.Collect.Traces(_database.ChangeTracker.Entries()))
         {
             // Ignore.
         }

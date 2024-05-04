@@ -1,4 +1,4 @@
-namespace Audentity.Tests;
+namespace Audentity.Tests.Fixture;
 
 public static class Seeding
 {

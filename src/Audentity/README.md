@@ -8,20 +8,30 @@ Collect traces by catching the state of the `Microsoft.EntityFrameworkCore.Chang
 before saving changes. That can be done simply by overriding the `SaveChanges()` & `SaveChangesAsync(CancellationToken)`
 methods in your `Microsoft.EntityFrameworkCore.DbContext` implementation.
 
+### Collecting Traces
+
 ```csharp
 public class MyDbContext : DbContext
 {
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
     {
-        ImmutableList<EntityTrace> traces = ChangeTracker.Entries()
-            .Select(EntityTrace.FromEntry)
-            .ToList();
-        
+        EntityTrace[] traces = Collect.Entities(ChangeTracker).ToArray();
         int result = await base.SaveChangesAsync(cancellationToken);
         // Process traces...
         return result;
     }
 }
+```
+
+### Transforming Trace Ownership
+
+Some traces can be owned by another trace
+([see more](https://learn.microsoft.com/en-us/ef/core/modeling/owned-entities)). Trace collection can be transformed to
+show owned trace properties inside the owner trace property collection.
+
+```csharp
+EntityTrace[] traces = Collect.Entities(ChangeTracker).ToArray();
+EntityTrace[] transformed = Transform.Ownership(traces).ToArray();
 ```
 
 ### Shadow Entries
@@ -54,7 +64,7 @@ Those entities, even if they are not defined in the code itself, will still end 
 To exclude them from traces, you can filter all entries by their CLR type before collecting traces.
 
 ```csharp
-ChangeTracker.Entries()
-    .Where(e => e.Metadata.ClrType != typeof(Dictionary<string, object>))
+Collect.Entities(ChangeTracker)
+    .Where(e => e.Type != typeof(Dictionary<string, object>))
     .Select(EntityTrace.FromEntry);
 ```

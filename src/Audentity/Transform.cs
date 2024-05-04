@@ -4,70 +4,69 @@ namespace Audentity;
 
 public static class Transform
 {
-    public static IEnumerable<EntityTrace> Ownership(IEnumerable<EntityTrace> entities)
+    public static IEnumerable<Trace> Ownership(IEnumerable<Trace> entities)
     {
         entities = entities.ToArray();
 
-        IReadOnlyCollection<EntityTrace> owned = entities
+        IReadOnlyCollection<Trace> owned = entities
             .Where(e => e.IsOwned)
             .ToFrozenSet();
 
         return entities.Where(e => !e.IsOwned).Select(e => Entity(e, owned));
     }
 
-    private static EntityTrace Entity(EntityTrace entity, IReadOnlyCollection<EntityTrace> owned)
+    private static Trace Entity(Trace trace, IReadOnlyCollection<Trace> owned)
     {
-        ReferenceTrace[] references = entity
+        Reference[] references = trace
             .References
-            .Where(r => ReferencesAny(owned, r))
+            .Where(r => IsReferencing(owned, r))
             .ToArray();
 
-        PropertyTrace[] properties =
+        Property[] properties =
         [
-            .. entity.Properties,
-            .. Properties(entity.References, owned).Where(p => !p.IsPrimaryKey)
+            .. trace.Properties,
+            .. Properties(trace.References, owned).Where(p => !p.IsPrimaryKey)
         ];
-        return entity with { Properties = properties, References = references };
+        return trace with { Properties = properties, References = references };
     }
 
-    private static bool ReferencesAny(IEnumerable<EntityTrace> owned, ReferenceTrace r)
+    private static bool IsReferencing(IEnumerable<Trace> owned, Reference r)
     {
-        return owned.Any(o => References(r, o));
+        return owned.Any(o => IsReferencing(r, o));
     }
 
-    private static bool References(ReferenceTrace reference, EntityTrace entity)
+    private static bool IsReferencing(Reference reference, Trace trace)
     {
-        IReadOnlyCollection<PropertyTrace> keys = entity.Properties.Where(p => p.IsPrimaryKey).ToFrozenSet();
-        return entity.Type == reference.Type &&
+        IReadOnlyCollection<Property> keys = trace.Properties.Where(p => p.IsPrimaryKey).ToFrozenSet();
+        return trace.Type == reference.Type &&
                reference.Links.All(l => keys.Any(p => p.Name == l.Name && p.CurrentValue == l.Value));
     }
-    
-    private static IEnumerable<PropertyTrace> Properties(
-        IEnumerable<ReferenceTrace> references,
-        IReadOnlyCollection<EntityTrace> entities
+
+    private static IEnumerable<Property> Properties(
+        IEnumerable<Reference> references,
+        IReadOnlyCollection<Trace> entities
     )
     {
-        foreach (ReferenceTrace reference in references)
+        foreach (Reference reference in references)
         {
-            if (entities.SingleOrDefault(t => References(reference, t)) is not { } entity)
+            if (entities.SingleOrDefault(t => IsReferencing(reference, t)) is not { } entity)
             {
                 continue;
             }
 
-            foreach (PropertyTrace property in entity.Properties)
+            foreach (Property property in entity.Properties)
             {
                 yield return PropertyReference(property, reference);
             }
 
-            foreach (PropertyTrace property in Properties(entity.References, entities))
+            foreach (Property property in Properties(entity.References, entities))
             {
                 yield return PropertyReference(property, reference);
             }
         }
     }
 
-
-    private static PropertyTrace PropertyReference(PropertyTrace property, ReferenceTrace reference)
+    private static Property PropertyReference(Property property, Reference reference)
     {
         return property with { Name = $"{reference.Name}/{property.Name}" };
     }
