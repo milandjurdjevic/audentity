@@ -15,7 +15,7 @@ public class MyDbContext : DbContext
 {
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
     {
-        EntityTrace[] traces = Collect.Entities(ChangeTracker).ToArray();
+        EntityTrace[] traces = Collect.Entities(ChangeTracker.Entries()).ToArray();
         int result = await base.SaveChangesAsync(cancellationToken);
         // Process traces...
         return result;
@@ -30,7 +30,7 @@ Some traces can be owned by another trace
 show owned trace properties inside the owner trace property collection.
 
 ```csharp
-EntityTrace[] traces = Collect.Entities(ChangeTracker).ToArray();
+EntityTrace[] traces = Collect.Entities(ChangeTracker.Entries()).ToArray();
 EntityTrace[] transformed = Transform.Ownership(traces).ToArray();
 ```
 
@@ -64,7 +64,7 @@ Those entities, even if they are not defined in the code itself, will still end 
 To exclude them from traces, you can filter all entries by their CLR type before collecting traces.
 
 ```csharp
-Collect.Entities(ChangeTracker)
+Collect.Entities(ChangeTracker.Entries())
     .Where(e => e.Type != typeof(Dictionary<string, object>))
     .Select(EntityTrace.FromEntry);
 ```
