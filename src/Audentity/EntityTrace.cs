@@ -7,7 +7,8 @@ public record EntityTrace(
     Type Type,
     EntityState State,
     IReadOnlyCollection<PropertyTrace> Properties,
-    IReadOnlyCollection<ReferenceTrace> References)
+    IReadOnlyCollection<ReferenceTrace> References,
+    bool IsOwned)
 {
     public static EntityTrace FromEntry(EntityEntry entry)
     {
@@ -23,6 +24,6 @@ public record EntityTrace(
                 .SelectMany(ReferenceTrace.FromEntry)
                 .ToArray();
 
-        return new EntityTrace(entry.Entity.GetType(), entry.State, properties, references);
+        return new EntityTrace(entry.Entity.GetType(), entry.State, properties, references, entry.Metadata.IsOwned());
     }
 }
