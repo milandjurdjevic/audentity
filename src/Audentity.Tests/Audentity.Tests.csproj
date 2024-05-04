@@ -33,4 +33,16 @@
         <ProjectReference Include="..\Audentity\Audentity.csproj"/>
     </ItemGroup>
 
+    <ItemGroup>
+        <None Update="EntityTests.FromEntry_AddEntity_Collects.verified.json">
+            <DependentUpon>EntityTraceTests.cs</DependentUpon>
+        </None>
+        <None Update="EntityTests.FromEntry_DeleteEntity_Collects.verified.json">
+            <DependentUpon>EntityTraceTests.cs</DependentUpon>
+        </None>
+        <None Update="EntityTests.FromEntry_ModifyEntity_Collects.verified.json">
+            <DependentUpon>EntityTraceTests.cs</DependentUpon>
+        </None>
+    </ItemGroup>
+
 </Project>

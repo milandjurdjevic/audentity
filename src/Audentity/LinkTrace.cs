@@ -3,17 +3,17 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Audentity;
 
-public record Link(string Name, string Value)
+public record LinkTrace(string Name, string Value)
 {
-    internal static Link FromProperty(IProperty property, object entity)
+    internal static LinkTrace FromProperty(IProperty property, object entity)
     {
         string value = property.PropertyInfo?.GetValue(entity)?.ToString() ?? String.Empty;
-        return new Link(property.Name, value);
+        return new LinkTrace(property.Name, value);
     }
 
-    internal static Link FromEntry(PropertyEntry entry)
+    internal static LinkTrace FromEntry(PropertyEntry entry)
     {
         string value = entry.CurrentValue?.ToString() ?? String.Empty;
-        return new Link(entry.Metadata.Name, value);
+        return new LinkTrace(entry.Metadata.Name, value);
     }
 }
