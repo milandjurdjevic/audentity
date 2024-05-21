@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audentity", "Audentity\Audentity.csproj", "{6E67ED5D-517B-4815-A8C3-9ECC91AE600C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audentity.Tests", "Audentity.Tests\Audentity.Tests.csproj", "{FCD70416-5931-42F4-8CDB-08EAEB1496E3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audentity.Benchmarks", "Audentity.Benchmarks\Audentity.Benchmarks.csproj", "{FC81451B-A4B4-467D-8BA1-8277D9BDE524}"
@@ -13,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{0139
 	ProjectSection(SolutionItems) = preProject
 		..\.github\workflows\main.yml = ..\.github\workflows\main.yml
 	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Audentity", "Audentity\Audentity.fsproj", "{B31023C0-6610-4007-BCBD-4F9164AB3346}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6E67ED5D-517B-4815-A8C3-9ECC91AE600C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E67ED5D-517B-4815-A8C3-9ECC91AE600C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6E67ED5D-517B-4815-A8C3-9ECC91AE600C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E67ED5D-517B-4815-A8C3-9ECC91AE600C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FCD70416-5931-42F4-8CDB-08EAEB1496E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FCD70416-5931-42F4-8CDB-08EAEB1496E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCD70416-5931-42F4-8CDB-08EAEB1496E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,5 +31,9 @@ Global
 		{FC81451B-A4B4-467D-8BA1-8277D9BDE524}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC81451B-A4B4-467D-8BA1-8277D9BDE524}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC81451B-A4B4-467D-8BA1-8277D9BDE524}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B31023C0-6610-4007-BCBD-4F9164AB3346}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B31023C0-6610-4007-BCBD-4F9164AB3346}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B31023C0-6610-4007-BCBD-4F9164AB3346}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B31023C0-6610-4007-BCBD-4F9164AB3346}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -56,7 +56,7 @@ public class Executor
     [Benchmark]
     public void Collect()
     {
-        foreach (Trace _ in Audentity.Collect.Traces(_database.ChangeTracker.Entries()))
+        foreach (Trace _ in _database.ChangeTracker.Entries().Traces())
         {
             // Ignore.
         }

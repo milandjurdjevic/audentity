@@ -1,7 +1,7 @@
 ﻿[
   {
     "Type": "Tenant",
-    "State": "Modified",
+    "State": 3,
     "Properties": [
       {
         "Name": "Id",
@@ -11,78 +11,17 @@
       },
       {
         "Name": "Name",
-        "CurrentValue": "Tenant1Updated",
+        "CurrentValue": "Updated",
         "OriginalValue": "Tenant1",
         "IsPrimaryKey": false
       }
     ],
-    "References": [
-      {
-        "Name": "Projects",
-        "Type": "Project",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_2"
-          }
-        ]
-      },
-      {
-        "Name": "Projects",
-        "Type": "Project",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_3"
-          }
-        ]
-      },
-      {
-        "Name": "Projects",
-        "Type": "Project",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_4"
-          }
-        ]
-      },
-      {
-        "Name": "Users",
-        "Type": "User",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_5"
-          }
-        ]
-      },
-      {
-        "Name": "Users",
-        "Type": "User",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_6"
-          }
-        ]
-      },
-      {
-        "Name": "Users",
-        "Type": "User",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_7"
-          }
-        ]
-      }
-    ],
+    "References": [],
     "IsOwned": false
   },
   {
     "Type": "Project",
-    "State": "Modified",
+    "State": 3,
     "Properties": [
       {
         "Name": "Id",
@@ -113,53 +52,23 @@
             "Value": "Guid_1"
           }
         ]
-      },
-      {
-        "Name": "Users",
-        "Type": "User",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_5"
-          }
-        ]
-      },
-      {
-        "Name": "Users",
-        "Type": "User",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_6"
-          }
-        ]
-      },
-      {
-        "Name": "Users",
-        "Type": "User",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_7"
-          }
-        ]
       }
     ],
     "IsOwned": false
   },
   {
     "Type": "User",
-    "State": "Modified",
+    "State": 3,
     "Properties": [
       {
         "Name": "Id",
-        "CurrentValue": "Guid_5",
-        "OriginalValue": "Guid_5",
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
         "IsPrimaryKey": true
       },
       {
         "Name": "Name",
-        "CurrentValue": "User1Updated",
+        "CurrentValue": null,
         "OriginalValue": "User1",
         "IsPrimaryKey": false
       },
@@ -177,37 +86,7 @@
         "Links": [
           {
             "Name": "UserId",
-            "Value": "Guid_5"
-          }
-        ]
-      },
-      {
-        "Name": "Projects",
-        "Type": "Project",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_2"
-          }
-        ]
-      },
-      {
-        "Name": "Projects",
-        "Type": "Project",
-        "Links": [
-          {
-            "Name": "Id",
             "Value": "Guid_3"
-          }
-        ]
-      },
-      {
-        "Name": "Projects",
-        "Type": "Project",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_4"
           }
         ]
       }
@@ -216,12 +95,12 @@
   },
   {
     "Type": "Address",
-    "State": "Unchanged",
+    "State": 1,
     "Properties": [
       {
         "Name": "UserId",
-        "CurrentValue": "Guid_5",
-        "OriginalValue": "Guid_5",
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
         "IsPrimaryKey": true
       },
       {
@@ -250,7 +129,7 @@
         "Links": [
           {
             "Name": "AddressUserId",
-            "Value": "Guid_5"
+            "Value": "Guid_3"
           }
         ]
       },
@@ -260,7 +139,7 @@
         "Links": [
           {
             "Name": "AddressUserId",
-            "Value": "Guid_5"
+            "Value": "Guid_3"
           }
         ]
       }
@@ -269,12 +148,12 @@
   },
   {
     "Type": "Building",
-    "State": "Unchanged",
+    "State": 1,
     "Properties": [
       {
         "Name": "AddressUserId",
-        "CurrentValue": "Guid_5",
-        "OriginalValue": "Guid_5",
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
         "IsPrimaryKey": true
       },
       {
@@ -297,7 +176,7 @@
         "Links": [
           {
             "Name": "BuildingAddressUserId",
-            "Value": "Guid_5"
+            "Value": "Guid_3"
           }
         ]
       }
@@ -306,12 +185,12 @@
   },
   {
     "Type": "BuildingNumber",
-    "State": "Unchanged",
+    "State": 1,
     "Properties": [
       {
         "Name": "BuildingAddressUserId",
-        "CurrentValue": "Guid_5",
-        "OriginalValue": "Guid_5",
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
         "IsPrimaryKey": true
       },
       {
@@ -332,12 +211,12 @@
   },
   {
     "Type": "ZipCode",
-    "State": "Unchanged",
+    "State": 1,
     "Properties": [
       {
         "Name": "AddressUserId",
-        "CurrentValue": "Guid_5",
-        "OriginalValue": "Guid_5",
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
         "IsPrimaryKey": true
       },
       {
@@ -352,12 +231,12 @@
   },
   {
     "Type": "Project",
-    "State": "Unchanged",
+    "State": 1,
     "Properties": [
       {
         "Name": "Id",
-        "CurrentValue": "Guid_3",
-        "OriginalValue": "Guid_3",
+        "CurrentValue": "Guid_4",
+        "OriginalValue": "Guid_4",
         "IsPrimaryKey": true
       },
       {
@@ -383,48 +262,18 @@
             "Value": "Guid_1"
           }
         ]
-      },
-      {
-        "Name": "Users",
-        "Type": "User",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_5"
-          }
-        ]
-      },
-      {
-        "Name": "Users",
-        "Type": "User",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_6"
-          }
-        ]
-      },
-      {
-        "Name": "Users",
-        "Type": "User",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_7"
-          }
-        ]
       }
     ],
     "IsOwned": false
   },
   {
     "Type": "User",
-    "State": "Unchanged",
+    "State": 1,
     "Properties": [
       {
         "Name": "Id",
-        "CurrentValue": "Guid_6",
-        "OriginalValue": "Guid_6",
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
         "IsPrimaryKey": true
       },
       {
@@ -447,37 +296,7 @@
         "Links": [
           {
             "Name": "UserId",
-            "Value": "Guid_6"
-          }
-        ]
-      },
-      {
-        "Name": "Projects",
-        "Type": "Project",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_2"
-          }
-        ]
-      },
-      {
-        "Name": "Projects",
-        "Type": "Project",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_3"
-          }
-        ]
-      },
-      {
-        "Name": "Projects",
-        "Type": "Project",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_4"
+            "Value": "Guid_5"
           }
         ]
       }
@@ -486,12 +305,12 @@
   },
   {
     "Type": "Address",
-    "State": "Unchanged",
+    "State": 1,
     "Properties": [
       {
         "Name": "UserId",
-        "CurrentValue": "Guid_6",
-        "OriginalValue": "Guid_6",
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
         "IsPrimaryKey": true
       },
       {
@@ -520,7 +339,7 @@
         "Links": [
           {
             "Name": "AddressUserId",
-            "Value": "Guid_6"
+            "Value": "Guid_5"
           }
         ]
       },
@@ -530,7 +349,7 @@
         "Links": [
           {
             "Name": "AddressUserId",
-            "Value": "Guid_6"
+            "Value": "Guid_5"
           }
         ]
       }
@@ -539,12 +358,12 @@
   },
   {
     "Type": "Building",
-    "State": "Unchanged",
+    "State": 1,
     "Properties": [
       {
         "Name": "AddressUserId",
-        "CurrentValue": "Guid_6",
-        "OriginalValue": "Guid_6",
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
         "IsPrimaryKey": true
       },
       {
@@ -567,7 +386,7 @@
         "Links": [
           {
             "Name": "BuildingAddressUserId",
-            "Value": "Guid_6"
+            "Value": "Guid_5"
           }
         ]
       }
@@ -576,12 +395,12 @@
   },
   {
     "Type": "BuildingNumber",
-    "State": "Unchanged",
+    "State": 1,
     "Properties": [
       {
         "Name": "BuildingAddressUserId",
-        "CurrentValue": "Guid_6",
-        "OriginalValue": "Guid_6",
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
         "IsPrimaryKey": true
       },
       {
@@ -602,12 +421,12 @@
   },
   {
     "Type": "ZipCode",
-    "State": "Unchanged",
+    "State": 1,
     "Properties": [
       {
         "Name": "AddressUserId",
-        "CurrentValue": "Guid_6",
-        "OriginalValue": "Guid_6",
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
         "IsPrimaryKey": true
       },
       {
@@ -622,12 +441,12 @@
   },
   {
     "Type": "Project",
-    "State": "Unchanged",
+    "State": 1,
     "Properties": [
       {
         "Name": "Id",
-        "CurrentValue": "Guid_4",
-        "OriginalValue": "Guid_4",
+        "CurrentValue": "Guid_6",
+        "OriginalValue": "Guid_6",
         "IsPrimaryKey": true
       },
       {
@@ -653,43 +472,13 @@
             "Value": "Guid_1"
           }
         ]
-      },
-      {
-        "Name": "Users",
-        "Type": "User",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_5"
-          }
-        ]
-      },
-      {
-        "Name": "Users",
-        "Type": "User",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_6"
-          }
-        ]
-      },
-      {
-        "Name": "Users",
-        "Type": "User",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_7"
-          }
-        ]
       }
     ],
     "IsOwned": false
   },
   {
     "Type": "User",
-    "State": "Unchanged",
+    "State": 1,
     "Properties": [
       {
         "Name": "Id",
@@ -720,43 +509,13 @@
             "Value": "Guid_7"
           }
         ]
-      },
-      {
-        "Name": "Projects",
-        "Type": "Project",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_2"
-          }
-        ]
-      },
-      {
-        "Name": "Projects",
-        "Type": "Project",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_3"
-          }
-        ]
-      },
-      {
-        "Name": "Projects",
-        "Type": "Project",
-        "Links": [
-          {
-            "Name": "Id",
-            "Value": "Guid_4"
-          }
-        ]
       }
     ],
     "IsOwned": false
   },
   {
     "Type": "Address",
-    "State": "Unchanged",
+    "State": 1,
     "Properties": [
       {
         "Name": "UserId",
@@ -809,7 +568,7 @@
   },
   {
     "Type": "Building",
-    "State": "Unchanged",
+    "State": 1,
     "Properties": [
       {
         "Name": "AddressUserId",
@@ -846,7 +605,7 @@
   },
   {
     "Type": "BuildingNumber",
-    "State": "Unchanged",
+    "State": 1,
     "Properties": [
       {
         "Name": "BuildingAddressUserId",
@@ -872,7 +631,7 @@
   },
   {
     "Type": "ZipCode",
-    "State": "Unchanged",
+    "State": 1,
     "Properties": [
       {
         "Name": "AddressUserId",
@@ -891,8 +650,48 @@
     "IsOwned": true
   },
   {
-    "Type": "Dictionary<string, object>",
-    "State": "Unchanged",
+    "Type": "Dictionary`2",
+    "State": 1,
+    "Properties": [
+      {
+        "Name": "ProjectsId",
+        "CurrentValue": "Guid_2",
+        "OriginalValue": "Guid_2",
+        "IsPrimaryKey": true
+      },
+      {
+        "Name": "UsersId",
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
+        "IsPrimaryKey": true
+      }
+    ],
+    "References": [],
+    "IsOwned": false
+  },
+  {
+    "Type": "Dictionary`2",
+    "State": 1,
+    "Properties": [
+      {
+        "Name": "ProjectsId",
+        "CurrentValue": "Guid_4",
+        "OriginalValue": "Guid_4",
+        "IsPrimaryKey": true
+      },
+      {
+        "Name": "UsersId",
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
+        "IsPrimaryKey": true
+      }
+    ],
+    "References": [],
+    "IsOwned": false
+  },
+  {
+    "Type": "Dictionary`2",
+    "State": 1,
     "Properties": [
       {
         "Name": "ProjectsId",
@@ -911,68 +710,8 @@
     "IsOwned": false
   },
   {
-    "Type": "Dictionary<string, object>",
-    "State": "Unchanged",
-    "Properties": [
-      {
-        "Name": "ProjectsId",
-        "CurrentValue": "Guid_3",
-        "OriginalValue": "Guid_3",
-        "IsPrimaryKey": true
-      },
-      {
-        "Name": "UsersId",
-        "CurrentValue": "Guid_5",
-        "OriginalValue": "Guid_5",
-        "IsPrimaryKey": true
-      }
-    ],
-    "References": [],
-    "IsOwned": false
-  },
-  {
-    "Type": "Dictionary<string, object>",
-    "State": "Unchanged",
-    "Properties": [
-      {
-        "Name": "ProjectsId",
-        "CurrentValue": "Guid_2",
-        "OriginalValue": "Guid_2",
-        "IsPrimaryKey": true
-      },
-      {
-        "Name": "UsersId",
-        "CurrentValue": "Guid_6",
-        "OriginalValue": "Guid_6",
-        "IsPrimaryKey": true
-      }
-    ],
-    "References": [],
-    "IsOwned": false
-  },
-  {
-    "Type": "Dictionary<string, object>",
-    "State": "Unchanged",
-    "Properties": [
-      {
-        "Name": "ProjectsId",
-        "CurrentValue": "Guid_3",
-        "OriginalValue": "Guid_3",
-        "IsPrimaryKey": true
-      },
-      {
-        "Name": "UsersId",
-        "CurrentValue": "Guid_6",
-        "OriginalValue": "Guid_6",
-        "IsPrimaryKey": true
-      }
-    ],
-    "References": [],
-    "IsOwned": false
-  },
-  {
-    "Type": "Dictionary<string, object>",
-    "State": "Unchanged",
+    "Type": "Dictionary`2",
+    "State": 1,
     "Properties": [
       {
         "Name": "ProjectsId",
@@ -991,19 +730,19 @@
     "IsOwned": false
   },
   {
-    "Type": "Dictionary<string, object>",
-    "State": "Unchanged",
+    "Type": "Dictionary`2",
+    "State": 1,
     "Properties": [
       {
         "Name": "ProjectsId",
-        "CurrentValue": "Guid_4",
-        "OriginalValue": "Guid_4",
+        "CurrentValue": "Guid_6",
+        "OriginalValue": "Guid_6",
         "IsPrimaryKey": true
       },
       {
         "Name": "UsersId",
-        "CurrentValue": "Guid_6",
-        "OriginalValue": "Guid_6",
+        "CurrentValue": "Guid_3",
+        "OriginalValue": "Guid_3",
         "IsPrimaryKey": true
       }
     ],
@@ -1011,8 +750,28 @@
     "IsOwned": false
   },
   {
-    "Type": "Dictionary<string, object>",
-    "State": "Unchanged",
+    "Type": "Dictionary`2",
+    "State": 1,
+    "Properties": [
+      {
+        "Name": "ProjectsId",
+        "CurrentValue": "Guid_6",
+        "OriginalValue": "Guid_6",
+        "IsPrimaryKey": true
+      },
+      {
+        "Name": "UsersId",
+        "CurrentValue": "Guid_5",
+        "OriginalValue": "Guid_5",
+        "IsPrimaryKey": true
+      }
+    ],
+    "References": [],
+    "IsOwned": false
+  },
+  {
+    "Type": "Dictionary`2",
+    "State": 1,
     "Properties": [
       {
         "Name": "ProjectsId",
@@ -1031,13 +790,13 @@
     "IsOwned": false
   },
   {
-    "Type": "Dictionary<string, object>",
-    "State": "Unchanged",
+    "Type": "Dictionary`2",
+    "State": 1,
     "Properties": [
       {
         "Name": "ProjectsId",
-        "CurrentValue": "Guid_3",
-        "OriginalValue": "Guid_3",
+        "CurrentValue": "Guid_4",
+        "OriginalValue": "Guid_4",
         "IsPrimaryKey": true
       },
       {
@@ -1051,13 +810,13 @@
     "IsOwned": false
   },
   {
-    "Type": "Dictionary<string, object>",
-    "State": "Unchanged",
+    "Type": "Dictionary`2",
+    "State": 1,
     "Properties": [
       {
         "Name": "ProjectsId",
-        "CurrentValue": "Guid_4",
-        "OriginalValue": "Guid_4",
+        "CurrentValue": "Guid_6",
+        "OriginalValue": "Guid_6",
         "IsPrimaryKey": true
       },
       {

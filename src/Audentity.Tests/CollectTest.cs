@@ -1,8 +1,11 @@
 using Audentity.Tests.Fixture;
 
+using JetBrains.Annotations;
+
 namespace Audentity.Tests;
 
 [UsesVerify]
+[TestSubject(typeof(Collect))]
 public class CollectTest
 {
     private readonly Database _database = new();
@@ -10,7 +13,8 @@ public class CollectTest
 
     private Task VerifyCollected()
     {
-        return Verify(Collect.Traces(_database.ChangeTracker.Entries()));
+        IEnumerable<Trace> traces = _database.ChangeTracker.Entries().Traces();
+        return VerifyJson(Serializer.Serialize(traces));
     }
 
     [Fact]
@@ -25,8 +29,8 @@ public class CollectTest
     {
         _database.Add(_tenant);
         _database.SaveChanges();
-        _tenant.Name += "Updated";
-        _tenant.Users.First().Name += "Updated";
+        _tenant.Name = "Updated";
+        _tenant.Users.First().Name = null;
         _tenant.Projects.First().Name += "Updated";
         return VerifyCollected();
     }
