@@ -15,7 +15,7 @@ public class MyDbContext : DbContext
 {
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
     {
-        EntityTrace[] traces = Collect.Entities(ChangeTracker.Entries()).ToArray();
+        EntityTrace[] traces = Collect.Traces(ChangeTracker.Entries()).ToArray();
         int result = await base.SaveChangesAsync(cancellationToken);
         // Process traces...
         return result;
@@ -23,15 +23,15 @@ public class MyDbContext : DbContext
 }
 ```
 
-### Transforming Trace Ownership
+### Merging Owned Traces
 
 Some traces can be owned by another trace
 ([see more](https://learn.microsoft.com/en-us/ef/core/modeling/owned-entities)). Trace collection can be transformed to
 show owned trace properties inside the owner trace property collection.
 
 ```csharp
-EntityTrace[] traces = Collect.Entities(ChangeTracker.Entries()).ToArray();
-EntityTrace[] transformed = Transform.Ownership(traces).ToArray();
+EntityTrace[] traces = Collect.Traces(ChangeTracker.Entries()).ToArray();
+EntityTrace[] transformed = Merge.Traces(traces).ToArray();
 ```
 
 ### Shadow Entries
@@ -64,7 +64,8 @@ Those entities, even if they are not defined in the code itself, will still end 
 To exclude them from traces, you can filter all entries by their CLR type before collecting traces.
 
 ```csharp
-Collect.Entities(ChangeTracker.Entries())
+ChangeTracker
+    .Entries()
     .Where(e => e.Type != typeof(Dictionary<string, object>))
-    .Select(EntityTrace.FromEntry);
+    .Collect();
 ```

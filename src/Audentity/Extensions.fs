@@ -6,7 +6,7 @@ open Microsoft.EntityFrameworkCore.ChangeTracking
 type Extensions() =
 
     [<Extension>]
-    static member Traces(entries: EntityEntry seq) = Collect.Traces entries
+    static member Collect(entries: EntityEntry seq) = Collect.Traces entries
 
     [<Extension>]
     static member Merge(traces: Trace seq) = Merge.Traces traces

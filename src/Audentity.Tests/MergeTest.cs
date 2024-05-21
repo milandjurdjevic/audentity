@@ -18,7 +18,7 @@ public class MergeTest
         IEnumerable<Trace> traces = _database
             .ChangeTracker
             .Entries()
-            .Traces()
+            .Collect()
             .Merge();
 
         return VerifyJson(Serializer.Serialize(traces));

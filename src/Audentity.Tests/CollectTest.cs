@@ -13,7 +13,7 @@ public class CollectTest
 
     private Task VerifyCollected()
     {
-        IEnumerable<Trace> traces = _database.ChangeTracker.Entries().Traces();
+        IEnumerable<Trace> traces = _database.ChangeTracker.Entries().Collect();
         return VerifyJson(Serializer.Serialize(traces));
     }
 
